@@ -8,6 +8,8 @@ Right now it supports out of the box permissions for:
 - Notifications
 - Microphone
 - Camera
+
+
 ![](./ReadmeResources/PAPermissions1.gif)
 ![](./ReadmeResources/PAPermissions2.gif)
 ![](./ReadmeResources/PAPermissions3.gif)
