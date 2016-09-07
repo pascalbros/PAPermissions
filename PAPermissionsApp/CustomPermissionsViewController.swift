@@ -20,6 +20,10 @@ class CustomPermissionsViewController: PAPermissionsViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
+		//Custom settings
+		self.locationCheck.requestAlwaysAuthorization = true
+		
+		
 		let permissions = [PAPermissionsItem.itemForType(.Bluetooth, reason: "Required to connect with your cool device")!,
 						   PAPermissionsItem.itemForType(.Location, reason: "Required to locate yourself")!,
 						   PAPermissionsItem.itemForType(.Microphone, reason: "Required to hear your beautiful voice")!,

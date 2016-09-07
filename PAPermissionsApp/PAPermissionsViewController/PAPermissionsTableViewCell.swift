@@ -77,7 +77,7 @@ class PAPermissionsTableViewCell: UITableViewCell {
 			"V:|-2-[iconImageView]-2-|",
 			"H:|-0-[iconImageView(15)]",
 			"V:|-2-[rightDetailsContainer]-2-|",
-			"H:[rightDetailsContainer(46)]-0-|",
+			"H:[rightDetailsContainer(58)]-0-|",
 			"V:|-8-[titleLabel(18)]-2-[detailsLabel(13)]",
 			"H:[iconImageView]-8-[titleLabel]-4-[rightDetailsContainer]",
 			"H:[iconImageView]-8-[detailsLabel]-4-[rightDetailsContainer]"
@@ -159,7 +159,7 @@ class PAPermissionsTableViewCell: UITableViewCell {
 						 "checkingIndicator": self.checkingIndicator]
 			
 			var allConstraints = PAConstraintsUtils.concatenateConstraintsFromString([
-				"V:[enableButton(24)]",
+				"V:[enableButton(30)]",
 				"H:|-2-[enableButton]-2-|",
 				"V:|-0-[checkingIndicator]-0-|",
 				"H:|-0-[checkingIndicator]-0-|"
@@ -187,9 +187,10 @@ class PAPermissionsTableViewCell: UITableViewCell {
 			self.checkingIndicator.hidden = true
 			self.checkingIndicator.stopAnimating()
 			self.enableButton.setTitle(NSLocalizedString("Enable", comment: ""), forState: .Normal)
-			self.enableButton.titleLabel?.font = UIFont(name: "HelveticaNeue-Bold", size: 10)
+			self.enableButton.titleLabel?.font = UIFont(name: "HelveticaNeue-Bold", size: 12)
 			self.enableButton.setImage(nil, forState: .Normal)
 			self.enableButton.titleLabel?.minimumScaleFactor = 0.1
+			self.enableButton.titleLabel?.adjustsFontSizeToFitWidth  = true
 			self.enableButton.setTitleColor(self.tintColor, forState: .Normal)
 			self.enableButton.backgroundColor = UIColor.clearColor()
 			self.enableButton.layer.cornerRadius = 2.0
