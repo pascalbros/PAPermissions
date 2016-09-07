@@ -26,7 +26,9 @@ class PAPermissionsCheck: NSObject {
 	
 	func updateStatus() {
 		if let d = self.delegate {
-			d.permissionCheck(self, didCheckStatus: self.status)
+			dispatch_async(dispatch_get_main_queue()){
+				d.permissionCheck(self, didCheckStatus: self.status)
+			}
 		}
 	}
 }

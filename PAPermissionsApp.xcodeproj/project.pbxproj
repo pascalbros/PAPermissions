@@ -48,6 +48,7 @@
 		50E9DD881D7F3701007D0ED5 /* PACustomPermissionsCheck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E9DD871D7F3701007D0ED5 /* PACustomPermissionsCheck.swift */; };
 		50E9DD8B1D7F371F007D0ED5 /* PAConstraintsUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E9DD8A1D7F371F007D0ED5 /* PAConstraintsUtils.swift */; };
 		50E9DD8D1D7F548B007D0ED5 /* CustomPermissionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E9DD8C1D7F548B007D0ED5 /* CustomPermissionsViewController.swift */; };
+		50E9DD8F1D80925F007D0ED5 /* background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 50E9DD8E1D80925F007D0ED5 /* background.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -94,6 +95,7 @@
 		50E9DD871D7F3701007D0ED5 /* PACustomPermissionsCheck.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PACustomPermissionsCheck.swift; sourceTree = "<group>"; };
 		50E9DD8A1D7F371F007D0ED5 /* PAConstraintsUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PAConstraintsUtils.swift; sourceTree = "<group>"; };
 		50E9DD8C1D7F548B007D0ED5 /* CustomPermissionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomPermissionsViewController.swift; sourceTree = "<group>"; };
+		50E9DD8E1D80925F007D0ED5 /* background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = background.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +143,7 @@
 				50E9DCD91D7DC370007D0ED5 /* Assets.xcassets */,
 				50E9DCDB1D7DC370007D0ED5 /* LaunchScreen.storyboard */,
 				50E9DCDE1D7DC370007D0ED5 /* Info.plist */,
+				50E9DD8E1D80925F007D0ED5 /* background.jpg */,
 			);
 			path = PAPermissionsApp;
 			sourceTree = "<group>";
@@ -276,6 +279,7 @@
 				50E9DD021D7E2492007D0ED5 /* pa_camera_icon@2x.png in Resources */,
 				50E9DD0D1D7E250D007D0ED5 /* pa_microphone_icon.png in Resources */,
 				50E9DD031D7E2492007D0ED5 /* pa_camera_icon@3x.png in Resources */,
+				50E9DD8F1D80925F007D0ED5 /* background.jpg in Resources */,
 				50E9DD241D7E3DF9007D0ED5 /* pa_cancel_icon@3x.png in Resources */,
 				50E9DD0F1D7E250D007D0ED5 /* pa_microphone_icon@3x.png in Resources */,
 				50E9DCDD1D7DC370007D0ED5 /* LaunchScreen.storyboard in Resources */,
@@ -466,6 +470,7 @@
 				50E9DCE31D7DC370007D0ED5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -39,7 +39,9 @@ class CustomPermissionsViewController: PAPermissionsViewController {
 						"my-custom-permission": self.customCheck]
 		self.setupData(permissions, handlers: handlers)
 		//self.tintColor = UIColor.whiteColor()
-		//self.backgroundColor = UIColor(red: 59.0/255.0, green: 89.0/255.0, blue: 152.0/255.0, alpha: 1.0)
+		//self.backgroundColor = UIColor(red: 245.0/255.0, green: 94.0/255.0, blue: 78.0/255.0, alpha: 1.0)
+		//self.backgroundImage = UIImage(named: "background.jpg")
+		//self.useBlurBackground = true
 		self.titleText = "My Awesome App"
 		self.detailsText = "Please enable the following"
 	}

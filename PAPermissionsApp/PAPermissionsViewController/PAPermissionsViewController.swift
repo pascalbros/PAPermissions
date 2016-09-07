@@ -60,6 +60,26 @@ class PAPermissionsViewController: UIViewController, PAPermissionsViewDelegate, 
 		}
 	}
 	
+	var backgroundImage: UIImage? {
+		get {
+			return self.permissionsView.backgroundImage
+		}
+		
+		set (newImage) {
+			self.permissionsView.backgroundImage = newImage
+		}
+	}
+	
+	var useBlurBackground: Bool {
+		get {
+			return self.permissionsView.useBlurBackground
+		}
+		
+		set (newBlurBackground) {
+			self.permissionsView.useBlurBackground = newBlurBackground
+		}
+	}
+	
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		self.setupUI()
