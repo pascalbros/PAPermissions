@@ -28,7 +28,6 @@ class PANotificationsPermissionsCheck: PAPermissionsCheck {
 		}else{
 			self.status = .Disabled
 		}
-		self.updateStatus()
 		
 		if self.status != currentStatus {
 			if self.status == .Enabled {
