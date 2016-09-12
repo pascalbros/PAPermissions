@@ -7,51 +7,82 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5078F8F01D86C82500A487CC /* pa_bluetooth_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 5078F8CF1D86C82500A487CC /* pa_bluetooth_icon.png */; };
+		5078F8F11D86C82500A487CC /* pa_bluetooth_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5078F8D01D86C82500A487CC /* pa_bluetooth_icon@2x.png */; };
+		5078F8F21D86C82500A487CC /* pa_bluetooth_icon@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5078F8D11D86C82500A487CC /* pa_bluetooth_icon@3x.png */; };
+		5078F8F31D86C82500A487CC /* pa_camera_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 5078F8D21D86C82500A487CC /* pa_camera_icon.png */; };
+		5078F8F41D86C82500A487CC /* pa_camera_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5078F8D31D86C82500A487CC /* pa_camera_icon@2x.png */; };
+		5078F8F51D86C82500A487CC /* pa_camera_icon@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5078F8D41D86C82500A487CC /* pa_camera_icon@3x.png */; };
+		5078F8F61D86C82500A487CC /* pa_cancel_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 5078F8D51D86C82500A487CC /* pa_cancel_icon.png */; };
+		5078F8F71D86C82500A487CC /* pa_cancel_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5078F8D61D86C82500A487CC /* pa_cancel_icon@2x.png */; };
+		5078F8F81D86C82500A487CC /* pa_cancel_icon@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5078F8D71D86C82500A487CC /* pa_cancel_icon@3x.png */; };
+		5078F8F91D86C82500A487CC /* pa_checkmark_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 5078F8D81D86C82500A487CC /* pa_checkmark_icon.png */; };
+		5078F8FA1D86C82500A487CC /* pa_checkmark_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5078F8D91D86C82500A487CC /* pa_checkmark_icon@2x.png */; };
+		5078F8FB1D86C82500A487CC /* pa_checkmark_icon@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5078F8DA1D86C82500A487CC /* pa_checkmark_icon@3x.png */; };
+		5078F8FC1D86C82500A487CC /* pa_location_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 5078F8DB1D86C82500A487CC /* pa_location_icon.png */; };
+		5078F8FD1D86C82500A487CC /* pa_location_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5078F8DC1D86C82500A487CC /* pa_location_icon@2x.png */; };
+		5078F8FE1D86C82500A487CC /* pa_location_icon@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5078F8DD1D86C82500A487CC /* pa_location_icon@3x.png */; };
+		5078F8FF1D86C82500A487CC /* pa_microphone_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 5078F8DE1D86C82500A487CC /* pa_microphone_icon.png */; };
+		5078F9001D86C82500A487CC /* pa_microphone_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5078F8DF1D86C82500A487CC /* pa_microphone_icon@2x.png */; };
+		5078F9011D86C82500A487CC /* pa_microphone_icon@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5078F8E01D86C82500A487CC /* pa_microphone_icon@3x.png */; };
+		5078F9021D86C82500A487CC /* pa_notification_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 5078F8E11D86C82500A487CC /* pa_notification_icon.png */; };
+		5078F9031D86C82500A487CC /* pa_notification_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5078F8E21D86C82500A487CC /* pa_notification_icon@2x.png */; };
+		5078F9041D86C82500A487CC /* pa_notification_icon@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5078F8E31D86C82500A487CC /* pa_notification_icon@3x.png */; };
+		5078F9051D86C82500A487CC /* PABluetoothPermissionsCheck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5078F8E51D86C82500A487CC /* PABluetoothPermissionsCheck.swift */; };
+		5078F9061D86C82500A487CC /* PACameraPermissionsCheck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5078F8E61D86C82500A487CC /* PACameraPermissionsCheck.swift */; };
+		5078F9071D86C82500A487CC /* PALocationPermissionsCheck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5078F8E71D86C82500A487CC /* PALocationPermissionsCheck.swift */; };
+		5078F9081D86C82500A487CC /* PAMicrophonePermissionsCheck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5078F8E81D86C82500A487CC /* PAMicrophonePermissionsCheck.swift */; };
+		5078F9091D86C82500A487CC /* PANotificationsPermissionsCheck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5078F8E91D86C82500A487CC /* PANotificationsPermissionsCheck.swift */; };
+		5078F90A1D86C82500A487CC /* PAPermissionsCheck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5078F8EA1D86C82500A487CC /* PAPermissionsCheck.swift */; };
+		5078F90B1D86C82500A487CC /* PAPermissionsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5078F8EB1D86C82500A487CC /* PAPermissionsTableViewCell.swift */; };
+		5078F90C1D86C82500A487CC /* PAPermissionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5078F8EC1D86C82500A487CC /* PAPermissionsView.swift */; };
+		5078F90D1D86C82500A487CC /* PAPermissionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5078F8ED1D86C82500A487CC /* PAPermissionsViewController.swift */; };
+		5078F90E1D86C82500A487CC /* PAConstraintsUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5078F8EF1D86C82500A487CC /* PAConstraintsUtils.swift */; };
 		50E9DCD31D7DC370007D0ED5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E9DCD21D7DC370007D0ED5 /* AppDelegate.swift */; };
 		50E9DCD51D7DC370007D0ED5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E9DCD41D7DC370007D0ED5 /* ViewController.swift */; };
 		50E9DCD81D7DC370007D0ED5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50E9DCD61D7DC370007D0ED5 /* Main.storyboard */; };
 		50E9DCDA1D7DC370007D0ED5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50E9DCD91D7DC370007D0ED5 /* Assets.xcassets */; };
 		50E9DCDD1D7DC370007D0ED5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50E9DCDB1D7DC370007D0ED5 /* LaunchScreen.storyboard */; };
-		50E9DCE61D7DC39D007D0ED5 /* PAPermissionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E9DCE51D7DC39D007D0ED5 /* PAPermissionsView.swift */; };
-		50E9DCE81D7DC4A9007D0ED5 /* PAPermissionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E9DCE71D7DC4A9007D0ED5 /* PAPermissionsViewController.swift */; };
-		50E9DCEC1D7DE089007D0ED5 /* PAPermissionsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E9DCEB1D7DE089007D0ED5 /* PAPermissionsTableViewCell.swift */; };
-		50E9DCFE1D7E2492007D0ED5 /* pa_bluetooth_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 50E9DCF21D7E2492007D0ED5 /* pa_bluetooth_icon.png */; };
-		50E9DCFF1D7E2492007D0ED5 /* pa_bluetooth_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 50E9DCF31D7E2492007D0ED5 /* pa_bluetooth_icon@2x.png */; };
-		50E9DD001D7E2492007D0ED5 /* pa_bluetooth_icon@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 50E9DCF41D7E2492007D0ED5 /* pa_bluetooth_icon@3x.png */; };
-		50E9DD011D7E2492007D0ED5 /* pa_camera_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 50E9DCF51D7E2492007D0ED5 /* pa_camera_icon.png */; };
-		50E9DD021D7E2492007D0ED5 /* pa_camera_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 50E9DCF61D7E2492007D0ED5 /* pa_camera_icon@2x.png */; };
-		50E9DD031D7E2492007D0ED5 /* pa_camera_icon@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 50E9DCF71D7E2492007D0ED5 /* pa_camera_icon@3x.png */; };
-		50E9DD041D7E2492007D0ED5 /* pa_location_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 50E9DCF81D7E2492007D0ED5 /* pa_location_icon.png */; };
-		50E9DD051D7E2492007D0ED5 /* pa_location_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 50E9DCF91D7E2492007D0ED5 /* pa_location_icon@2x.png */; };
-		50E9DD061D7E2492007D0ED5 /* pa_location_icon@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 50E9DCFA1D7E2492007D0ED5 /* pa_location_icon@3x.png */; };
-		50E9DD071D7E2492007D0ED5 /* pa_notification_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 50E9DCFB1D7E2492007D0ED5 /* pa_notification_icon.png */; };
-		50E9DD081D7E2492007D0ED5 /* pa_notification_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 50E9DCFC1D7E2492007D0ED5 /* pa_notification_icon@2x.png */; };
-		50E9DD091D7E2492007D0ED5 /* pa_notification_icon@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 50E9DCFD1D7E2492007D0ED5 /* pa_notification_icon@3x.png */; };
-		50E9DD0D1D7E250D007D0ED5 /* pa_microphone_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 50E9DD0A1D7E250D007D0ED5 /* pa_microphone_icon.png */; };
-		50E9DD0E1D7E250D007D0ED5 /* pa_microphone_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 50E9DD0B1D7E250D007D0ED5 /* pa_microphone_icon@2x.png */; };
-		50E9DD0F1D7E250D007D0ED5 /* pa_microphone_icon@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 50E9DD0C1D7E250D007D0ED5 /* pa_microphone_icon@3x.png */; };
-		50E9DD131D7E3244007D0ED5 /* pa_checkmark_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 50E9DD101D7E3244007D0ED5 /* pa_checkmark_icon.png */; };
-		50E9DD141D7E3244007D0ED5 /* pa_checkmark_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 50E9DD111D7E3244007D0ED5 /* pa_checkmark_icon@2x.png */; };
-		50E9DD151D7E3244007D0ED5 /* pa_checkmark_icon@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 50E9DD121D7E3244007D0ED5 /* pa_checkmark_icon@3x.png */; };
 		50E9DD191D7E37FC007D0ED5 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50E9DD181D7E37FC007D0ED5 /* CoreBluetooth.framework */; };
-		50E9DD1C1D7E385F007D0ED5 /* PABluetoothPermissionsCheck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E9DD1B1D7E385F007D0ED5 /* PABluetoothPermissionsCheck.swift */; };
-		50E9DD1E1D7E3873007D0ED5 /* PAPermissionsCheck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E9DD1D1D7E3873007D0ED5 /* PAPermissionsCheck.swift */; };
-		50E9DD221D7E3DF9007D0ED5 /* pa_cancel_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 50E9DD1F1D7E3DF9007D0ED5 /* pa_cancel_icon.png */; };
-		50E9DD231D7E3DF9007D0ED5 /* pa_cancel_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 50E9DD201D7E3DF9007D0ED5 /* pa_cancel_icon@2x.png */; };
-		50E9DD241D7E3DF9007D0ED5 /* pa_cancel_icon@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 50E9DD211D7E3DF9007D0ED5 /* pa_cancel_icon@3x.png */; };
-		50E9DD261D7E41B6007D0ED5 /* PALocationPermissionsCheck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E9DD251D7E41B6007D0ED5 /* PALocationPermissionsCheck.swift */; };
 		50E9DD281D7E41E9007D0ED5 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50E9DD271D7E41E9007D0ED5 /* CoreLocation.framework */; };
-		50E9DD2A1D7E44AE007D0ED5 /* PAMicrophonePermissionsCheck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E9DD291D7E44AE007D0ED5 /* PAMicrophonePermissionsCheck.swift */; };
 		50E9DD2C1D7E44BD007D0ED5 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50E9DD2B1D7E44BD007D0ED5 /* AVFoundation.framework */; };
-		50E9DD801D7F1448007D0ED5 /* PACameraPermissionsCheck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E9DD7F1D7F1448007D0ED5 /* PACameraPermissionsCheck.swift */; };
-		50E9DD821D7F1C1E007D0ED5 /* PANotificationsPermissionsCheck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E9DD811D7F1C1E007D0ED5 /* PANotificationsPermissionsCheck.swift */; };
 		50E9DD881D7F3701007D0ED5 /* PACustomPermissionsCheck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E9DD871D7F3701007D0ED5 /* PACustomPermissionsCheck.swift */; };
-		50E9DD8B1D7F371F007D0ED5 /* PAConstraintsUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E9DD8A1D7F371F007D0ED5 /* PAConstraintsUtils.swift */; };
 		50E9DD8D1D7F548B007D0ED5 /* CustomPermissionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E9DD8C1D7F548B007D0ED5 /* CustomPermissionsViewController.swift */; };
 		50E9DD8F1D80925F007D0ED5 /* background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 50E9DD8E1D80925F007D0ED5 /* background.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5078F8CF1D86C82500A487CC /* pa_bluetooth_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pa_bluetooth_icon.png; sourceTree = "<group>"; };
+		5078F8D01D86C82500A487CC /* pa_bluetooth_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pa_bluetooth_icon@2x.png"; sourceTree = "<group>"; };
+		5078F8D11D86C82500A487CC /* pa_bluetooth_icon@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pa_bluetooth_icon@3x.png"; sourceTree = "<group>"; };
+		5078F8D21D86C82500A487CC /* pa_camera_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pa_camera_icon.png; sourceTree = "<group>"; };
+		5078F8D31D86C82500A487CC /* pa_camera_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pa_camera_icon@2x.png"; sourceTree = "<group>"; };
+		5078F8D41D86C82500A487CC /* pa_camera_icon@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pa_camera_icon@3x.png"; sourceTree = "<group>"; };
+		5078F8D51D86C82500A487CC /* pa_cancel_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pa_cancel_icon.png; sourceTree = "<group>"; };
+		5078F8D61D86C82500A487CC /* pa_cancel_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pa_cancel_icon@2x.png"; sourceTree = "<group>"; };
+		5078F8D71D86C82500A487CC /* pa_cancel_icon@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pa_cancel_icon@3x.png"; sourceTree = "<group>"; };
+		5078F8D81D86C82500A487CC /* pa_checkmark_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pa_checkmark_icon.png; sourceTree = "<group>"; };
+		5078F8D91D86C82500A487CC /* pa_checkmark_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pa_checkmark_icon@2x.png"; sourceTree = "<group>"; };
+		5078F8DA1D86C82500A487CC /* pa_checkmark_icon@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pa_checkmark_icon@3x.png"; sourceTree = "<group>"; };
+		5078F8DB1D86C82500A487CC /* pa_location_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pa_location_icon.png; sourceTree = "<group>"; };
+		5078F8DC1D86C82500A487CC /* pa_location_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pa_location_icon@2x.png"; sourceTree = "<group>"; };
+		5078F8DD1D86C82500A487CC /* pa_location_icon@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pa_location_icon@3x.png"; sourceTree = "<group>"; };
+		5078F8DE1D86C82500A487CC /* pa_microphone_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pa_microphone_icon.png; sourceTree = "<group>"; };
+		5078F8DF1D86C82500A487CC /* pa_microphone_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pa_microphone_icon@2x.png"; sourceTree = "<group>"; };
+		5078F8E01D86C82500A487CC /* pa_microphone_icon@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pa_microphone_icon@3x.png"; sourceTree = "<group>"; };
+		5078F8E11D86C82500A487CC /* pa_notification_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pa_notification_icon.png; sourceTree = "<group>"; };
+		5078F8E21D86C82500A487CC /* pa_notification_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pa_notification_icon@2x.png"; sourceTree = "<group>"; };
+		5078F8E31D86C82500A487CC /* pa_notification_icon@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pa_notification_icon@3x.png"; sourceTree = "<group>"; };
+		5078F8E51D86C82500A487CC /* PABluetoothPermissionsCheck.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PABluetoothPermissionsCheck.swift; sourceTree = "<group>"; };
+		5078F8E61D86C82500A487CC /* PACameraPermissionsCheck.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PACameraPermissionsCheck.swift; sourceTree = "<group>"; };
+		5078F8E71D86C82500A487CC /* PALocationPermissionsCheck.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PALocationPermissionsCheck.swift; sourceTree = "<group>"; };
+		5078F8E81D86C82500A487CC /* PAMicrophonePermissionsCheck.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PAMicrophonePermissionsCheck.swift; sourceTree = "<group>"; };
+		5078F8E91D86C82500A487CC /* PANotificationsPermissionsCheck.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PANotificationsPermissionsCheck.swift; sourceTree = "<group>"; };
+		5078F8EA1D86C82500A487CC /* PAPermissionsCheck.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PAPermissionsCheck.swift; sourceTree = "<group>"; };
+		5078F8EB1D86C82500A487CC /* PAPermissionsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PAPermissionsTableViewCell.swift; sourceTree = "<group>"; };
+		5078F8EC1D86C82500A487CC /* PAPermissionsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PAPermissionsView.swift; sourceTree = "<group>"; };
+		5078F8ED1D86C82500A487CC /* PAPermissionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PAPermissionsViewController.swift; sourceTree = "<group>"; };
+		5078F8EF1D86C82500A487CC /* PAConstraintsUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PAConstraintsUtils.swift; sourceTree = "<group>"; };
 		50E9DCCF1D7DC370007D0ED5 /* PAPermissionsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PAPermissionsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		50E9DCD21D7DC370007D0ED5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		50E9DCD41D7DC370007D0ED5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -59,41 +90,10 @@
 		50E9DCD91D7DC370007D0ED5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		50E9DCDC1D7DC370007D0ED5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		50E9DCDE1D7DC370007D0ED5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		50E9DCE51D7DC39D007D0ED5 /* PAPermissionsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PAPermissionsView.swift; sourceTree = "<group>"; };
-		50E9DCE71D7DC4A9007D0ED5 /* PAPermissionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PAPermissionsViewController.swift; sourceTree = "<group>"; };
-		50E9DCEB1D7DE089007D0ED5 /* PAPermissionsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PAPermissionsTableViewCell.swift; sourceTree = "<group>"; };
-		50E9DCF21D7E2492007D0ED5 /* pa_bluetooth_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pa_bluetooth_icon.png; sourceTree = "<group>"; };
-		50E9DCF31D7E2492007D0ED5 /* pa_bluetooth_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pa_bluetooth_icon@2x.png"; sourceTree = "<group>"; };
-		50E9DCF41D7E2492007D0ED5 /* pa_bluetooth_icon@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pa_bluetooth_icon@3x.png"; sourceTree = "<group>"; };
-		50E9DCF51D7E2492007D0ED5 /* pa_camera_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pa_camera_icon.png; sourceTree = "<group>"; };
-		50E9DCF61D7E2492007D0ED5 /* pa_camera_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pa_camera_icon@2x.png"; sourceTree = "<group>"; };
-		50E9DCF71D7E2492007D0ED5 /* pa_camera_icon@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pa_camera_icon@3x.png"; sourceTree = "<group>"; };
-		50E9DCF81D7E2492007D0ED5 /* pa_location_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pa_location_icon.png; sourceTree = "<group>"; };
-		50E9DCF91D7E2492007D0ED5 /* pa_location_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pa_location_icon@2x.png"; sourceTree = "<group>"; };
-		50E9DCFA1D7E2492007D0ED5 /* pa_location_icon@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pa_location_icon@3x.png"; sourceTree = "<group>"; };
-		50E9DCFB1D7E2492007D0ED5 /* pa_notification_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pa_notification_icon.png; sourceTree = "<group>"; };
-		50E9DCFC1D7E2492007D0ED5 /* pa_notification_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pa_notification_icon@2x.png"; sourceTree = "<group>"; };
-		50E9DCFD1D7E2492007D0ED5 /* pa_notification_icon@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pa_notification_icon@3x.png"; sourceTree = "<group>"; };
-		50E9DD0A1D7E250D007D0ED5 /* pa_microphone_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pa_microphone_icon.png; sourceTree = "<group>"; };
-		50E9DD0B1D7E250D007D0ED5 /* pa_microphone_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pa_microphone_icon@2x.png"; sourceTree = "<group>"; };
-		50E9DD0C1D7E250D007D0ED5 /* pa_microphone_icon@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pa_microphone_icon@3x.png"; sourceTree = "<group>"; };
-		50E9DD101D7E3244007D0ED5 /* pa_checkmark_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pa_checkmark_icon.png; sourceTree = "<group>"; };
-		50E9DD111D7E3244007D0ED5 /* pa_checkmark_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pa_checkmark_icon@2x.png"; sourceTree = "<group>"; };
-		50E9DD121D7E3244007D0ED5 /* pa_checkmark_icon@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pa_checkmark_icon@3x.png"; sourceTree = "<group>"; };
 		50E9DD181D7E37FC007D0ED5 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
-		50E9DD1B1D7E385F007D0ED5 /* PABluetoothPermissionsCheck.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PABluetoothPermissionsCheck.swift; sourceTree = "<group>"; };
-		50E9DD1D1D7E3873007D0ED5 /* PAPermissionsCheck.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PAPermissionsCheck.swift; sourceTree = "<group>"; };
-		50E9DD1F1D7E3DF9007D0ED5 /* pa_cancel_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pa_cancel_icon.png; sourceTree = "<group>"; };
-		50E9DD201D7E3DF9007D0ED5 /* pa_cancel_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pa_cancel_icon@2x.png"; sourceTree = "<group>"; };
-		50E9DD211D7E3DF9007D0ED5 /* pa_cancel_icon@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pa_cancel_icon@3x.png"; sourceTree = "<group>"; };
-		50E9DD251D7E41B6007D0ED5 /* PALocationPermissionsCheck.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PALocationPermissionsCheck.swift; sourceTree = "<group>"; };
 		50E9DD271D7E41E9007D0ED5 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
-		50E9DD291D7E44AE007D0ED5 /* PAMicrophonePermissionsCheck.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PAMicrophonePermissionsCheck.swift; sourceTree = "<group>"; };
 		50E9DD2B1D7E44BD007D0ED5 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
-		50E9DD7F1D7F1448007D0ED5 /* PACameraPermissionsCheck.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PACameraPermissionsCheck.swift; sourceTree = "<group>"; };
-		50E9DD811D7F1C1E007D0ED5 /* PANotificationsPermissionsCheck.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PANotificationsPermissionsCheck.swift; sourceTree = "<group>"; };
 		50E9DD871D7F3701007D0ED5 /* PACustomPermissionsCheck.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PACustomPermissionsCheck.swift; sourceTree = "<group>"; };
-		50E9DD8A1D7F371F007D0ED5 /* PAConstraintsUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PAConstraintsUtils.swift; sourceTree = "<group>"; };
 		50E9DD8C1D7F548B007D0ED5 /* CustomPermissionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomPermissionsViewController.swift; sourceTree = "<group>"; };
 		50E9DD8E1D80925F007D0ED5 /* background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = background.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -112,9 +112,72 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5078F8CD1D86C82500A487CC /* PAPermissionsViewController */ = {
+			isa = PBXGroup;
+			children = (
+				5078F8CE1D86C82500A487CC /* Assets */,
+				5078F8E41D86C82500A487CC /* Checks */,
+				5078F8EB1D86C82500A487CC /* PAPermissionsTableViewCell.swift */,
+				5078F8EC1D86C82500A487CC /* PAPermissionsView.swift */,
+				5078F8ED1D86C82500A487CC /* PAPermissionsViewController.swift */,
+				5078F8EE1D86C82500A487CC /* Utils */,
+			);
+			path = PAPermissionsViewController;
+			sourceTree = "<group>";
+		};
+		5078F8CE1D86C82500A487CC /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				5078F8CF1D86C82500A487CC /* pa_bluetooth_icon.png */,
+				5078F8D01D86C82500A487CC /* pa_bluetooth_icon@2x.png */,
+				5078F8D11D86C82500A487CC /* pa_bluetooth_icon@3x.png */,
+				5078F8D21D86C82500A487CC /* pa_camera_icon.png */,
+				5078F8D31D86C82500A487CC /* pa_camera_icon@2x.png */,
+				5078F8D41D86C82500A487CC /* pa_camera_icon@3x.png */,
+				5078F8D51D86C82500A487CC /* pa_cancel_icon.png */,
+				5078F8D61D86C82500A487CC /* pa_cancel_icon@2x.png */,
+				5078F8D71D86C82500A487CC /* pa_cancel_icon@3x.png */,
+				5078F8D81D86C82500A487CC /* pa_checkmark_icon.png */,
+				5078F8D91D86C82500A487CC /* pa_checkmark_icon@2x.png */,
+				5078F8DA1D86C82500A487CC /* pa_checkmark_icon@3x.png */,
+				5078F8DB1D86C82500A487CC /* pa_location_icon.png */,
+				5078F8DC1D86C82500A487CC /* pa_location_icon@2x.png */,
+				5078F8DD1D86C82500A487CC /* pa_location_icon@3x.png */,
+				5078F8DE1D86C82500A487CC /* pa_microphone_icon.png */,
+				5078F8DF1D86C82500A487CC /* pa_microphone_icon@2x.png */,
+				5078F8E01D86C82500A487CC /* pa_microphone_icon@3x.png */,
+				5078F8E11D86C82500A487CC /* pa_notification_icon.png */,
+				5078F8E21D86C82500A487CC /* pa_notification_icon@2x.png */,
+				5078F8E31D86C82500A487CC /* pa_notification_icon@3x.png */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		5078F8E41D86C82500A487CC /* Checks */ = {
+			isa = PBXGroup;
+			children = (
+				5078F8E51D86C82500A487CC /* PABluetoothPermissionsCheck.swift */,
+				5078F8E61D86C82500A487CC /* PACameraPermissionsCheck.swift */,
+				5078F8E71D86C82500A487CC /* PALocationPermissionsCheck.swift */,
+				5078F8E81D86C82500A487CC /* PAMicrophonePermissionsCheck.swift */,
+				5078F8E91D86C82500A487CC /* PANotificationsPermissionsCheck.swift */,
+				5078F8EA1D86C82500A487CC /* PAPermissionsCheck.swift */,
+			);
+			path = Checks;
+			sourceTree = "<group>";
+		};
+		5078F8EE1D86C82500A487CC /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				5078F8EF1D86C82500A487CC /* PAConstraintsUtils.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		50E9DCC61D7DC370007D0ED5 = {
 			isa = PBXGroup;
 			children = (
+				5078F8CD1D86C82500A487CC /* PAPermissionsViewController */,
 				50E9DD2B1D7E44BD007D0ED5 /* AVFoundation.framework */,
 				50E9DD271D7E41E9007D0ED5 /* CoreLocation.framework */,
 				50E9DD181D7E37FC007D0ED5 /* CoreBluetooth.framework */,
@@ -134,7 +197,6 @@
 		50E9DCD11D7DC370007D0ED5 /* PAPermissionsApp */ = {
 			isa = PBXGroup;
 			children = (
-				50E9DCE41D7DC38A007D0ED5 /* PAPermissionsViewController */,
 				50E9DCD21D7DC370007D0ED5 /* AppDelegate.swift */,
 				50E9DCD41D7DC370007D0ED5 /* ViewController.swift */,
 				50E9DD8C1D7F548B007D0ED5 /* CustomPermissionsViewController.swift */,
@@ -146,68 +208,6 @@
 				50E9DD8E1D80925F007D0ED5 /* background.jpg */,
 			);
 			path = PAPermissionsApp;
-			sourceTree = "<group>";
-		};
-		50E9DCE41D7DC38A007D0ED5 /* PAPermissionsViewController */ = {
-			isa = PBXGroup;
-			children = (
-				50E9DD891D7F371F007D0ED5 /* Utils */,
-				50E9DCF11D7E2492007D0ED5 /* Assets */,
-				50E9DD1A1D7E385F007D0ED5 /* Checks */,
-				50E9DCE51D7DC39D007D0ED5 /* PAPermissionsView.swift */,
-				50E9DCE71D7DC4A9007D0ED5 /* PAPermissionsViewController.swift */,
-				50E9DCEB1D7DE089007D0ED5 /* PAPermissionsTableViewCell.swift */,
-			);
-			path = PAPermissionsViewController;
-			sourceTree = "<group>";
-		};
-		50E9DCF11D7E2492007D0ED5 /* Assets */ = {
-			isa = PBXGroup;
-			children = (
-				50E9DD1F1D7E3DF9007D0ED5 /* pa_cancel_icon.png */,
-				50E9DD201D7E3DF9007D0ED5 /* pa_cancel_icon@2x.png */,
-				50E9DD211D7E3DF9007D0ED5 /* pa_cancel_icon@3x.png */,
-				50E9DD101D7E3244007D0ED5 /* pa_checkmark_icon.png */,
-				50E9DD111D7E3244007D0ED5 /* pa_checkmark_icon@2x.png */,
-				50E9DD121D7E3244007D0ED5 /* pa_checkmark_icon@3x.png */,
-				50E9DD0A1D7E250D007D0ED5 /* pa_microphone_icon.png */,
-				50E9DD0B1D7E250D007D0ED5 /* pa_microphone_icon@2x.png */,
-				50E9DD0C1D7E250D007D0ED5 /* pa_microphone_icon@3x.png */,
-				50E9DCF21D7E2492007D0ED5 /* pa_bluetooth_icon.png */,
-				50E9DCF31D7E2492007D0ED5 /* pa_bluetooth_icon@2x.png */,
-				50E9DCF41D7E2492007D0ED5 /* pa_bluetooth_icon@3x.png */,
-				50E9DCF51D7E2492007D0ED5 /* pa_camera_icon.png */,
-				50E9DCF61D7E2492007D0ED5 /* pa_camera_icon@2x.png */,
-				50E9DCF71D7E2492007D0ED5 /* pa_camera_icon@3x.png */,
-				50E9DCF81D7E2492007D0ED5 /* pa_location_icon.png */,
-				50E9DCF91D7E2492007D0ED5 /* pa_location_icon@2x.png */,
-				50E9DCFA1D7E2492007D0ED5 /* pa_location_icon@3x.png */,
-				50E9DCFB1D7E2492007D0ED5 /* pa_notification_icon.png */,
-				50E9DCFC1D7E2492007D0ED5 /* pa_notification_icon@2x.png */,
-				50E9DCFD1D7E2492007D0ED5 /* pa_notification_icon@3x.png */,
-			);
-			path = Assets;
-			sourceTree = "<group>";
-		};
-		50E9DD1A1D7E385F007D0ED5 /* Checks */ = {
-			isa = PBXGroup;
-			children = (
-				50E9DD1B1D7E385F007D0ED5 /* PABluetoothPermissionsCheck.swift */,
-				50E9DD291D7E44AE007D0ED5 /* PAMicrophonePermissionsCheck.swift */,
-				50E9DD251D7E41B6007D0ED5 /* PALocationPermissionsCheck.swift */,
-				50E9DD1D1D7E3873007D0ED5 /* PAPermissionsCheck.swift */,
-				50E9DD7F1D7F1448007D0ED5 /* PACameraPermissionsCheck.swift */,
-				50E9DD811D7F1C1E007D0ED5 /* PANotificationsPermissionsCheck.swift */,
-			);
-			path = Checks;
-			sourceTree = "<group>";
-		};
-		50E9DD891D7F371F007D0ED5 /* Utils */ = {
-			isa = PBXGroup;
-			children = (
-				50E9DD8A1D7F371F007D0ED5 /* PAConstraintsUtils.swift */,
-			);
-			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -269,31 +269,31 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				50E9DD151D7E3244007D0ED5 /* pa_checkmark_icon@3x.png in Resources */,
-				50E9DD041D7E2492007D0ED5 /* pa_location_icon.png in Resources */,
-				50E9DD131D7E3244007D0ED5 /* pa_checkmark_icon.png in Resources */,
-				50E9DD221D7E3DF9007D0ED5 /* pa_cancel_icon.png in Resources */,
-				50E9DD141D7E3244007D0ED5 /* pa_checkmark_icon@2x.png in Resources */,
-				50E9DD091D7E2492007D0ED5 /* pa_notification_icon@3x.png in Resources */,
-				50E9DD071D7E2492007D0ED5 /* pa_notification_icon.png in Resources */,
-				50E9DD011D7E2492007D0ED5 /* pa_camera_icon.png in Resources */,
-				50E9DD021D7E2492007D0ED5 /* pa_camera_icon@2x.png in Resources */,
-				50E9DD0D1D7E250D007D0ED5 /* pa_microphone_icon.png in Resources */,
-				50E9DD031D7E2492007D0ED5 /* pa_camera_icon@3x.png in Resources */,
+				5078F8F71D86C82500A487CC /* pa_cancel_icon@2x.png in Resources */,
+				5078F8FA1D86C82500A487CC /* pa_checkmark_icon@2x.png in Resources */,
+				5078F8F91D86C82500A487CC /* pa_checkmark_icon.png in Resources */,
+				5078F9001D86C82500A487CC /* pa_microphone_icon@2x.png in Resources */,
+				5078F8F61D86C82500A487CC /* pa_cancel_icon.png in Resources */,
 				50E9DD8F1D80925F007D0ED5 /* background.jpg in Resources */,
-				50E9DD241D7E3DF9007D0ED5 /* pa_cancel_icon@3x.png in Resources */,
-				50E9DD0F1D7E250D007D0ED5 /* pa_microphone_icon@3x.png in Resources */,
 				50E9DCDD1D7DC370007D0ED5 /* LaunchScreen.storyboard in Resources */,
-				50E9DD081D7E2492007D0ED5 /* pa_notification_icon@2x.png in Resources */,
-				50E9DD0E1D7E250D007D0ED5 /* pa_microphone_icon@2x.png in Resources */,
-				50E9DD231D7E3DF9007D0ED5 /* pa_cancel_icon@2x.png in Resources */,
-				50E9DCFE1D7E2492007D0ED5 /* pa_bluetooth_icon.png in Resources */,
+				5078F9021D86C82500A487CC /* pa_notification_icon.png in Resources */,
+				5078F8F01D86C82500A487CC /* pa_bluetooth_icon.png in Resources */,
+				5078F8FC1D86C82500A487CC /* pa_location_icon.png in Resources */,
+				5078F9011D86C82500A487CC /* pa_microphone_icon@3x.png in Resources */,
+				5078F8FB1D86C82500A487CC /* pa_checkmark_icon@3x.png in Resources */,
+				5078F8FD1D86C82500A487CC /* pa_location_icon@2x.png in Resources */,
 				50E9DCDA1D7DC370007D0ED5 /* Assets.xcassets in Resources */,
-				50E9DD061D7E2492007D0ED5 /* pa_location_icon@3x.png in Resources */,
-				50E9DD001D7E2492007D0ED5 /* pa_bluetooth_icon@3x.png in Resources */,
+				5078F8F41D86C82500A487CC /* pa_camera_icon@2x.png in Resources */,
+				5078F9041D86C82500A487CC /* pa_notification_icon@3x.png in Resources */,
+				5078F9031D86C82500A487CC /* pa_notification_icon@2x.png in Resources */,
 				50E9DCD81D7DC370007D0ED5 /* Main.storyboard in Resources */,
-				50E9DD051D7E2492007D0ED5 /* pa_location_icon@2x.png in Resources */,
-				50E9DCFF1D7E2492007D0ED5 /* pa_bluetooth_icon@2x.png in Resources */,
+				5078F8F51D86C82500A487CC /* pa_camera_icon@3x.png in Resources */,
+				5078F8F11D86C82500A487CC /* pa_bluetooth_icon@2x.png in Resources */,
+				5078F8F31D86C82500A487CC /* pa_camera_icon.png in Resources */,
+				5078F8FE1D86C82500A487CC /* pa_location_icon@3x.png in Resources */,
+				5078F8FF1D86C82500A487CC /* pa_microphone_icon.png in Resources */,
+				5078F8F81D86C82500A487CC /* pa_cancel_icon@3x.png in Resources */,
+				5078F8F21D86C82500A487CC /* pa_bluetooth_icon@3x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -304,19 +304,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				50E9DCE81D7DC4A9007D0ED5 /* PAPermissionsViewController.swift in Sources */,
-				50E9DD8B1D7F371F007D0ED5 /* PAConstraintsUtils.swift in Sources */,
+				5078F9091D86C82500A487CC /* PANotificationsPermissionsCheck.swift in Sources */,
+				5078F90E1D86C82500A487CC /* PAConstraintsUtils.swift in Sources */,
 				50E9DD8D1D7F548B007D0ED5 /* CustomPermissionsViewController.swift in Sources */,
-				50E9DD1C1D7E385F007D0ED5 /* PABluetoothPermissionsCheck.swift in Sources */,
+				5078F90C1D86C82500A487CC /* PAPermissionsView.swift in Sources */,
+				5078F90A1D86C82500A487CC /* PAPermissionsCheck.swift in Sources */,
+				5078F90D1D86C82500A487CC /* PAPermissionsViewController.swift in Sources */,
 				50E9DCD51D7DC370007D0ED5 /* ViewController.swift in Sources */,
-				50E9DCE61D7DC39D007D0ED5 /* PAPermissionsView.swift in Sources */,
-				50E9DD2A1D7E44AE007D0ED5 /* PAMicrophonePermissionsCheck.swift in Sources */,
-				50E9DD801D7F1448007D0ED5 /* PACameraPermissionsCheck.swift in Sources */,
 				50E9DD881D7F3701007D0ED5 /* PACustomPermissionsCheck.swift in Sources */,
-				50E9DCEC1D7DE089007D0ED5 /* PAPermissionsTableViewCell.swift in Sources */,
-				50E9DD261D7E41B6007D0ED5 /* PALocationPermissionsCheck.swift in Sources */,
-				50E9DD821D7F1C1E007D0ED5 /* PANotificationsPermissionsCheck.swift in Sources */,
-				50E9DD1E1D7E3873007D0ED5 /* PAPermissionsCheck.swift in Sources */,
+				5078F9071D86C82500A487CC /* PALocationPermissionsCheck.swift in Sources */,
+				5078F9081D86C82500A487CC /* PAMicrophonePermissionsCheck.swift in Sources */,
+				5078F9061D86C82500A487CC /* PACameraPermissionsCheck.swift in Sources */,
+				5078F90B1D86C82500A487CC /* PAPermissionsTableViewCell.swift in Sources */,
+				5078F9051D86C82500A487CC /* PABluetoothPermissionsCheck.swift in Sources */,
 				50E9DCD31D7DC370007D0ED5 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
