@@ -79,7 +79,18 @@ class PAPermissionsView: UIView, UITableViewDataSource, UITableViewDelegate {
 	private weak var tableView: UITableView!
 	private weak var refreshControl: UIRefreshControl!
 	private weak var imageView: UIImageView!
-	private weak var blurEffectView: UIVisualEffectView!
+	
+	private weak var _blurEffectView: AnyObject!
+	@available(iOS 8.0, *)
+	private weak var blurEffectView: UIVisualEffectView! {
+		get {
+			return self._blurEffectView as! UIVisualEffectView
+		}
+		
+		set(newView) {
+			self._blurEffectView = newView
+		}
+	}
 	
 	var permissions: [PAPermissionsItem] = Array()
 	
@@ -93,6 +104,7 @@ class PAPermissionsView: UIView, UITableViewDataSource, UITableViewDelegate {
 		}
 	}
 	
+	@available (iOS 8, *)
 	var useBlurBackground: Bool {
 		get {
 			return self.blurEffectView != nil
@@ -186,7 +198,11 @@ class PAPermissionsView: UIView, UITableViewDataSource, UITableViewDelegate {
 		allConstraints.appendContentsOf(horizontalConstraints("detailsLabel"))
 		allConstraints.appendContentsOf(horizontalConstraints("tableView"))
 		allConstraints.appendContentsOf(horizontalConstraints("continueButton"))
-		NSLayoutConstraint.activateConstraints(allConstraints)
+		if #available(iOS 8.0, *) {
+			NSLayoutConstraint.activateConstraints(allConstraints)
+		} else {
+			self.addConstraints(allConstraints)
+		}
 	}
 	
 	private func setupTitleLabel() {

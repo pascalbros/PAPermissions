@@ -83,7 +83,11 @@ class PAPermissionsTableViewCell: UITableViewCell {
 			"H:[iconImageView]-8-[detailsLabel]-4-[rightDetailsContainer]"
 			], views: views)
 		
-		NSLayoutConstraint.activateConstraints(allConstraints)
+		if #available(iOS 8.0, *) {
+			NSLayoutConstraint.activateConstraints(allConstraints)
+		} else {
+			self.addConstraints(allConstraints)
+		}
 		
 		self.setupEnableButton(.Disabled)
 	}
@@ -166,7 +170,11 @@ class PAPermissionsTableViewCell: UITableViewCell {
 				], views: views)
 			allConstraints.append(NSLayoutConstraint.init(item: self.enableButton, attribute: NSLayoutAttribute.CenterY, relatedBy: NSLayoutRelation.Equal, toItem: self.enableButton.superview, attribute: NSLayoutAttribute.CenterY, multiplier: 1.0, constant: 0.0))
 			
-			NSLayoutConstraint.activateConstraints(allConstraints)
+			if #available(iOS 8.0, *) {
+				NSLayoutConstraint.activateConstraints(allConstraints)
+			} else {
+				self.rightDetailsContainer.addConstraints(allConstraints)
+			}
 		}
 		
 		self.enableButton.tintColor = self.tintColor

@@ -70,6 +70,7 @@ class PAPermissionsViewController: UIViewController, PAPermissionsViewDelegate, 
 		}
 	}
 	
+	@available (iOS 8, *)
 	var useBlurBackground: Bool {
 		get {
 			return self.permissionsView.useBlurBackground

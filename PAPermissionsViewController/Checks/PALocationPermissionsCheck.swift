@@ -20,16 +20,27 @@ class PALocationPermissionsCheck: PAPermissionsCheck, CLLocationManagerDelegate 
 	}
 	
 	override func defaultAction() {
-		if CLLocationManager.authorizationStatus() == .Denied {
-			let settingsURL = NSURL(string: UIApplicationOpenSettingsURLString)
-			UIApplication.sharedApplication().openURL(settingsURL!)
-		}else{
-			if self.requestAlwaysAuthorization {
-				self.locationManager.requestAlwaysAuthorization()
+		
+		if #available(iOS 8.0, *) {
+			if CLLocationManager.authorizationStatus() == .Denied {
+				let settingsURL = NSURL(string: UIApplicationOpenSettingsURLString)
+				UIApplication.sharedApplication().openURL(settingsURL!)
 			}else{
-				self.locationManager.requestWhenInUseAuthorization()
+				if self.requestAlwaysAuthorization {
+					self.locationManager.requestAlwaysAuthorization()
+				}else{
+					self.locationManager.requestWhenInUseAuthorization()
+				}
+				self.updateStatus()
 			}
-			self.updateStatus()
+		}else{
+			if CLLocationManager.authorizationStatus() == .Denied {
+				let settingsURL = NSURL(string: "prefs:root=LOCATION_SERVICES")
+				UIApplication.sharedApplication().openURL(settingsURL!)
+			}else{
+				self.status = .Enabled
+				self.updateStatus()
+			}
 		}
 	}
 	
