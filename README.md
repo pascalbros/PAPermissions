@@ -8,6 +8,7 @@ Right now it supports out of the box permissions for:
 - Notifications
 - Microphone
 - Camera
+- Contacts
 - Custom
 
 ##### NB: PAPermissions is written in Swift 2.2, if you are looking for the Swift 3 version of it, please check the [Swift3 branch](https://github.com/pascalbros/PAPermissions/tree/Swift3)

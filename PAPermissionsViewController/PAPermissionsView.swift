@@ -20,6 +20,7 @@ protocol PAPermissionsViewDelegate {
 enum PAPermissionsStatus: Int {
 	case Disabled
 	case Enabled
+	case Denied
 	case Checking
 	case Unavailable
 }
@@ -30,6 +31,7 @@ enum PAPermissionsType: String {
 	case Notifications = "notifications"
 	case Microphone = "microphone"
 	case Camera = "camera"
+	case Contacts = "contacts"
 	case Custom = "custom"
 }
 
@@ -61,6 +63,8 @@ class PAPermissionsItem {
 			return PAPermissionsItem(type: type, identifier: type.rawValue, title: NSLocalizedString("Microphone", comment: ""), reason: localReason, icon: UIImage(named: "pa_microphone_icon.png")!)
 		case .Camera:
 			return PAPermissionsItem(type: type, identifier: type.rawValue, title: NSLocalizedString("Camera", comment: ""), reason: localReason, icon: UIImage(named: "pa_camera_icon.png")!)
+		case .Contacts:
+			return PAPermissionsItem(type: type, identifier: type.rawValue, title: NSLocalizedString("Contacts", comment: ""), reason: localReason, icon: UIImage(named: "pa_contacts_icon.png")!)
 		default:
 			return nil
 		}

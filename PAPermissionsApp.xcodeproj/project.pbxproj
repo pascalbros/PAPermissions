@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5076DE861D885BA700440C0F /* PAContactsCheck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5076DE851D885BA700440C0F /* PAContactsCheck.swift */; };
 		5078F8F01D86C82500A487CC /* pa_bluetooth_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 5078F8CF1D86C82500A487CC /* pa_bluetooth_icon.png */; };
 		5078F8F11D86C82500A487CC /* pa_bluetooth_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5078F8D01D86C82500A487CC /* pa_bluetooth_icon@2x.png */; };
 		5078F8F21D86C82500A487CC /* pa_bluetooth_icon@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5078F8D11D86C82500A487CC /* pa_bluetooth_icon@3x.png */; };
@@ -38,6 +39,9 @@
 		5078F90C1D86C82500A487CC /* PAPermissionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5078F8EC1D86C82500A487CC /* PAPermissionsView.swift */; };
 		5078F90D1D86C82500A487CC /* PAPermissionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5078F8ED1D86C82500A487CC /* PAPermissionsViewController.swift */; };
 		5078F90E1D86C82500A487CC /* PAConstraintsUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5078F8EF1D86C82500A487CC /* PAConstraintsUtils.swift */; };
+		50DF9A641D886DC1001E663C /* pa_contacts_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 50DF9A611D886DC1001E663C /* pa_contacts_icon.png */; };
+		50DF9A651D886DC1001E663C /* pa_contacts_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 50DF9A621D886DC1001E663C /* pa_contacts_icon@2x.png */; };
+		50DF9A661D886DC1001E663C /* pa_contacts_icon@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 50DF9A631D886DC1001E663C /* pa_contacts_icon@3x.png */; };
 		50E9DCD31D7DC370007D0ED5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E9DCD21D7DC370007D0ED5 /* AppDelegate.swift */; };
 		50E9DCD51D7DC370007D0ED5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E9DCD41D7DC370007D0ED5 /* ViewController.swift */; };
 		50E9DCD81D7DC370007D0ED5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50E9DCD61D7DC370007D0ED5 /* Main.storyboard */; };
@@ -52,6 +56,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5076DE851D885BA700440C0F /* PAContactsCheck.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PAContactsCheck.swift; sourceTree = "<group>"; };
 		5078F8CF1D86C82500A487CC /* pa_bluetooth_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pa_bluetooth_icon.png; sourceTree = "<group>"; };
 		5078F8D01D86C82500A487CC /* pa_bluetooth_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pa_bluetooth_icon@2x.png"; sourceTree = "<group>"; };
 		5078F8D11D86C82500A487CC /* pa_bluetooth_icon@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pa_bluetooth_icon@3x.png"; sourceTree = "<group>"; };
@@ -83,6 +88,9 @@
 		5078F8EC1D86C82500A487CC /* PAPermissionsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PAPermissionsView.swift; sourceTree = "<group>"; };
 		5078F8ED1D86C82500A487CC /* PAPermissionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PAPermissionsViewController.swift; sourceTree = "<group>"; };
 		5078F8EF1D86C82500A487CC /* PAConstraintsUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PAConstraintsUtils.swift; sourceTree = "<group>"; };
+		50DF9A611D886DC1001E663C /* pa_contacts_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pa_contacts_icon.png; sourceTree = "<group>"; };
+		50DF9A621D886DC1001E663C /* pa_contacts_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pa_contacts_icon@2x.png"; sourceTree = "<group>"; };
+		50DF9A631D886DC1001E663C /* pa_contacts_icon@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pa_contacts_icon@3x.png"; sourceTree = "<group>"; };
 		50E9DCCF1D7DC370007D0ED5 /* PAPermissionsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PAPermissionsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		50E9DCD21D7DC370007D0ED5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		50E9DCD41D7DC370007D0ED5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -149,6 +157,9 @@
 				5078F8E11D86C82500A487CC /* pa_notification_icon.png */,
 				5078F8E21D86C82500A487CC /* pa_notification_icon@2x.png */,
 				5078F8E31D86C82500A487CC /* pa_notification_icon@3x.png */,
+				50DF9A611D886DC1001E663C /* pa_contacts_icon.png */,
+				50DF9A621D886DC1001E663C /* pa_contacts_icon@2x.png */,
+				50DF9A631D886DC1001E663C /* pa_contacts_icon@3x.png */,
 			);
 			path = Assets;
 			sourceTree = "<group>";
@@ -161,6 +172,7 @@
 				5078F8E71D86C82500A487CC /* PALocationPermissionsCheck.swift */,
 				5078F8E81D86C82500A487CC /* PAMicrophonePermissionsCheck.swift */,
 				5078F8E91D86C82500A487CC /* PANotificationsPermissionsCheck.swift */,
+				5076DE851D885BA700440C0F /* PAContactsCheck.swift */,
 				5078F8EA1D86C82500A487CC /* PAPermissionsCheck.swift */,
 			);
 			path = Checks;
@@ -270,6 +282,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5078F8F71D86C82500A487CC /* pa_cancel_icon@2x.png in Resources */,
+				50DF9A641D886DC1001E663C /* pa_contacts_icon.png in Resources */,
 				5078F8FA1D86C82500A487CC /* pa_checkmark_icon@2x.png in Resources */,
 				5078F8F91D86C82500A487CC /* pa_checkmark_icon.png in Resources */,
 				5078F9001D86C82500A487CC /* pa_microphone_icon@2x.png in Resources */,
@@ -278,8 +291,10 @@
 				50E9DCDD1D7DC370007D0ED5 /* LaunchScreen.storyboard in Resources */,
 				5078F9021D86C82500A487CC /* pa_notification_icon.png in Resources */,
 				5078F8F01D86C82500A487CC /* pa_bluetooth_icon.png in Resources */,
+				50DF9A651D886DC1001E663C /* pa_contacts_icon@2x.png in Resources */,
 				5078F8FC1D86C82500A487CC /* pa_location_icon.png in Resources */,
 				5078F9011D86C82500A487CC /* pa_microphone_icon@3x.png in Resources */,
+				50DF9A661D886DC1001E663C /* pa_contacts_icon@3x.png in Resources */,
 				5078F8FB1D86C82500A487CC /* pa_checkmark_icon@3x.png in Resources */,
 				5078F8FD1D86C82500A487CC /* pa_location_icon@2x.png in Resources */,
 				50E9DCDA1D7DC370007D0ED5 /* Assets.xcassets in Resources */,
@@ -317,6 +332,7 @@
 				5078F9061D86C82500A487CC /* PACameraPermissionsCheck.swift in Sources */,
 				5078F90B1D86C82500A487CC /* PAPermissionsTableViewCell.swift in Sources */,
 				5078F9051D86C82500A487CC /* PABluetoothPermissionsCheck.swift in Sources */,
+				5076DE861D885BA700440C0F /* PAContactsCheck.swift in Sources */,
 				50E9DCD31D7DC370007D0ED5 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

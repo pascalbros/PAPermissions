@@ -15,6 +15,7 @@ class CustomPermissionsViewController: PAPermissionsViewController {
 	let microphoneCheck = PAMicrophonePermissionsCheck()
 	let cameraCheck = PACameraPermissionsCheck()
 	let notificationsCheck = PANotificationsPermissionsCheck()
+	let contactsCheck = PAContactsCheck()
 	let customCheck = PACustomPermissionsCheck()
 
 	override func viewDidLoad() {
@@ -29,13 +30,15 @@ class CustomPermissionsViewController: PAPermissionsViewController {
 						   PAPermissionsItem.itemForType(.Microphone, reason: "Required to hear your beautiful voice")!,
 						   PAPermissionsItem.itemForType(.Notifications, reason: "Required to send you great updates")!,
 						   PAPermissionsItem.itemForType(.Camera, reason: "Required to shoot awesome photos")!,
+						   PAPermissionsItem.itemForType(.Contacts, reason: "Required to add your contacts")!,
 						   PAPermissionsItem(type: .Custom, identifier: "my-custom-permission", title: "Custom Option", reason: "Optional", icon: UIImage(named: "pa_checkmark_icon.png")!)]
 		
 		let handlers = [PAPermissionsType.Bluetooth.rawValue: self.bluetoothCheck,
 						PAPermissionsType.Location.rawValue: self.locationCheck,
 						PAPermissionsType.Microphone.rawValue: self.microphoneCheck,
-						PAPermissionsType.Camera.rawValue: self.cameraCheck,
 						PAPermissionsType.Notifications.rawValue: self.notificationsCheck,
+						PAPermissionsType.Camera.rawValue: self.cameraCheck,
+						PAPermissionsType.Contacts.rawValue: self.contactsCheck,
 						"my-custom-permission": self.customCheck]
 		self.setupData(permissions, handlers: handlers)
 		//self.tintColor = UIColor.whiteColor()
