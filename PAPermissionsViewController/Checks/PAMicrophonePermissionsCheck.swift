@@ -16,18 +16,18 @@ class PAMicrophonePermissionsCheck: PAPermissionsCheck {
 	override func checkStatus() {
 		let currentStatus = self.status
 
-		if AVAudioSession.sharedInstance().inputAvailable {
+		if AVAudioSession.sharedInstance().isInputAvailable {
 			if #available(iOS 8.0, *) {
-				if AVAudioSession.sharedInstance().recordPermission() == .Granted {
-					self.status = .Enabled
+				if AVAudioSession.sharedInstance().recordPermission() == .granted {
+					self.status = .enabled
 				}else{
-					self.status = .Disabled
+					self.status = .disabled
 				}
 			}else{
-				self.status = .Enabled
+				self.status = .enabled
 			}
 		}else{
-			self.status = .Unavailable
+			self.status = .unavailable
 		}
 		
 		if self.status != currentStatus {
@@ -37,15 +37,15 @@ class PAMicrophonePermissionsCheck: PAPermissionsCheck {
 	
 	override func defaultAction() {
 		if #available(iOS 8.0, *) {
-			if AVAudioSession.sharedInstance().recordPermission() == .Denied {
-				let settingsURL = NSURL(string: UIApplicationOpenSettingsURLString)
-				UIApplication.sharedApplication().openURL(settingsURL!)
+			if AVAudioSession.sharedInstance().recordPermission() == .denied {
+				let settingsURL = URL(string: UIApplicationOpenSettingsURLString)
+				UIApplication.shared.openURL(settingsURL!)
 			}else{
 				AVAudioSession.sharedInstance().requestRecordPermission { (result) in
 					if result {
-						self.status = .Enabled
+						self.status = .enabled
 					}else{
-						self.status = .Disabled
+						self.status = .disabled
 					}
 					
 					self.updateStatus()

@@ -9,14 +9,14 @@
 import UIKit
 
 protocol PAPermissionsViewControllerDelegate {
-	func permissionsViewControllerDidContinue(viewController: PAPermissionsViewController)
+	func permissionsViewControllerDidContinue(_ viewController: PAPermissionsViewController)
 }
 
 class PAPermissionsViewController: UIViewController, PAPermissionsViewDelegate, PAPermissionsViewDataSource, PAPermissionsCheckDelegate {
 	
 	var delegate: PAPermissionsViewControllerDelegate?
-	private var permissionHandlers: [String: PAPermissionsCheck] = Dictionary()
-	private weak var permissionsView: PAPermissionsView!
+	fileprivate var permissionHandlers: [String: PAPermissionsCheck] = Dictionary()
+	fileprivate weak var permissionsView: PAPermissionsView!
 	
 	var titleText: String? {
 		get {
@@ -86,28 +86,28 @@ class PAPermissionsViewController: UIViewController, PAPermissionsViewDelegate, 
 		self.setupUI()
 	}
 	
-	override func viewDidAppear(animated: Bool) {
+	override func viewDidAppear(_ animated: Bool) {
 		super.viewDidAppear(animated)
 		if self.permissionHandlers.count != 0 {
 			self.permissionsView.reloadPermissions()
 		}
 	}
 	
-	private func setupUI() {
-		let mainView = PAPermissionsView(frame: CGRect(origin: CGPointZero, size: CGSizeZero));
+	fileprivate func setupUI() {
+		let mainView = PAPermissionsView(frame: CGRect(origin: CGPoint.zero, size: CGSize.zero));
 		mainView.delegate = self
 		mainView.dataSource = self
 		self.view.addSubview(mainView)
 		self.permissionsView = mainView
 		
 		mainView.translatesAutoresizingMaskIntoConstraints = false
-		mainView.superview!.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("H:|-0-[subview]-0-|", options: .DirectionLeadingToTrailing, metrics: nil, views: ["subview": mainView]))
-		mainView.superview!.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("V:|-0-[subview]-0-|", options: .DirectionLeadingToTrailing, metrics: nil, views: ["subview": mainView]))
-		mainView.backgroundColor = UIColor.whiteColor()
-		mainView.continueButton.addTarget(self, action: #selector(PAPermissionsViewController.didContinue), forControlEvents: .TouchUpInside)
+		mainView.superview!.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-0-[subview]-0-|", options: [], metrics: nil, views: ["subview": mainView]))
+		mainView.superview!.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|-0-[subview]-0-|", options: [], metrics: nil, views: ["subview": mainView]))
+		mainView.backgroundColor = UIColor.white
+		mainView.continueButton.addTarget(self, action: #selector(PAPermissionsViewController.didContinue), for: .touchUpInside)
 	}
 	
-	func setupData(permissions: [PAPermissionsItem], handlers:[String: PAPermissionsCheck]) {
+	func setupData(_ permissions: [PAPermissionsItem], handlers:[String: PAPermissionsCheck]) {
 		
 		assert(permissions.count == handlers.count, "Count mismatch")
 		
@@ -120,15 +120,15 @@ class PAPermissionsViewController: UIViewController, PAPermissionsViewDelegate, 
 		}
 	}
 	
-	@objc private func didContinue() {
+	@objc fileprivate func didContinue() {
 		if let delegate = self.delegate {
 			delegate.permissionsViewControllerDidContinue(self)
 		}else{
-			self.dismissViewControllerAnimated(true, completion: nil)
+			self.dismiss(animated: true, completion: nil)
 		}
 	}
 	
-	func permissionsView(view: PAPermissionsView, checkStatus permission: PAPermissionsItem) {
+	func permissionsView(_ view: PAPermissionsView, checkStatus permission: PAPermissionsItem) {
 		if let permissionsCheck = self.permissionHandlers[permission.identifier] {
 			permissionsCheck.checkStatus()
 		}else{
@@ -136,7 +136,7 @@ class PAPermissionsViewController: UIViewController, PAPermissionsViewDelegate, 
 		}
 	}
 	
-	func permissionsView(view: PAPermissionsView, permissionSelected permission: PAPermissionsItem) {
+	func permissionsView(_ view: PAPermissionsView, permissionSelected permission: PAPermissionsItem) {
 		if let permissionsCheck = self.permissionHandlers[permission.identifier] {
 			permissionsCheck.defaultAction()
 		}else{
@@ -144,17 +144,17 @@ class PAPermissionsViewController: UIViewController, PAPermissionsViewDelegate, 
 		}
 	}
 	
-	func permissionsView(view: PAPermissionsView, isPermissionEnabled permission: PAPermissionsItem) -> PAPermissionsStatus {
+	func permissionsView(_ view: PAPermissionsView, isPermissionEnabled permission: PAPermissionsItem) -> PAPermissionsStatus {
 		
 		if let permissionsCheck = self.permissionHandlers[permission.identifier] {
 			return permissionsCheck.status
 		}else{
 			//Custom code, should not reach here
-			return .Unavailable
+			return .unavailable
 		}
 	}
 	
-	func permissionCheck(permissionCheck: PAPermissionsCheck, didCheckStatus: PAPermissionsStatus) {
+	func permissionCheck(_ permissionCheck: PAPermissionsCheck, didCheckStatus: PAPermissionsStatus) {
 		self.permissionsView.reloadPermissions()
 	}
 	

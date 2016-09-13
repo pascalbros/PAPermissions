@@ -9,13 +9,13 @@
 import UIKit
 
 protocol PAPermissionsCheckDelegate {
-	func permissionCheck(permissionCheck: PAPermissionsCheck, didCheckStatus: PAPermissionsStatus);
+	func permissionCheck(_ permissionCheck: PAPermissionsCheck, didCheckStatus: PAPermissionsStatus);
 }
 
 class PAPermissionsCheck: NSObject {
 	
 	var delegate: PAPermissionsCheckDelegate?
-	var status: PAPermissionsStatus = PAPermissionsStatus.Checking
+	var status: PAPermissionsStatus = PAPermissionsStatus.checking
 	func checkStatus() {
 		fatalError("checkStatus has not been implemented")
 	}
@@ -26,7 +26,7 @@ class PAPermissionsCheck: NSObject {
 	
 	func updateStatus() {
 		if let d = self.delegate {
-			dispatch_async(dispatch_get_main_queue()){
+			DispatchQueue.main.async{
 				d.permissionCheck(self, didCheckStatus: self.status)
 			}
 		}
