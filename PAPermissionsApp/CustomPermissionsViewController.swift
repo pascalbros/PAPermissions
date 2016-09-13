@@ -33,34 +33,31 @@ class CustomPermissionsViewController: PAPermissionsViewController {
 		}
 	}()
 
+
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		
-		//Custom settings
-		self.locationCheck.requestAlwaysAuthorization = true
-		
-		
-		let permissions = [
-			PAPermissionsItem.itemForType(.Calendar, reason: "Required to show your Apple Calendar")!,
-			PAPermissionsItem.itemForType(.Reminders, reason: "Required to show your Apple Reminders")!,
-			PAPermissionsItem.itemForType(.Contacts, reason: "Required to show your Contacts")!,
 
-			PAPermissionsItem.itemForType(.Bluetooth, reason: "Required to connect with your cool device")!,
-			PAPermissionsItem.itemForType(.Location, reason: "Required to locate yourself")!,
-			PAPermissionsItem.itemForType(.Microphone, reason: "Required to hear your beautiful voice")!,
-			PAPermissionsItem.itemForType(.Notifications, reason: "Required to send you great updates")!,
-			PAPermissionsItem.itemForType(.Camera, reason: "Required to shoot awesome photos")!,
-			PAPermissionsItem(type: .Custom, identifier: "my-custom-permission", title: "Custom Option", reason: "Optional", icon: UIImage(named: "pa_checkmark_icon.png")!)]
+		let permissions = [
+			PAPermissionsItem.itemForType(.calendar, reason: PAPermissionDefaultReason)!,
+			PAPermissionsItem.itemForType(.reminders, reason: PAPermissionDefaultReason)!,
+			PAPermissionsItem.itemForType(.contacts, reason: PAPermissionDefaultReason)!,
+
+			PAPermissionsItem.itemForType(.bluetooth, reason: PAPermissionDefaultReason)!,
+			PAPermissionsItem.itemForType(.location, reason: PAPermissionDefaultReason)!,
+			PAPermissionsItem.itemForType(.microphone, reason: PAPermissionDefaultReason)!,
+			PAPermissionsItem.itemForType(.notifications, reason: "Required to send you great updates")!,
+			PAPermissionsItem.itemForType(.camera, reason: PAPermissionDefaultReason)!,
+			PAPermissionsItem(type: .custom, identifier: "my-custom-permission", title: "Custom Option", reason: "Optional", icon: UIImage(named: "pa_checkmark_icon.png")!)]
 
 		let handlers = [
-			PAPermissionsType.Calendar.rawValue: self.calendarCheck,
-			PAPermissionsType.Reminders.rawValue: self.reminderCheck,
-			PAPermissionsType.Contacts.rawValue: self.contactsCheck,
-			PAPermissionsType.Bluetooth.rawValue: self.bluetoothCheck,
-			PAPermissionsType.Location.rawValue: self.locationCheck,
-			PAPermissionsType.Microphone.rawValue: self.microphoneCheck,
-			PAPermissionsType.Camera.rawValue: self.cameraCheck,
-			PAPermissionsType.Notifications.rawValue: self.notificationsCheck,
+			PAPermissionsType.calendar.rawValue: self.calendarCheck,
+			PAPermissionsType.reminders.rawValue: self.reminderCheck,
+			PAPermissionsType.contacts.rawValue: self.contactsCheck,
+			PAPermissionsType.bluetooth.rawValue: self.bluetoothCheck,
+			PAPermissionsType.location.rawValue: self.locationCheck,
+			PAPermissionsType.microphone.rawValue: self.microphoneCheck,
+			PAPermissionsType.camera.rawValue: self.cameraCheck,
+			PAPermissionsType.notifications.rawValue: self.notificationsCheck,
 			"my-custom-permission": self.customCheck]
 
 		self.setupData(permissions, handlers: handlers)

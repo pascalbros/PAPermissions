@@ -11,7 +11,9 @@ import UIKit
 
 class PALocationPermissionsCheck: PAPermissionsCheck, CLLocationManagerDelegate {
 	
-	var requestAlwaysAuthorization = false
+	var requestAlwaysAuthorization : Bool {
+		return Bundle.main.object(forInfoDictionaryKey: Constants.InfoPlistKeys.locationAlways) == nil ? false:true
+	}
 	fileprivate var locationManager = CLLocationManager()
 	
 	override func checkStatus() {

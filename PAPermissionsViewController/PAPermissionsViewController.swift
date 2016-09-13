@@ -8,6 +8,20 @@
 
 import UIKit
 
+enum Constants {
+	struct InfoPlistKeys {
+		static let locationWhenInUse        = "NSLocationWhenInUseUsageDescription"
+		static let locationAlways           = "NSLocationAlwaysUsageDescription"
+		static let calendar                 = "NSCalendarsUsageDescription"
+		static let reminders                = "NSRemindersUsageDescription"
+		static let contacts                 = "NSContactsUsageDescription"
+		static let camera 					= "NSCameraUsageDescription"
+		static let microphone				= "NSMicrophoneUsageDescription"
+		static let bluetooth				= "NSBluetoothPeripheralUsageDescription"
+	}
+}
+
+
 protocol PAPermissionsViewControllerDelegate {
 	func permissionsViewControllerDidContinue(_ viewController: PAPermissionsViewController)
 }
@@ -17,7 +31,7 @@ class PAPermissionsViewController: UIViewController, PAPermissionsViewDelegate, 
 	var delegate: PAPermissionsViewControllerDelegate?
 	fileprivate var permissionHandlers: [String: PAPermissionsCheck] = Dictionary()
 	fileprivate weak var permissionsView: PAPermissionsView!
-	
+
 	var titleText: String? {
 		get {
 			return self.permissionsView.titleLabel.text
@@ -80,7 +94,7 @@ class PAPermissionsViewController: UIViewController, PAPermissionsViewDelegate, 
 			self.permissionsView.useBlurBackground = newBlurBackground
 		}
 	}
-	
+
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		self.setupUI()

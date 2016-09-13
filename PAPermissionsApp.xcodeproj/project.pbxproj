@@ -12,6 +12,7 @@
 		407CBF1B1D8864C2005DE918 /* PAEventKitPermissionsCheck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407CBF1A1D8864C2005DE918 /* PAEventKitPermissionsCheck.swift */; };
 		407CBF1D1D8864D2005DE918 /* PACNContactsPermissionsCheck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407CBF1C1D8864D2005DE918 /* PACNContactsPermissionsCheck.swift */; };
 		40B2C1A41D887A3900731B20 /* PAABAddressBookCheck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B2C1A31D887A3900731B20 /* PAABAddressBookCheck.swift */; };
+		40B2C1EB1D88851800731B20 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 40B2C1EA1D88851800731B20 /* InfoPlist.strings */; };
 		5078F9051D86C82500A487CC /* PABluetoothPermissionsCheck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5078F8E51D86C82500A487CC /* PABluetoothPermissionsCheck.swift */; };
 		5078F9061D86C82500A487CC /* PACameraPermissionsCheck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5078F8E61D86C82500A487CC /* PACameraPermissionsCheck.swift */; };
 		5078F9071D86C82500A487CC /* PALocationPermissionsCheck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5078F8E71D86C82500A487CC /* PALocationPermissionsCheck.swift */; };
@@ -41,6 +42,7 @@
 		407CBF1A1D8864C2005DE918 /* PAEventKitPermissionsCheck.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PAEventKitPermissionsCheck.swift; sourceTree = "<group>"; };
 		407CBF1C1D8864D2005DE918 /* PACNContactsPermissionsCheck.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PACNContactsPermissionsCheck.swift; sourceTree = "<group>"; };
 		40B2C1A31D887A3900731B20 /* PAABAddressBookCheck.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PAABAddressBookCheck.swift; sourceTree = "<group>"; };
+		40B2C1EA1D88851800731B20 /* InfoPlist.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = InfoPlist.strings; sourceTree = "<group>"; };
 		5078F8E51D86C82500A487CC /* PABluetoothPermissionsCheck.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PABluetoothPermissionsCheck.swift; sourceTree = "<group>"; };
 		5078F8E61D86C82500A487CC /* PACameraPermissionsCheck.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PACameraPermissionsCheck.swift; sourceTree = "<group>"; };
 		5078F8E71D86C82500A487CC /* PALocationPermissionsCheck.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PALocationPermissionsCheck.swift; sourceTree = "<group>"; };
@@ -157,6 +159,7 @@
 				50E9DCD91D7DC370007D0ED5 /* Assets.xcassets */,
 				50E9DCDB1D7DC370007D0ED5 /* LaunchScreen.storyboard */,
 				50E9DCDE1D7DC370007D0ED5 /* Info.plist */,
+				40B2C1EA1D88851800731B20 /* InfoPlist.strings */,
 				50E9DD8E1D80925F007D0ED5 /* background.jpg */,
 			);
 			path = PAPermissionsApp;
@@ -222,6 +225,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				50E9DD8F1D80925F007D0ED5 /* background.jpg in Resources */,
+				40B2C1EB1D88851800731B20 /* InfoPlist.strings in Resources */,
 				50E9DCDD1D7DC370007D0ED5 /* LaunchScreen.storyboard in Resources */,
 				407CBF151D8860AA005DE918 /* pa_icons.xcassets in Resources */,
 				50E9DCDA1D7DC370007D0ED5 /* Assets.xcassets in Resources */,
