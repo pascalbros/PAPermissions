@@ -18,10 +18,10 @@ class ViewController: UIViewController {
 	
 	let customCheck = PACustomPermissionsCheck()
 	
-	@IBAction func didShowPermissions(sender: AnyObject) {
+	@IBAction func didShowPermissions(_ sender: AnyObject) {
 		
-		let controller = self.storyboard?.instantiateViewControllerWithIdentifier("CustomPermissionsViewController")
-		self.presentViewController(controller!, animated: true, completion: nil)
+		let controller = self.storyboard?.instantiateViewController(withIdentifier: "CustomPermissionsViewController")
+		self.present(controller!, animated: true, completion: nil)
 	}
 	override func viewDidLoad() {
 		super.viewDidLoad()

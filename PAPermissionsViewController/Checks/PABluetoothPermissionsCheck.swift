@@ -17,31 +17,31 @@ class PABluetoothPermissionsCheck: PAPermissionsCheck, CBCentralManagerDelegate 
 	
 	override func defaultAction() {
 		if #available(iOS 9, *) {
-			let url = NSURL(string: "prefs:root=Bluetooth")!
-			UIApplication.sharedApplication().openURL(url)
+			let url = URL(string: "prefs:root=Bluetooth")!
+			UIApplication.shared.openURL(url)
 		} else {
-			let url = NSURL(string: "prefs:root=General&path=Bluetooth")!
-			UIApplication.sharedApplication().openURL(url)
+			let url = URL(string: "prefs:root=General&path=Bluetooth")!
+			UIApplication.shared.openURL(url)
 		}
 	}
 	
-	func centralManagerDidUpdateState(central: CBCentralManager) {
+	func centralManagerDidUpdateState(_ central: CBCentralManager) {
 		let currentStatus = self.status
 
 		switch managerBLE!.state
 		{
-		case CBCentralManagerState.PoweredOff:
-			self.status = .Disabled
-		case CBCentralManagerState.PoweredOn:
-			self.status = .Enabled
-		case CBCentralManagerState.Unsupported:
-			self.status = .Unavailable
-		case CBCentralManagerState.Resetting:
-			self.status = .Checking
-		case CBCentralManagerState.Unauthorized:
-			self.status = .Disabled
-		case CBCentralManagerState.Unknown:
-			self.status = .Unavailable
+		case .poweredOff:
+			self.status = .disabled
+		case .poweredOn:
+			self.status = .enabled
+		case .unsupported:
+			self.status = .unavailable
+		case .resetting:
+			self.status = .checking
+		case .unauthorized:
+			self.status = .disabled
+		case .unknown:
+			self.status = .unavailable
 		}
 		
 		if self.status != currentStatus {

@@ -16,21 +16,21 @@ class PACameraPermissionsCheck: PAPermissionsCheck {
 	override func checkStatus() {
 		let currentStatus = self.status
 
-		if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera) {
-			let authStatus = AVCaptureDevice.authorizationStatusForMediaType(mediaType)
+		if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.camera) {
+			let authStatus = AVCaptureDevice.authorizationStatus(forMediaType: mediaType)
 			switch authStatus {
 			
-			case .Authorized:
-				self.status = .Enabled
-			case .Denied:
-				self.status = .Disabled
-			case .NotDetermined:
-				self.status = .Disabled
+			case .authorized:
+				self.status = .enabled
+			case .denied:
+				self.status = .disabled
+			case .notDetermined:
+				self.status = .disabled
 			default:
-				self.status = .Unavailable
+				self.status = .unavailable
 			}
 		}else{
-			self.status = .Unavailable
+			self.status = .unavailable
 		}
 		
 		if self.status != currentStatus {
@@ -39,19 +39,19 @@ class PACameraPermissionsCheck: PAPermissionsCheck {
 	}
 	
 	override func defaultAction() {
-		if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera) {
+		if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.camera) {
 			
 			if #available(iOS 8.0, *) {
-				let authStatus = AVCaptureDevice.authorizationStatusForMediaType(mediaType)
-				if authStatus == .Denied {
-					let settingsURL = NSURL(string: UIApplicationOpenSettingsURLString)
-					UIApplication.sharedApplication().openURL(settingsURL!)
+				let authStatus = AVCaptureDevice.authorizationStatus(forMediaType: mediaType)
+				if authStatus == .denied {
+					let settingsURL = URL(string: UIApplicationOpenSettingsURLString)
+					UIApplication.shared.openURL(settingsURL!)
 				}else{
-					AVCaptureDevice.requestAccessForMediaType(mediaType, completionHandler: { (result) in
+					AVCaptureDevice.requestAccess(forMediaType: mediaType, completionHandler: { (result) in
 						if result {
-							self.status = .Enabled
+							self.status = .enabled
 						}else{
-							self.status = .Disabled
+							self.status = .disabled
 						}
 					})
 					self.updateStatus();

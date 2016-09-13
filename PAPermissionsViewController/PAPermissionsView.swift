@@ -9,19 +9,19 @@ import UIKit
 
 
 protocol PAPermissionsViewDataSource {
-	func permissionsView(view: PAPermissionsView, isPermissionEnabled permission: PAPermissionsItem) -> PAPermissionsStatus
-	func permissionsView(view: PAPermissionsView, checkStatus permission: PAPermissionsItem)
+	func permissionsView(_ view: PAPermissionsView, isPermissionEnabled permission: PAPermissionsItem) -> PAPermissionsStatus
+	func permissionsView(_ view: PAPermissionsView, checkStatus permission: PAPermissionsItem)
 }
 
 protocol PAPermissionsViewDelegate {
-	func permissionsView(view: PAPermissionsView, permissionSelected permission: PAPermissionsItem)
+	func permissionsView(_ view: PAPermissionsView, permissionSelected permission: PAPermissionsItem)
 }
 
 enum PAPermissionsStatus: Int {
-	case Disabled
-	case Enabled
-	case Checking
-	case Unavailable
+	case disabled
+	case enabled
+	case checking
+	case unavailable
 }
 
 enum PAPermissionsType: String {
@@ -48,7 +48,7 @@ class PAPermissionsItem {
 		self.icon = icon
 	}
 	
-	static func itemForType(type: PAPermissionsType, reason: String?) -> PAPermissionsItem? {
+	static func itemForType(_ type: PAPermissionsType, reason: String?) -> PAPermissionsItem? {
 		let localReason: String = reason != nil ? reason! : ""
 		switch type {
 		case .Bluetooth:
@@ -76,13 +76,13 @@ class PAPermissionsView: UIView, UITableViewDataSource, UITableViewDelegate {
 	var delegate: PAPermissionsViewDelegate?
 	var dataSource: PAPermissionsViewDataSource?
 	
-	private weak var tableView: UITableView!
-	private weak var refreshControl: UIRefreshControl!
-	private weak var imageView: UIImageView!
+	fileprivate weak var tableView: UITableView!
+	fileprivate weak var refreshControl: UIRefreshControl!
+	fileprivate weak var imageView: UIImageView!
 	
-	private weak var _blurEffectView: AnyObject!
+	fileprivate weak var _blurEffectView: AnyObject!
 	@available(iOS 8.0, *)
-	private weak var blurEffectView: UIVisualEffectView! {
+	fileprivate weak var blurEffectView: UIVisualEffectView! {
 		get {
 			return self._blurEffectView as! UIVisualEffectView
 		}
@@ -113,10 +113,10 @@ class PAPermissionsView: UIView, UITableViewDataSource, UITableViewDelegate {
 		set (use) {
 			if use {
 				if !self.useBlurBackground {
-					let blurEffect = UIBlurEffect(style: UIBlurEffectStyle.Dark)
+					let blurEffect = UIBlurEffect(style: UIBlurEffectStyle.dark)
 					let blurEffectView = UIVisualEffectView(effect: blurEffect)
 					blurEffectView.frame = self.bounds
-					blurEffectView.autoresizingMask = [.FlexibleWidth, .FlexibleHeight]
+					blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
 					self.blurEffectView = blurEffectView
 					self.insertSubview(self.blurEffectView, aboveSubview: self.imageView)
 				}
@@ -156,7 +156,7 @@ class PAPermissionsView: UIView, UITableViewDataSource, UITableViewDelegate {
 	
 	//MARK: UI Methods
 	
-	private func updateTintColor() {
+	fileprivate func updateTintColor() {
 		self.setupTitleLabel()
 		self.setupDetailsLabel()
 		self.setupTableView()
@@ -164,8 +164,8 @@ class PAPermissionsView: UIView, UITableViewDataSource, UITableViewDelegate {
 		self.tableView.reloadData()
 	}
 	
-	private func setupUI() {
-		self.backgroundColor = UIColor.blackColor()
+	fileprivate func setupUI() {
+		self.backgroundColor = UIColor.black
 		self.setupImageView()
 		self.setupTitleLabel()
 		self.setupDetailsLabel()
@@ -176,36 +176,36 @@ class PAPermissionsView: UIView, UITableViewDataSource, UITableViewDelegate {
 		let views = ["titleLabel": self.titleLabel,
 					 "detailsLabel": self.detailsLabel,
 					 "tableView": self.tableView,
-					 "continueButton": self.continueButton]
+					 "continueButton": self.continueButton] as [String : UIView]
 		
-		func horizontalConstraints(name: String) -> [NSLayoutConstraint]{
-			return NSLayoutConstraint.constraintsWithVisualFormat(
-				"H:|-\(horizontalSpace)-[\(name)]-\(horizontalSpace)-|",
-				options: .DirectionLeadingToTrailing,
+		func horizontalConstraints(_ name: String) -> [NSLayoutConstraint]{
+			return NSLayoutConstraint.constraints(
+				withVisualFormat: "H:|-\(horizontalSpace)-[\(name)]-\(horizontalSpace)-|",
+				options: [],
 				metrics: nil,
 				views: views)
 		}
 		
 		var allConstraints = [NSLayoutConstraint]()
 		//"V:|-68-[titleLabel(43)]-40-[detailsLabel(22)]-15-[tableView]-10-|"
-		let verticalConstraints = NSLayoutConstraint.constraintsWithVisualFormat(
-			"V:|-58-[titleLabel(43)]-30-[detailsLabel(22)]-15-[tableView]-10-[continueButton(30)]-20-|",
+		let verticalConstraints = NSLayoutConstraint.constraints(
+			withVisualFormat: "V:|-58-[titleLabel(43)]-30-[detailsLabel(22)]-15-[tableView]-10-[continueButton(30)]-20-|",
 			options: [],
 			metrics: nil,
 			views: views)
-		allConstraints.appendContentsOf(verticalConstraints)
-		allConstraints.appendContentsOf(horizontalConstraints("titleLabel"))
-		allConstraints.appendContentsOf(horizontalConstraints("detailsLabel"))
-		allConstraints.appendContentsOf(horizontalConstraints("tableView"))
-		allConstraints.appendContentsOf(horizontalConstraints("continueButton"))
+		allConstraints.append(contentsOf: verticalConstraints)
+		allConstraints.append(contentsOf: horizontalConstraints("titleLabel"))
+		allConstraints.append(contentsOf: horizontalConstraints("detailsLabel"))
+		allConstraints.append(contentsOf: horizontalConstraints("tableView"))
+		allConstraints.append(contentsOf: horizontalConstraints("continueButton"))
 		if #available(iOS 8.0, *) {
-			NSLayoutConstraint.activateConstraints(allConstraints)
+			NSLayoutConstraint.activate(allConstraints)
 		} else {
 			self.addConstraints(allConstraints)
 		}
 	}
 	
-	private func setupTitleLabel() {
+	fileprivate func setupTitleLabel() {
 		if self.titleLabel == nil {
 			let titleLabel = UILabel()
 			titleLabel.translatesAutoresizingMaskIntoConstraints = false
@@ -219,7 +219,7 @@ class PAPermissionsView: UIView, UITableViewDataSource, UITableViewDelegate {
 		self.titleLabel.textColor = self.tintColor
 	}
 	
-	private func setupDetailsLabel() {
+	fileprivate func setupDetailsLabel() {
 		if self.detailsLabel == nil {
 			let detailsLabel = UILabel()
 			detailsLabel.translatesAutoresizingMaskIntoConstraints = false
@@ -233,20 +233,20 @@ class PAPermissionsView: UIView, UITableViewDataSource, UITableViewDelegate {
 		self.detailsLabel.textColor = self.tintColor
 	}
 	
-	private func setupTableView() {
+	fileprivate func setupTableView() {
 		if self.tableView == nil {
-			let tableView = UITableView(frame: CGRectZero, style: .Plain)
+			let tableView = UITableView(frame: CGRect.zero, style: .plain)
 			tableView.translatesAutoresizingMaskIntoConstraints = false
 			self.addSubview(tableView)
 			self.tableView = tableView
-			self.tableView.backgroundColor = UIColor.clearColor()
+			self.tableView.backgroundColor = UIColor.clear
 			self.tableView.dataSource = self
 			self.tableView.delegate = self
-			self.tableView.registerClass(PAPermissionsTableViewCell.self, forCellReuseIdentifier: "permission-item")
+			self.tableView.register(PAPermissionsTableViewCell.self, forCellReuseIdentifier: "permission-item")
 			self.tableView.tableFooterView = UIView()
 			
 			let refreshControl = UIRefreshControl()
-			refreshControl.addTarget(self, action: #selector(PAPermissionsView.refresh(_:)), forControlEvents: UIControlEvents.ValueChanged)
+			refreshControl.addTarget(self, action: #selector(PAPermissionsView.refresh(_:)), for: UIControlEvents.valueChanged)
 			tableView.addSubview(refreshControl)
 			self.refreshControl = refreshControl
 		}
@@ -254,54 +254,54 @@ class PAPermissionsView: UIView, UITableViewDataSource, UITableViewDelegate {
 
 	}
 	
-	@objc private func refresh(sender:UIRefreshControl) {
+	@objc fileprivate func refresh(_ sender:UIRefreshControl) {
 		sender.endRefreshing()
 		for permission in self.permissions {
 			self.dataSource?.permissionsView(self, checkStatus: permission)
 		}
 	}
 	
-	private func setupContinueButton() {
+	fileprivate func setupContinueButton() {
 		if self.continueButton == nil {
-			let continueButton = UIButton(type: .System)
+			let continueButton = UIButton(type: .system)
 			continueButton.translatesAutoresizingMaskIntoConstraints = false
 			self.addSubview(continueButton)
 			self.continueButton = continueButton
-			self.continueButton.backgroundColor = UIColor.redColor()
+			self.continueButton.backgroundColor = UIColor.red
 		}
 		self.continueButton.titleLabel?.font = UIFont(name: "HelveticaNeue-Regular", size: 14)
 		self.continueButton.titleLabel?.minimumScaleFactor = 0.1
-		self.continueButton.setTitle(NSLocalizedString("Continue", comment: ""), forState: .Normal)
-		self.continueButton.setTitleColor(self.tintColor, forState: .Normal)
-		self.continueButton.backgroundColor = UIColor.clearColor()
+		self.continueButton.setTitle(NSLocalizedString("Continue", comment: ""), for: UIControlState())
+		self.continueButton.setTitleColor(self.tintColor, for: UIControlState())
+		self.continueButton.backgroundColor = UIColor.clear
 	}
 	
-	private func setupImageView() {
+	fileprivate func setupImageView() {
 		if self.imageView == nil {
 			let imageView = UIImageView()
-			imageView.contentMode = .ScaleAspectFill
+			imageView.contentMode = .scaleAspectFill
 			self.addSubview(imageView)
 			self.imageView = imageView
-			self.imageView.backgroundColor = UIColor.clearColor()
+			self.imageView.backgroundColor = UIColor.clear
 			imageView.translatesAutoresizingMaskIntoConstraints = false
-			imageView.superview!.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("H:|-0-[subview]-0-|", options: .DirectionLeadingToTrailing, metrics: nil, views: ["subview": imageView]))
-			imageView.superview!.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("V:|-0-[subview]-0-|", options: .DirectionLeadingToTrailing, metrics: nil, views: ["subview": imageView]))
+			imageView.superview!.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-0-[subview]-0-|", options: [], metrics: nil, views: ["subview": imageView]))
+			imageView.superview!.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|-0-[subview]-0-|", options: [], metrics: nil, views: ["subview": imageView]))
 		}
 	}
 	
 	
 	//MARK: Table View Methods
-	func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 		return self.permissions.count
 	}
 	
-	func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+	func numberOfSections(in tableView: UITableView) -> Int {
 		return 1
 	}
 	
-	func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-		let cell = tableView.dequeueReusableCellWithIdentifier("permission-item", forIndexPath: indexPath) as! PAPermissionsTableViewCell
-		let item = self.permissions[indexPath.row]
+	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+		let cell = tableView.dequeueReusableCell(withIdentifier: "permission-item", for: indexPath) as! PAPermissionsTableViewCell
+		let item = self.permissions[(indexPath as NSIndexPath).row]
 		cell.didSelectItem = {selectedPermission in
 			if let delegate = self.delegate {
 				delegate.permissionsView(self, permissionSelected: selectedPermission)
@@ -309,15 +309,15 @@ class PAPermissionsView: UIView, UITableViewDataSource, UITableViewDelegate {
 		}
 		cell.permissionStatus = self.dataSource!.permissionsView(self, isPermissionEnabled: item)
 		cell.tintColor = self.tintColor
-		cell.selectionStyle = .None
+		cell.selectionStyle = .none
 		cell.titleLabel.text = item.title
 		cell.detailsLabel.text = item.reason
-		cell.iconImageView.image = item.icon.imageWithRenderingMode(.AlwaysTemplate)
+		cell.iconImageView.image = item.icon.withRenderingMode(.alwaysTemplate)
 		cell.permission = item
 		return cell
 	}
 	
-	func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+	func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
 		return 50
 	}
 }

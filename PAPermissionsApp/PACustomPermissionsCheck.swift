@@ -11,12 +11,12 @@ import UIKit
 class PACustomPermissionsCheck: PAPermissionsCheck {
 
 	override func checkStatus() {
-		self.status = .Disabled
+		self.status = .disabled
 		self.updateStatus()
 	}
 	
 	override func defaultAction() {
-		self.status = .Enabled
+		self.status = .enabled
 		self.updateStatus()
 	}
 }

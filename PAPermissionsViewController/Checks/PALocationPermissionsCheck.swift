@@ -12,7 +12,7 @@ import UIKit
 class PALocationPermissionsCheck: PAPermissionsCheck, CLLocationManagerDelegate {
 	
 	var requestAlwaysAuthorization = false
-	private var locationManager = CLLocationManager()
+	fileprivate var locationManager = CLLocationManager()
 	
 	override func checkStatus() {
 		locationManager.delegate = self
@@ -22,9 +22,9 @@ class PALocationPermissionsCheck: PAPermissionsCheck, CLLocationManagerDelegate 
 	override func defaultAction() {
 		
 		if #available(iOS 8.0, *) {
-			if CLLocationManager.authorizationStatus() == .Denied {
-				let settingsURL = NSURL(string: UIApplicationOpenSettingsURLString)
-				UIApplication.sharedApplication().openURL(settingsURL!)
+			if CLLocationManager.authorizationStatus() == .denied {
+				let settingsURL = URL(string: UIApplicationOpenSettingsURLString)
+				UIApplication.shared.openURL(settingsURL!)
 			}else{
 				if self.requestAlwaysAuthorization {
 					self.locationManager.requestAlwaysAuthorization()
@@ -34,32 +34,32 @@ class PALocationPermissionsCheck: PAPermissionsCheck, CLLocationManagerDelegate 
 				self.updateStatus()
 			}
 		}else{
-			if CLLocationManager.authorizationStatus() == .Denied {
-				let settingsURL = NSURL(string: "prefs:root=LOCATION_SERVICES")
-				UIApplication.sharedApplication().openURL(settingsURL!)
+			if CLLocationManager.authorizationStatus() == .denied {
+				let settingsURL = URL(string: "prefs:root=LOCATION_SERVICES")
+				UIApplication.shared.openURL(settingsURL!)
 			}else{
-				self.status = .Enabled
+				self.status = .enabled
 				self.updateStatus()
 			}
 		}
 	}
 	
-	func locationManager(manager: CLLocationManager, didChangeAuthorizationStatus status: CLAuthorizationStatus) {
+	func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
 		self.updateAuthorization()
 	}
 	
-	private func updateAuthorization() {
+	fileprivate func updateAuthorization() {
 		let currentStatus = self.status
 
 		if CLLocationManager.locationServicesEnabled() {
 			switch(CLLocationManager.authorizationStatus()) {
-			case .NotDetermined, .Restricted, .Denied:
-				self.status = PAPermissionsStatus.Disabled
-			case .AuthorizedAlways, .AuthorizedWhenInUse:
-				self.status = PAPermissionsStatus.Enabled
+			case .notDetermined, .restricted, .denied:
+				self.status = PAPermissionsStatus.disabled
+			case .authorizedAlways, .authorizedWhenInUse:
+				self.status = PAPermissionsStatus.enabled
 			}
 		} else {
-			self.status = PAPermissionsStatus.Disabled
+			self.status = PAPermissionsStatus.disabled
 		}
 		
 		if self.status != currentStatus {
