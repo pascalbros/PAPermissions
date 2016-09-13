@@ -25,6 +25,9 @@ enum PAPermissionsStatus: Int {
 }
 
 enum PAPermissionsType: String {
+	case Calendar = "calendar"
+	case Reminders = "reminders"
+	case Contacts = "contacts"
 	case Bluetooth = "bluetooth"
 	case Location = "location"
 	case Notifications = "notifications"
@@ -61,6 +64,12 @@ class PAPermissionsItem {
 			return PAPermissionsItem(type: type, identifier: type.rawValue, title: NSLocalizedString("Microphone", comment: ""), reason: localReason, icon: UIImage(named: "pa_microphone_icon.png")!)
 		case .Camera:
 			return PAPermissionsItem(type: type, identifier: type.rawValue, title: NSLocalizedString("Camera", comment: ""), reason: localReason, icon: UIImage(named: "pa_camera_icon.png")!)
+		case .Calendar:
+			return PAPermissionsItem(type: type, identifier: type.rawValue, title: NSLocalizedString("Calendar", comment: ""), reason: localReason, icon: UIImage(named: "pa_calendar_icon.png")!)
+		case .Reminders:
+			return PAPermissionsItem(type: type, identifier: type.rawValue, title: NSLocalizedString("Reminders", comment: ""), reason: localReason, icon: UIImage(named: "pa_reminders_icon.png")!)
+		case .Contacts:
+			return PAPermissionsItem(type: type, identifier: type.rawValue, title: NSLocalizedString("Contacts", comment: ""), reason: localReason, icon: UIImage(named: "pa_contacts_icon.png")!)
 		default:
 			return nil
 		}

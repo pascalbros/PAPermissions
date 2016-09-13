@@ -14,8 +14,24 @@ class CustomPermissionsViewController: PAPermissionsViewController {
 	let locationCheck = PALocationPermissionsCheck()
 	let microphoneCheck = PAMicrophonePermissionsCheck()
 	let cameraCheck = PACameraPermissionsCheck()
-	let notificationsCheck = PANotificationsPermissionsCheck()
+	lazy var notificationsCheck : PAPermissionsCheck = {
+		if #available(iOS 10.0, *) {
+			return PAUNNotificationPermissionsCheck()
+		} else {
+			return PANotificationsPermissionsCheck()
+		}
+	}()
 	let customCheck = PACustomPermissionsCheck()
+
+	let calendarCheck = PACalendarPermissionsCheck()
+	let reminderCheck = PARemindersPermissionsCheck()
+	let contactsCheck  : PAPermissionsCheck = {
+		if #available(iOS 9.0, *) {
+			return PACNContactsPermissionsCheck()
+		} else {
+			return PAABAddressBookCheck()
+		}
+	}()
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
@@ -24,19 +40,29 @@ class CustomPermissionsViewController: PAPermissionsViewController {
 		self.locationCheck.requestAlwaysAuthorization = true
 		
 		
-		let permissions = [PAPermissionsItem.itemForType(.Bluetooth, reason: "Required to connect with your cool device")!,
-						   PAPermissionsItem.itemForType(.Location, reason: "Required to locate yourself")!,
-						   PAPermissionsItem.itemForType(.Microphone, reason: "Required to hear your beautiful voice")!,
-						   PAPermissionsItem.itemForType(.Notifications, reason: "Required to send you great updates")!,
-						   PAPermissionsItem.itemForType(.Camera, reason: "Required to shoot awesome photos")!,
-						   PAPermissionsItem(type: .Custom, identifier: "my-custom-permission", title: "Custom Option", reason: "Optional", icon: UIImage(named: "pa_checkmark_icon.png")!)]
-		
-		let handlers = [PAPermissionsType.Bluetooth.rawValue: self.bluetoothCheck,
-						PAPermissionsType.Location.rawValue: self.locationCheck,
-						PAPermissionsType.Microphone.rawValue: self.microphoneCheck,
-						PAPermissionsType.Camera.rawValue: self.cameraCheck,
-						PAPermissionsType.Notifications.rawValue: self.notificationsCheck,
-						"my-custom-permission": self.customCheck]
+		let permissions = [
+			PAPermissionsItem.itemForType(.Calendar, reason: "Required to show your Apple Calendar")!,
+			PAPermissionsItem.itemForType(.Reminders, reason: "Required to show your Apple Reminders")!,
+			PAPermissionsItem.itemForType(.Contacts, reason: "Required to show your Contacts")!,
+
+			PAPermissionsItem.itemForType(.Bluetooth, reason: "Required to connect with your cool device")!,
+			PAPermissionsItem.itemForType(.Location, reason: "Required to locate yourself")!,
+			PAPermissionsItem.itemForType(.Microphone, reason: "Required to hear your beautiful voice")!,
+			PAPermissionsItem.itemForType(.Notifications, reason: "Required to send you great updates")!,
+			PAPermissionsItem.itemForType(.Camera, reason: "Required to shoot awesome photos")!,
+			PAPermissionsItem(type: .Custom, identifier: "my-custom-permission", title: "Custom Option", reason: "Optional", icon: UIImage(named: "pa_checkmark_icon.png")!)]
+
+		let handlers = [
+			PAPermissionsType.Calendar.rawValue: self.calendarCheck,
+			PAPermissionsType.Reminders.rawValue: self.reminderCheck,
+			PAPermissionsType.Contacts.rawValue: self.contactsCheck,
+			PAPermissionsType.Bluetooth.rawValue: self.bluetoothCheck,
+			PAPermissionsType.Location.rawValue: self.locationCheck,
+			PAPermissionsType.Microphone.rawValue: self.microphoneCheck,
+			PAPermissionsType.Camera.rawValue: self.cameraCheck,
+			PAPermissionsType.Notifications.rawValue: self.notificationsCheck,
+			"my-custom-permission": self.customCheck]
+
 		self.setupData(permissions, handlers: handlers)
 		//self.tintColor = UIColor.whiteColor()
 		//self.backgroundColor = UIColor(red: 245.0/255.0, green: 94.0/255.0, blue: 78.0/255.0, alpha: 1.0)
