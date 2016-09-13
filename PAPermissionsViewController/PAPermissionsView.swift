@@ -7,6 +7,7 @@
 //
 import UIKit
 
+let PAPermissionDefaultReason = "PAPermissionDefaultReason"
 
 protocol PAPermissionsViewDataSource {
 	func permissionsView(_ view: PAPermissionsView, isPermissionEnabled permission: PAPermissionsItem) -> PAPermissionsStatus
@@ -25,12 +26,15 @@ enum PAPermissionsStatus: Int {
 }
 
 enum PAPermissionsType: String {
-	case Bluetooth = "bluetooth"
-	case Location = "location"
-	case Notifications = "notifications"
-	case Microphone = "microphone"
-	case Camera = "camera"
-	case Custom = "custom"
+	case calendar = "calendar"
+	case reminders = "reminders"
+	case contacts = "contacts"
+	case bluetooth = "bluetooth"
+	case location = "location"
+	case notifications = "notifications"
+	case microphone = "microphone"
+	case camera = "camera"
+	case custom = "custom"
 }
 
 class PAPermissionsItem {
@@ -47,20 +51,62 @@ class PAPermissionsItem {
 		self.reason = reason
 		self.icon = icon
 	}
-	
-	static func itemForType(_ type: PAPermissionsType, reason: String?) -> PAPermissionsItem? {
-		let localReason: String = reason != nil ? reason! : ""
+
+	class func reasonText(type: PAPermissionsType) -> String {
+
+		var key = ""
+
 		switch type {
-		case .Bluetooth:
+		case .bluetooth: key = Constants.InfoPlistKeys.bluetooth
+		case .microphone: key = Constants.InfoPlistKeys.microphone
+		case .camera: key = Constants.InfoPlistKeys.camera
+		case .calendar: key = Constants.InfoPlistKeys.calendar
+		case .reminders: key = Constants.InfoPlistKeys.reminders
+		case .contacts: key = Constants.InfoPlistKeys.contacts
+		case .location:
+			if let _ = Bundle.main.object(forInfoDictionaryKey: Constants.InfoPlistKeys.locationAlways) {
+				key = Constants.InfoPlistKeys.locationAlways
+			} else {
+				key = Constants.InfoPlistKeys.locationWhenInUse
+			}
+		default:
+			break
+		}
+
+		if key.isEmpty { return "" }
+		return NSLocalizedString(key, tableName: "InfoPlist", bundle: Bundle.main, value: "", comment: "")
+	}
+	
+
+	class func itemForType(_ type: PAPermissionsType, reason: String?) -> PAPermissionsItem? {
+
+		var localReason = ""
+		if let reason = reason {
+			if reason == PAPermissionDefaultReason {
+				localReason = reasonText(type: type)
+			}
+			else {
+				localReason = reason
+			}
+		}
+
+		switch type {
+		case .bluetooth:
 			return PAPermissionsItem(type: type, identifier: type.rawValue, title: NSLocalizedString("Bluetooth", comment: ""), reason: localReason, icon: UIImage(named: "pa_bluetooth_icon.png")!)
-		case .Location:
+		case .location:
 			return PAPermissionsItem(type: type, identifier: type.rawValue, title: NSLocalizedString("Location", comment: ""), reason: localReason, icon: UIImage(named: "pa_location_icon.png")!)
-		case .Notifications:
+		case .notifications:
 			return PAPermissionsItem(type: type, identifier: type.rawValue, title: NSLocalizedString("Notifications", comment: ""), reason: localReason, icon: UIImage(named: "pa_notification_icon.png")!)
-		case .Microphone:
+		case .microphone:
 			return PAPermissionsItem(type: type, identifier: type.rawValue, title: NSLocalizedString("Microphone", comment: ""), reason: localReason, icon: UIImage(named: "pa_microphone_icon.png")!)
-		case .Camera:
+		case .camera:
 			return PAPermissionsItem(type: type, identifier: type.rawValue, title: NSLocalizedString("Camera", comment: ""), reason: localReason, icon: UIImage(named: "pa_camera_icon.png")!)
+		case .calendar:
+			return PAPermissionsItem(type: type, identifier: type.rawValue, title: NSLocalizedString("Calendar", comment: ""), reason: localReason, icon: UIImage(named: "pa_calendar_icon.png")!)
+		case .reminders:
+			return PAPermissionsItem(type: type, identifier: type.rawValue, title: NSLocalizedString("Reminders", comment: ""), reason: localReason, icon: UIImage(named: "pa_reminders_icon.png")!)
+		case .contacts:
+			return PAPermissionsItem(type: type, identifier: type.rawValue, title: NSLocalizedString("Contacts", comment: ""), reason: localReason, icon: UIImage(named: "pa_contacts_icon.png")!)
 		default:
 			return nil
 		}

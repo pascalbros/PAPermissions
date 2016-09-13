@@ -7,27 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5078F8F01D86C82500A487CC /* pa_bluetooth_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 5078F8CF1D86C82500A487CC /* pa_bluetooth_icon.png */; };
-		5078F8F11D86C82500A487CC /* pa_bluetooth_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5078F8D01D86C82500A487CC /* pa_bluetooth_icon@2x.png */; };
-		5078F8F21D86C82500A487CC /* pa_bluetooth_icon@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5078F8D11D86C82500A487CC /* pa_bluetooth_icon@3x.png */; };
-		5078F8F31D86C82500A487CC /* pa_camera_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 5078F8D21D86C82500A487CC /* pa_camera_icon.png */; };
-		5078F8F41D86C82500A487CC /* pa_camera_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5078F8D31D86C82500A487CC /* pa_camera_icon@2x.png */; };
-		5078F8F51D86C82500A487CC /* pa_camera_icon@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5078F8D41D86C82500A487CC /* pa_camera_icon@3x.png */; };
-		5078F8F61D86C82500A487CC /* pa_cancel_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 5078F8D51D86C82500A487CC /* pa_cancel_icon.png */; };
-		5078F8F71D86C82500A487CC /* pa_cancel_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5078F8D61D86C82500A487CC /* pa_cancel_icon@2x.png */; };
-		5078F8F81D86C82500A487CC /* pa_cancel_icon@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5078F8D71D86C82500A487CC /* pa_cancel_icon@3x.png */; };
-		5078F8F91D86C82500A487CC /* pa_checkmark_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 5078F8D81D86C82500A487CC /* pa_checkmark_icon.png */; };
-		5078F8FA1D86C82500A487CC /* pa_checkmark_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5078F8D91D86C82500A487CC /* pa_checkmark_icon@2x.png */; };
-		5078F8FB1D86C82500A487CC /* pa_checkmark_icon@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5078F8DA1D86C82500A487CC /* pa_checkmark_icon@3x.png */; };
-		5078F8FC1D86C82500A487CC /* pa_location_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 5078F8DB1D86C82500A487CC /* pa_location_icon.png */; };
-		5078F8FD1D86C82500A487CC /* pa_location_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5078F8DC1D86C82500A487CC /* pa_location_icon@2x.png */; };
-		5078F8FE1D86C82500A487CC /* pa_location_icon@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5078F8DD1D86C82500A487CC /* pa_location_icon@3x.png */; };
-		5078F8FF1D86C82500A487CC /* pa_microphone_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 5078F8DE1D86C82500A487CC /* pa_microphone_icon.png */; };
-		5078F9001D86C82500A487CC /* pa_microphone_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5078F8DF1D86C82500A487CC /* pa_microphone_icon@2x.png */; };
-		5078F9011D86C82500A487CC /* pa_microphone_icon@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5078F8E01D86C82500A487CC /* pa_microphone_icon@3x.png */; };
-		5078F9021D86C82500A487CC /* pa_notification_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 5078F8E11D86C82500A487CC /* pa_notification_icon.png */; };
-		5078F9031D86C82500A487CC /* pa_notification_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5078F8E21D86C82500A487CC /* pa_notification_icon@2x.png */; };
-		5078F9041D86C82500A487CC /* pa_notification_icon@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5078F8E31D86C82500A487CC /* pa_notification_icon@3x.png */; };
+		407CBF151D8860AA005DE918 /* pa_icons.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 407CBF141D8860AA005DE918 /* pa_icons.xcassets */; };
+		407CBF171D8864A7005DE918 /* PAUNNotificationPermissionsCheck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407CBF161D8864A7005DE918 /* PAUNNotificationPermissionsCheck.swift */; };
+		407CBF1B1D8864C2005DE918 /* PAEventKitPermissionsCheck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407CBF1A1D8864C2005DE918 /* PAEventKitPermissionsCheck.swift */; };
+		407CBF1D1D8864D2005DE918 /* PACNContactsPermissionsCheck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407CBF1C1D8864D2005DE918 /* PACNContactsPermissionsCheck.swift */; };
+		40B2C1A41D887A3900731B20 /* PAABAddressBookCheck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B2C1A31D887A3900731B20 /* PAABAddressBookCheck.swift */; };
+		40B2C1EB1D88851800731B20 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 40B2C1EA1D88851800731B20 /* InfoPlist.strings */; };
 		5078F9051D86C82500A487CC /* PABluetoothPermissionsCheck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5078F8E51D86C82500A487CC /* PABluetoothPermissionsCheck.swift */; };
 		5078F9061D86C82500A487CC /* PACameraPermissionsCheck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5078F8E61D86C82500A487CC /* PACameraPermissionsCheck.swift */; };
 		5078F9071D86C82500A487CC /* PALocationPermissionsCheck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5078F8E71D86C82500A487CC /* PALocationPermissionsCheck.swift */; };
@@ -52,27 +37,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		5078F8CF1D86C82500A487CC /* pa_bluetooth_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pa_bluetooth_icon.png; sourceTree = "<group>"; };
-		5078F8D01D86C82500A487CC /* pa_bluetooth_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pa_bluetooth_icon@2x.png"; sourceTree = "<group>"; };
-		5078F8D11D86C82500A487CC /* pa_bluetooth_icon@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pa_bluetooth_icon@3x.png"; sourceTree = "<group>"; };
-		5078F8D21D86C82500A487CC /* pa_camera_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pa_camera_icon.png; sourceTree = "<group>"; };
-		5078F8D31D86C82500A487CC /* pa_camera_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pa_camera_icon@2x.png"; sourceTree = "<group>"; };
-		5078F8D41D86C82500A487CC /* pa_camera_icon@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pa_camera_icon@3x.png"; sourceTree = "<group>"; };
-		5078F8D51D86C82500A487CC /* pa_cancel_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pa_cancel_icon.png; sourceTree = "<group>"; };
-		5078F8D61D86C82500A487CC /* pa_cancel_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pa_cancel_icon@2x.png"; sourceTree = "<group>"; };
-		5078F8D71D86C82500A487CC /* pa_cancel_icon@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pa_cancel_icon@3x.png"; sourceTree = "<group>"; };
-		5078F8D81D86C82500A487CC /* pa_checkmark_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pa_checkmark_icon.png; sourceTree = "<group>"; };
-		5078F8D91D86C82500A487CC /* pa_checkmark_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pa_checkmark_icon@2x.png"; sourceTree = "<group>"; };
-		5078F8DA1D86C82500A487CC /* pa_checkmark_icon@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pa_checkmark_icon@3x.png"; sourceTree = "<group>"; };
-		5078F8DB1D86C82500A487CC /* pa_location_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pa_location_icon.png; sourceTree = "<group>"; };
-		5078F8DC1D86C82500A487CC /* pa_location_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pa_location_icon@2x.png"; sourceTree = "<group>"; };
-		5078F8DD1D86C82500A487CC /* pa_location_icon@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pa_location_icon@3x.png"; sourceTree = "<group>"; };
-		5078F8DE1D86C82500A487CC /* pa_microphone_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pa_microphone_icon.png; sourceTree = "<group>"; };
-		5078F8DF1D86C82500A487CC /* pa_microphone_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pa_microphone_icon@2x.png"; sourceTree = "<group>"; };
-		5078F8E01D86C82500A487CC /* pa_microphone_icon@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pa_microphone_icon@3x.png"; sourceTree = "<group>"; };
-		5078F8E11D86C82500A487CC /* pa_notification_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pa_notification_icon.png; sourceTree = "<group>"; };
-		5078F8E21D86C82500A487CC /* pa_notification_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pa_notification_icon@2x.png"; sourceTree = "<group>"; };
-		5078F8E31D86C82500A487CC /* pa_notification_icon@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pa_notification_icon@3x.png"; sourceTree = "<group>"; };
+		407CBF141D8860AA005DE918 /* pa_icons.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = pa_icons.xcassets; sourceTree = "<group>"; };
+		407CBF161D8864A7005DE918 /* PAUNNotificationPermissionsCheck.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PAUNNotificationPermissionsCheck.swift; sourceTree = "<group>"; };
+		407CBF1A1D8864C2005DE918 /* PAEventKitPermissionsCheck.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PAEventKitPermissionsCheck.swift; sourceTree = "<group>"; };
+		407CBF1C1D8864D2005DE918 /* PACNContactsPermissionsCheck.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PACNContactsPermissionsCheck.swift; sourceTree = "<group>"; };
+		40B2C1A31D887A3900731B20 /* PAABAddressBookCheck.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PAABAddressBookCheck.swift; sourceTree = "<group>"; };
+		40B2C1EA1D88851800731B20 /* InfoPlist.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = InfoPlist.strings; sourceTree = "<group>"; };
 		5078F8E51D86C82500A487CC /* PABluetoothPermissionsCheck.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PABluetoothPermissionsCheck.swift; sourceTree = "<group>"; };
 		5078F8E61D86C82500A487CC /* PACameraPermissionsCheck.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PACameraPermissionsCheck.swift; sourceTree = "<group>"; };
 		5078F8E71D86C82500A487CC /* PALocationPermissionsCheck.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PALocationPermissionsCheck.swift; sourceTree = "<group>"; };
@@ -128,27 +98,7 @@
 		5078F8CE1D86C82500A487CC /* Assets */ = {
 			isa = PBXGroup;
 			children = (
-				5078F8CF1D86C82500A487CC /* pa_bluetooth_icon.png */,
-				5078F8D01D86C82500A487CC /* pa_bluetooth_icon@2x.png */,
-				5078F8D11D86C82500A487CC /* pa_bluetooth_icon@3x.png */,
-				5078F8D21D86C82500A487CC /* pa_camera_icon.png */,
-				5078F8D31D86C82500A487CC /* pa_camera_icon@2x.png */,
-				5078F8D41D86C82500A487CC /* pa_camera_icon@3x.png */,
-				5078F8D51D86C82500A487CC /* pa_cancel_icon.png */,
-				5078F8D61D86C82500A487CC /* pa_cancel_icon@2x.png */,
-				5078F8D71D86C82500A487CC /* pa_cancel_icon@3x.png */,
-				5078F8D81D86C82500A487CC /* pa_checkmark_icon.png */,
-				5078F8D91D86C82500A487CC /* pa_checkmark_icon@2x.png */,
-				5078F8DA1D86C82500A487CC /* pa_checkmark_icon@3x.png */,
-				5078F8DB1D86C82500A487CC /* pa_location_icon.png */,
-				5078F8DC1D86C82500A487CC /* pa_location_icon@2x.png */,
-				5078F8DD1D86C82500A487CC /* pa_location_icon@3x.png */,
-				5078F8DE1D86C82500A487CC /* pa_microphone_icon.png */,
-				5078F8DF1D86C82500A487CC /* pa_microphone_icon@2x.png */,
-				5078F8E01D86C82500A487CC /* pa_microphone_icon@3x.png */,
-				5078F8E11D86C82500A487CC /* pa_notification_icon.png */,
-				5078F8E21D86C82500A487CC /* pa_notification_icon@2x.png */,
-				5078F8E31D86C82500A487CC /* pa_notification_icon@3x.png */,
+				407CBF141D8860AA005DE918 /* pa_icons.xcassets */,
 			);
 			path = Assets;
 			sourceTree = "<group>";
@@ -156,6 +106,10 @@
 		5078F8E41D86C82500A487CC /* Checks */ = {
 			isa = PBXGroup;
 			children = (
+				407CBF161D8864A7005DE918 /* PAUNNotificationPermissionsCheck.swift */,
+				407CBF1A1D8864C2005DE918 /* PAEventKitPermissionsCheck.swift */,
+				407CBF1C1D8864D2005DE918 /* PACNContactsPermissionsCheck.swift */,
+				40B2C1A31D887A3900731B20 /* PAABAddressBookCheck.swift */,
 				5078F8E51D86C82500A487CC /* PABluetoothPermissionsCheck.swift */,
 				5078F8E61D86C82500A487CC /* PACameraPermissionsCheck.swift */,
 				5078F8E71D86C82500A487CC /* PALocationPermissionsCheck.swift */,
@@ -205,6 +159,7 @@
 				50E9DCD91D7DC370007D0ED5 /* Assets.xcassets */,
 				50E9DCDB1D7DC370007D0ED5 /* LaunchScreen.storyboard */,
 				50E9DCDE1D7DC370007D0ED5 /* Info.plist */,
+				40B2C1EA1D88851800731B20 /* InfoPlist.strings */,
 				50E9DD8E1D80925F007D0ED5 /* background.jpg */,
 			);
 			path = PAPermissionsApp;
@@ -237,7 +192,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0730;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = "Pasquale Ambrosini";
 				TargetAttributes = {
 					50E9DCCE1D7DC370007D0ED5 = {
@@ -270,31 +225,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5078F8F71D86C82500A487CC /* pa_cancel_icon@2x.png in Resources */,
-				5078F8FA1D86C82500A487CC /* pa_checkmark_icon@2x.png in Resources */,
-				5078F8F91D86C82500A487CC /* pa_checkmark_icon.png in Resources */,
-				5078F9001D86C82500A487CC /* pa_microphone_icon@2x.png in Resources */,
-				5078F8F61D86C82500A487CC /* pa_cancel_icon.png in Resources */,
 				50E9DD8F1D80925F007D0ED5 /* background.jpg in Resources */,
+				40B2C1EB1D88851800731B20 /* InfoPlist.strings in Resources */,
 				50E9DCDD1D7DC370007D0ED5 /* LaunchScreen.storyboard in Resources */,
-				5078F9021D86C82500A487CC /* pa_notification_icon.png in Resources */,
-				5078F8F01D86C82500A487CC /* pa_bluetooth_icon.png in Resources */,
-				5078F8FC1D86C82500A487CC /* pa_location_icon.png in Resources */,
-				5078F9011D86C82500A487CC /* pa_microphone_icon@3x.png in Resources */,
-				5078F8FB1D86C82500A487CC /* pa_checkmark_icon@3x.png in Resources */,
-				5078F8FD1D86C82500A487CC /* pa_location_icon@2x.png in Resources */,
+				407CBF151D8860AA005DE918 /* pa_icons.xcassets in Resources */,
 				50E9DCDA1D7DC370007D0ED5 /* Assets.xcassets in Resources */,
-				5078F8F41D86C82500A487CC /* pa_camera_icon@2x.png in Resources */,
-				5078F9041D86C82500A487CC /* pa_notification_icon@3x.png in Resources */,
-				5078F9031D86C82500A487CC /* pa_notification_icon@2x.png in Resources */,
 				50E9DCD81D7DC370007D0ED5 /* Main.storyboard in Resources */,
-				5078F8F51D86C82500A487CC /* pa_camera_icon@3x.png in Resources */,
-				5078F8F11D86C82500A487CC /* pa_bluetooth_icon@2x.png in Resources */,
-				5078F8F31D86C82500A487CC /* pa_camera_icon.png in Resources */,
-				5078F8FE1D86C82500A487CC /* pa_location_icon@3x.png in Resources */,
-				5078F8FF1D86C82500A487CC /* pa_microphone_icon.png in Resources */,
-				5078F8F81D86C82500A487CC /* pa_cancel_icon@3x.png in Resources */,
-				5078F8F21D86C82500A487CC /* pa_bluetooth_icon@3x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -312,10 +248,14 @@
 				5078F90A1D86C82500A487CC /* PAPermissionsCheck.swift in Sources */,
 				5078F90D1D86C82500A487CC /* PAPermissionsViewController.swift in Sources */,
 				50E9DCD51D7DC370007D0ED5 /* ViewController.swift in Sources */,
+				407CBF171D8864A7005DE918 /* PAUNNotificationPermissionsCheck.swift in Sources */,
 				50E9DD881D7F3701007D0ED5 /* PACustomPermissionsCheck.swift in Sources */,
 				5078F9071D86C82500A487CC /* PALocationPermissionsCheck.swift in Sources */,
+				40B2C1A41D887A3900731B20 /* PAABAddressBookCheck.swift in Sources */,
 				5078F9081D86C82500A487CC /* PAMicrophonePermissionsCheck.swift in Sources */,
+				407CBF1B1D8864C2005DE918 /* PAEventKitPermissionsCheck.swift in Sources */,
 				5078F9061D86C82500A487CC /* PACameraPermissionsCheck.swift in Sources */,
+				407CBF1D1D8864D2005DE918 /* PACNContactsPermissionsCheck.swift in Sources */,
 				5078F90B1D86C82500A487CC /* PAPermissionsTableViewCell.swift in Sources */,
 				5078F9051D86C82500A487CC /* PABluetoothPermissionsCheck.swift in Sources */,
 				50E9DCD31D7DC370007D0ED5 /* AppDelegate.swift in Sources */,
@@ -358,8 +298,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -404,8 +346,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -424,6 +368,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -435,7 +380,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = PAPermissionsApp/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.pasqualeambrosini.PAPermissionsApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -449,7 +394,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = PAPermissionsApp/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.pasqualeambrosini.PAPermissionsApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
