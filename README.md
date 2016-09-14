@@ -11,7 +11,7 @@ Right now it supports out of the box permissions for:
 - Contacts
 - Custom
 
-##### NB: PAPermissions is written in Swift 2.2, if you are looking for the Swift 3 version of it, please check the [Swift3 branch](https://github.com/pascalbros/PAPermissions/tree/Swift3)
+### NB: PAPermissions is written in Swift 2.2 and can be discontinued, if you are looking for the Swift 3 version of it, please check out the [master branch](https://github.com/pascalbros/PAPermissions/tree/master)
 
 ![](./ReadmeResources/PAPermissions1.gif)
 ![](./ReadmeResources/PAPermissions2.gif)
