@@ -9,7 +9,7 @@
 import UIKit
 import AVFoundation
 
-class PAMicrophonePermissionsCheck: PAPermissionsCheck {
+public class PAMicrophonePermissionsCheck: PAPermissionsCheck {
 
 	let audioSession = AVAudioSession.sharedInstance()
 	

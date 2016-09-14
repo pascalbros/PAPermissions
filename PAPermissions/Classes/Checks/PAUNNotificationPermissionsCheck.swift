@@ -10,12 +10,12 @@ import UIKit
 import UserNotifications
 
 @available(iOS 10.0, *)
-class PAUNNotificationPermissionsCheck: PAPermissionsCheck {
+public class PAUNNotificationPermissionsCheck: PAPermissionsCheck {
 
-	let notificationCenter = UNUserNotificationCenter.current()
-	var authorizationStatus : UNAuthorizationStatus = .notDetermined
+	public let notificationCenter = UNUserNotificationCenter.current()
+	public var authorizationStatus : UNAuthorizationStatus = .notDetermined
 
-	override func checkStatus() {
+	public override func checkStatus() {
 		let currentStatus = status
 
 		notificationCenter.getNotificationSettings { (settings) in
@@ -37,7 +37,7 @@ class PAUNNotificationPermissionsCheck: PAPermissionsCheck {
 		}
 	}
 
-	override func defaultAction() {
+	public override func defaultAction() {
 
 		if authorizationStatus == .denied {
 			let settingsURL = URL(string: UIApplicationOpenSettingsURLString)

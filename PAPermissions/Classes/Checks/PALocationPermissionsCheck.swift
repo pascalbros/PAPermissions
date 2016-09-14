@@ -9,7 +9,7 @@
 import CoreLocation
 import UIKit
 
-class PALocationPermissionsCheck: PAPermissionsCheck, CLLocationManagerDelegate {
+public class PALocationPermissionsCheck: PAPermissionsCheck, CLLocationManagerDelegate {
 	
 	var requestAlwaysAuthorization : Bool {
 		return Bundle.main.object(forInfoDictionaryKey: Constants.InfoPlistKeys.locationAlways) == nil ? false:true
@@ -46,7 +46,7 @@ class PALocationPermissionsCheck: PAPermissionsCheck, CLLocationManagerDelegate 
 		}
 	}
 	
-	func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+	public func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
 		self.updateAuthorization()
 	}
 	

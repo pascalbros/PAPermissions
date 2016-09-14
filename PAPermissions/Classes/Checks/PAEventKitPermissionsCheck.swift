@@ -9,25 +9,25 @@
 import UIKit
 import EventKit
 
-class PACalendarPermissionsCheck: PAEKPermissionsCheck {
-	override init() {
+public class PACalendarPermissionsCheck: PAEKPermissionsCheck {
+	public override init() {
 		super.init()
 		entityType = .event
 	}
 }
 
-class PARemindersPermissionsCheck: PAEKPermissionsCheck {
-	override init() {
+public class PARemindersPermissionsCheck: PAEKPermissionsCheck {
+	public override init() {
 		super.init()
 		entityType = .reminder
 	}
 }
 
-class PAEKPermissionsCheck: PAPermissionsCheck {
+public class PAEKPermissionsCheck: PAPermissionsCheck {
 
 	var entityType : EKEntityType?
 
-	override func checkStatus() {
+	public override func checkStatus() {
 		let currentStatus = status
 
 		switch EKEventStore.authorizationStatus(for: entityType!) {
@@ -46,7 +46,7 @@ class PAEKPermissionsCheck: PAPermissionsCheck {
 		}
 	}
 
-	override func defaultAction() {
+	public override func defaultAction() {
 
 		if EKEventStore.authorizationStatus(for: entityType!) == .denied {
 			let settingsURL = URL(string: UIApplicationOpenSettingsURLString)

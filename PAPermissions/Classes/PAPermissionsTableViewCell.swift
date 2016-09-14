@@ -187,7 +187,7 @@ class PAPermissionsTableViewCell: UITableViewCell {
 			self.enableButton.layer.cornerRadius = 0.0
 			self.enableButton.layer.borderColor = UIColor.clear.cgColor
 			self.enableButton.layer.borderWidth = 0.0
-			self.enableButton.setImage(UIImage(named: "pa_checkmark_icon.png"), for: UIControlState())
+			self.enableButton.setImage(UIImage(named: "pa_checkmark_icon", in: Bundle(for: PAPermissionsViewController.self), compatibleWith: nil), for: UIControlState())
 			self.enableButton.imageView?.contentMode = .scaleAspectFit
 			self.enableButton.isUserInteractionEnabled = false
 		}else if status == .disabled {
@@ -218,7 +218,7 @@ class PAPermissionsTableViewCell: UITableViewCell {
 			self.enableButton.layer.cornerRadius = 0.0
 			self.enableButton.layer.borderColor = UIColor.clear.cgColor
 			self.enableButton.layer.borderWidth = 0.0
-			self.enableButton.setImage(UIImage(named: "pa_cancel_icon.png"), for: UIControlState())
+			self.enableButton.setImage(UIImage(named: "pa_cancel_icon", in: Bundle(for: PAPermissionsViewController.self), compatibleWith: nil), for: UIControlState())
 			self.enableButton.imageView?.contentMode = .scaleAspectFit
 			self.enableButton.isUserInteractionEnabled = false
 		}

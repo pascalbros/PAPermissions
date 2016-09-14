@@ -8,11 +8,11 @@
 
 import UIKit
 
-class PANotificationsPermissionsCheck: PAPermissionsCheck {
+public class PANotificationsPermissionsCheck: PAPermissionsCheck {
 
 	fileprivate var _categories: AnyObject?
 	
-	var categories: Set<UIMutableUserNotificationCategory>? {
+	public var categories: Set<UIMutableUserNotificationCategory>? {
 		get {
 			return self._categories as? Set<UIMutableUserNotificationCategory>
 		}
@@ -24,16 +24,16 @@ class PANotificationsPermissionsCheck: PAPermissionsCheck {
 	
 	fileprivate var types: UIUserNotificationType = [.badge, .sound, .alert]
 
-	var lastDefaultActionTapped: Date?
+	fileprivate var lastDefaultActionTapped: Date?
 	
 	fileprivate var timer: Timer!
 	
-	override init() {
+	public override init() {
 		super.init()
 		self.types = [.badge, .sound, .alert]
 	}
 	
-	override func checkStatus() {
+	public override func checkStatus() {
 		let currentStatus = self.status
 		
 		if #available(iOS 8.0, *) {
@@ -75,7 +75,7 @@ class PANotificationsPermissionsCheck: PAPermissionsCheck {
 	
 	
 	
-	override func defaultAction() {
+	public override func defaultAction() {
 		
 		let notificationSettings: UIUserNotificationSettings = UIApplication.shared.currentUserNotificationSettings ?? UIUserNotificationSettings(types: UIUserNotificationType(), categories: nil)
 		if notificationSettings.types == UIUserNotificationType() {

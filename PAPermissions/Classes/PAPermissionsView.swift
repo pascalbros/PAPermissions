@@ -7,7 +7,7 @@
 //
 import UIKit
 
-let PAPermissionDefaultReason = "PAPermissionDefaultReason"
+public let PAPermissionDefaultReason = "PAPermissionDefaultReason"
 
 protocol PAPermissionsViewDataSource {
 	func permissionsView(_ view: PAPermissionsView, isPermissionEnabled permission: PAPermissionsItem) -> PAPermissionsStatus
@@ -18,14 +18,14 @@ protocol PAPermissionsViewDelegate {
 	func permissionsView(_ view: PAPermissionsView, permissionSelected permission: PAPermissionsItem)
 }
 
-enum PAPermissionsStatus: Int {
+public enum PAPermissionsStatus: Int {
 	case disabled
 	case enabled
 	case checking
 	case unavailable
 }
 
-enum PAPermissionsType: String {
+public enum PAPermissionsType: String {
 	case calendar = "calendar"
 	case reminders = "reminders"
 	case contacts = "contacts"
@@ -37,14 +37,14 @@ enum PAPermissionsType: String {
 	case custom = "custom"
 }
 
-class PAPermissionsItem {
+public class PAPermissionsItem {
 	var type: PAPermissionsType
 	var identifier: String
 	var title: String
 	var reason: String
 	var icon: UIImage
 	
-	init(type: PAPermissionsType, identifier: String, title: String, reason: String, icon: UIImage) {
+	public init(type: PAPermissionsType, identifier: String, title: String, reason: String, icon: UIImage) {
 		self.type = type
 		self.identifier = identifier
 		self.title = title
@@ -52,7 +52,7 @@ class PAPermissionsItem {
 		self.icon = icon
 	}
 
-	class func reasonText(type: PAPermissionsType) -> String {
+	public class func reasonText(_ type: PAPermissionsType) -> String {
 
 		var key = ""
 
@@ -78,12 +78,12 @@ class PAPermissionsItem {
 	}
 	
 
-	class func itemForType(_ type: PAPermissionsType, reason: String?) -> PAPermissionsItem? {
+	public class func itemForType(_ type: PAPermissionsType, reason: String?) -> PAPermissionsItem? {
 
 		var localReason = ""
 		if let reason = reason {
 			if reason == PAPermissionDefaultReason {
-				localReason = reasonText(type: type)
+				localReason = reasonText(type)
 			}
 			else {
 				localReason = reason
@@ -92,21 +92,21 @@ class PAPermissionsItem {
 
 		switch type {
 		case .bluetooth:
-			return PAPermissionsItem(type: type, identifier: type.rawValue, title: NSLocalizedString("Bluetooth", comment: ""), reason: localReason, icon: UIImage(named: "pa_bluetooth_icon.png")!)
+			return PAPermissionsItem(type: type, identifier: type.rawValue, title: NSLocalizedString("Bluetooth", comment: ""), reason: localReason, icon: UIImage(named: "pa_bluetooth_icon", in: Bundle(for: PAPermissionsViewController.self), compatibleWith: nil)!)
 		case .location:
-			return PAPermissionsItem(type: type, identifier: type.rawValue, title: NSLocalizedString("Location", comment: ""), reason: localReason, icon: UIImage(named: "pa_location_icon.png")!)
+			return PAPermissionsItem(type: type, identifier: type.rawValue, title: NSLocalizedString("Location", comment: ""), reason: localReason, icon: UIImage(named: "pa_location_icon", in: Bundle(for: PAPermissionsViewController.self), compatibleWith: nil)!)
 		case .notifications:
-			return PAPermissionsItem(type: type, identifier: type.rawValue, title: NSLocalizedString("Notifications", comment: ""), reason: localReason, icon: UIImage(named: "pa_notification_icon.png")!)
+			return PAPermissionsItem(type: type, identifier: type.rawValue, title: NSLocalizedString("Notifications", comment: ""), reason: localReason, icon: UIImage(named: "pa_notification_icon", in: Bundle(for: PAPermissionsViewController.self), compatibleWith: nil)!)
 		case .microphone:
-			return PAPermissionsItem(type: type, identifier: type.rawValue, title: NSLocalizedString("Microphone", comment: ""), reason: localReason, icon: UIImage(named: "pa_microphone_icon.png")!)
+			return PAPermissionsItem(type: type, identifier: type.rawValue, title: NSLocalizedString("Microphone", comment: ""), reason: localReason, icon: UIImage(named: "pa_microphone_icon", in: Bundle(for: PAPermissionsViewController.self), compatibleWith: nil)!)
 		case .camera:
-			return PAPermissionsItem(type: type, identifier: type.rawValue, title: NSLocalizedString("Camera", comment: ""), reason: localReason, icon: UIImage(named: "pa_camera_icon.png")!)
+			return PAPermissionsItem(type: type, identifier: type.rawValue, title: NSLocalizedString("Camera", comment: ""), reason: localReason, icon: UIImage(named: "pa_camera_icon", in: Bundle(for: PAPermissionsViewController.self), compatibleWith: nil)!)
 		case .calendar:
-			return PAPermissionsItem(type: type, identifier: type.rawValue, title: NSLocalizedString("Calendar", comment: ""), reason: localReason, icon: UIImage(named: "pa_calendar_icon.png")!)
+			return PAPermissionsItem(type: type, identifier: type.rawValue, title: NSLocalizedString("Calendar", comment: ""), reason: localReason, icon: UIImage(named: "pa_calendar_icon", in: Bundle(for: PAPermissionsViewController.self), compatibleWith: nil)!)
 		case .reminders:
-			return PAPermissionsItem(type: type, identifier: type.rawValue, title: NSLocalizedString("Reminders", comment: ""), reason: localReason, icon: UIImage(named: "pa_reminders_icon.png")!)
+			return PAPermissionsItem(type: type, identifier: type.rawValue, title: NSLocalizedString("Reminders", comment: ""), reason: localReason, icon: UIImage(named: "pa_reminders_icon", in: Bundle(for: PAPermissionsViewController.self), compatibleWith: nil)!)
 		case .contacts:
-			return PAPermissionsItem(type: type, identifier: type.rawValue, title: NSLocalizedString("Contacts", comment: ""), reason: localReason, icon: UIImage(named: "pa_contacts_icon.png")!)
+			return PAPermissionsItem(type: type, identifier: type.rawValue, title: NSLocalizedString("Contacts", comment: ""), reason: localReason, icon: UIImage(named: "pa_contacts_icon", in: Bundle(for: PAPermissionsViewController.self), compatibleWith: nil)!)
 		default:
 			return nil
 		}

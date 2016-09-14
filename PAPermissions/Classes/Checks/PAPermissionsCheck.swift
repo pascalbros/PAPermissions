@@ -8,11 +8,11 @@
 
 import UIKit
 
-protocol PAPermissionsCheckDelegate {
+public protocol PAPermissionsCheckDelegate {
 	func permissionCheck(_ permissionCheck: PAPermissionsCheck, didCheckStatus: PAPermissionsStatus);
 }
 
-class PAPermissionsCheck: NSObject {
+public class PAPermissionsCheck: NSObject {
 	
 	var delegate: PAPermissionsCheckDelegate?
 	var status: PAPermissionsStatus = PAPermissionsStatus.checking

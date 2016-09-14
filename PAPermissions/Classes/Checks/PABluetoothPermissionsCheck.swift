@@ -8,7 +8,7 @@
 import UIKit
 import CoreBluetooth
 
-class PABluetoothPermissionsCheck: PAPermissionsCheck, CBCentralManagerDelegate {
+public class PABluetoothPermissionsCheck: PAPermissionsCheck, CBCentralManagerDelegate {
 	
 	var managerBLE: CBCentralManager?
 	override func checkStatus() {
@@ -25,7 +25,7 @@ class PABluetoothPermissionsCheck: PAPermissionsCheck, CBCentralManagerDelegate 
 		}
 	}
 	
-	func centralManagerDidUpdateState(_ central: CBCentralManager) {
+	public func centralManagerDidUpdateState(_ central: CBCentralManager) {
 		let currentStatus = self.status
 
 		switch managerBLE!.state

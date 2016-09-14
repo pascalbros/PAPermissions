@@ -8,6 +8,6 @@
 
 import UIKit
 
-class PAABAddressBookCheck: PAPermissionsCheck {
+public class PAABAddressBookCheck: PAPermissionsCheck {
 
 }

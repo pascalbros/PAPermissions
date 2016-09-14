@@ -10,7 +10,7 @@ import UIKit
 import Contacts
 
 @available(iOS 9.0, *)
-class PACNContactsPermissionsCheck: PAPermissionsCheck {
+public class PACNContactsPermissionsCheck: PAPermissionsCheck {
 
 	override func checkStatus() {
 		let currentStatus = status

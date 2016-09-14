@@ -8,7 +8,7 @@
 
 import UIKit
 
-enum Constants {
+public enum Constants {
 	struct InfoPlistKeys {
 		static let locationWhenInUse        = "NSLocationWhenInUseUsageDescription"
 		static let locationAlways           = "NSLocationAlwaysUsageDescription"
@@ -22,17 +22,17 @@ enum Constants {
 }
 
 
-protocol PAPermissionsViewControllerDelegate {
+public protocol PAPermissionsViewControllerDelegate {
 	func permissionsViewControllerDidContinue(_ viewController: PAPermissionsViewController)
 }
 
-class PAPermissionsViewController: UIViewController, PAPermissionsViewDelegate, PAPermissionsViewDataSource, PAPermissionsCheckDelegate {
+open class PAPermissionsViewController: UIViewController, PAPermissionsViewDelegate, PAPermissionsViewDataSource, PAPermissionsCheckDelegate {
 	
-	var delegate: PAPermissionsViewControllerDelegate?
+	public var delegate: PAPermissionsViewControllerDelegate?
 	fileprivate var permissionHandlers: [String: PAPermissionsCheck] = Dictionary()
 	fileprivate weak var permissionsView: PAPermissionsView!
 
-	var titleText: String? {
+	public var titleText: String? {
 		get {
 			return self.permissionsView.titleLabel.text
 		}
@@ -43,7 +43,7 @@ class PAPermissionsViewController: UIViewController, PAPermissionsViewDelegate, 
 		
 	}
 	
-	var detailsText: String? {
+	public var detailsText: String? {
 		get {
 			return self.permissionsView.detailsLabel.text
 		}
@@ -54,7 +54,7 @@ class PAPermissionsViewController: UIViewController, PAPermissionsViewDelegate, 
 		
 	}
 	
-	var tintColor: UIColor! {
+	public var tintColor: UIColor! {
 		get {
 			return self.permissionsView.tintColor
 		}
@@ -64,7 +64,7 @@ class PAPermissionsViewController: UIViewController, PAPermissionsViewDelegate, 
 		}
 	}
 	
-	var backgroundColor: UIColor! {
+	public var backgroundColor: UIColor! {
 		get {
 			return self.permissionsView.backgroundColor
 		}
@@ -74,7 +74,7 @@ class PAPermissionsViewController: UIViewController, PAPermissionsViewDelegate, 
 		}
 	}
 	
-	var backgroundImage: UIImage? {
+	public var backgroundImage: UIImage? {
 		get {
 			return self.permissionsView.backgroundImage
 		}
@@ -85,7 +85,7 @@ class PAPermissionsViewController: UIViewController, PAPermissionsViewDelegate, 
 	}
 	
 	@available (iOS 8, *)
-	var useBlurBackground: Bool {
+	public var useBlurBackground: Bool {
 		get {
 			return self.permissionsView.useBlurBackground
 		}
@@ -95,12 +95,12 @@ class PAPermissionsViewController: UIViewController, PAPermissionsViewDelegate, 
 		}
 	}
 
-	override func viewDidLoad() {
+	open override func viewDidLoad() {
 		super.viewDidLoad()
 		self.setupUI()
 	}
 	
-	override func viewDidAppear(_ animated: Bool) {
+	open override func viewDidAppear(_ animated: Bool) {
 		super.viewDidAppear(animated)
 		if self.permissionHandlers.count != 0 {
 			self.permissionsView.reloadPermissions()
@@ -121,7 +121,7 @@ class PAPermissionsViewController: UIViewController, PAPermissionsViewDelegate, 
 		mainView.continueButton.addTarget(self, action: #selector(PAPermissionsViewController.didContinue), for: .touchUpInside)
 	}
 	
-	func setupData(_ permissions: [PAPermissionsItem], handlers:[String: PAPermissionsCheck]) {
+	public func setupData(_ permissions: [PAPermissionsItem], handlers:[String: PAPermissionsCheck]) {
 		
 		assert(permissions.count == handlers.count, "Count mismatch")
 		
@@ -168,7 +168,7 @@ class PAPermissionsViewController: UIViewController, PAPermissionsViewDelegate, 
 		}
 	}
 	
-	func permissionCheck(_ permissionCheck: PAPermissionsCheck, didCheckStatus: PAPermissionsStatus) {
+	public func permissionCheck(_ permissionCheck: PAPermissionsCheck, didCheckStatus: PAPermissionsStatus) {
 		self.permissionsView.reloadPermissions()
 	}
 	

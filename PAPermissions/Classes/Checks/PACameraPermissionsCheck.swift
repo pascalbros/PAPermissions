@@ -9,7 +9,7 @@
 import AVFoundation
 import UIKit
 
-class PACameraPermissionsCheck: PAPermissionsCheck {
+public class PACameraPermissionsCheck: PAPermissionsCheck {
 
 	var mediaType = AVMediaTypeVideo
 	

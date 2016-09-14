@@ -7,22 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		407CBF151D8860AA005DE918 /* pa_icons.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 407CBF141D8860AA005DE918 /* pa_icons.xcassets */; };
-		407CBF171D8864A7005DE918 /* PAUNNotificationPermissionsCheck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407CBF161D8864A7005DE918 /* PAUNNotificationPermissionsCheck.swift */; };
-		407CBF1B1D8864C2005DE918 /* PAEventKitPermissionsCheck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407CBF1A1D8864C2005DE918 /* PAEventKitPermissionsCheck.swift */; };
-		407CBF1D1D8864D2005DE918 /* PACNContactsPermissionsCheck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407CBF1C1D8864D2005DE918 /* PACNContactsPermissionsCheck.swift */; };
-		40B2C1A41D887A3900731B20 /* PAABAddressBookCheck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B2C1A31D887A3900731B20 /* PAABAddressBookCheck.swift */; };
 		40B2C1EB1D88851800731B20 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 40B2C1EA1D88851800731B20 /* InfoPlist.strings */; };
-		5078F9051D86C82500A487CC /* PABluetoothPermissionsCheck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5078F8E51D86C82500A487CC /* PABluetoothPermissionsCheck.swift */; };
-		5078F9061D86C82500A487CC /* PACameraPermissionsCheck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5078F8E61D86C82500A487CC /* PACameraPermissionsCheck.swift */; };
-		5078F9071D86C82500A487CC /* PALocationPermissionsCheck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5078F8E71D86C82500A487CC /* PALocationPermissionsCheck.swift */; };
-		5078F9081D86C82500A487CC /* PAMicrophonePermissionsCheck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5078F8E81D86C82500A487CC /* PAMicrophonePermissionsCheck.swift */; };
-		5078F9091D86C82500A487CC /* PANotificationsPermissionsCheck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5078F8E91D86C82500A487CC /* PANotificationsPermissionsCheck.swift */; };
-		5078F90A1D86C82500A487CC /* PAPermissionsCheck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5078F8EA1D86C82500A487CC /* PAPermissionsCheck.swift */; };
-		5078F90B1D86C82500A487CC /* PAPermissionsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5078F8EB1D86C82500A487CC /* PAPermissionsTableViewCell.swift */; };
-		5078F90C1D86C82500A487CC /* PAPermissionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5078F8EC1D86C82500A487CC /* PAPermissionsView.swift */; };
-		5078F90D1D86C82500A487CC /* PAPermissionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5078F8ED1D86C82500A487CC /* PAPermissionsViewController.swift */; };
-		5078F90E1D86C82500A487CC /* PAConstraintsUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5078F8EF1D86C82500A487CC /* PAConstraintsUtils.swift */; };
+		50BC84B91D899B2C0024B29D /* pa_icons.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50BC84A71D899B2C0024B29D /* pa_icons.xcassets */; };
+		50BC84BA1D899B2C0024B29D /* PAABAddressBookCheck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50BC84AA1D899B2C0024B29D /* PAABAddressBookCheck.swift */; };
+		50BC84BB1D899B2C0024B29D /* PABluetoothPermissionsCheck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50BC84AB1D899B2C0024B29D /* PABluetoothPermissionsCheck.swift */; };
+		50BC84BC1D899B2C0024B29D /* PACameraPermissionsCheck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50BC84AC1D899B2C0024B29D /* PACameraPermissionsCheck.swift */; };
+		50BC84BD1D899B2C0024B29D /* PACNContactsPermissionsCheck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50BC84AD1D899B2C0024B29D /* PACNContactsPermissionsCheck.swift */; };
+		50BC84BE1D899B2C0024B29D /* PAEventKitPermissionsCheck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50BC84AE1D899B2C0024B29D /* PAEventKitPermissionsCheck.swift */; };
+		50BC84BF1D899B2C0024B29D /* PALocationPermissionsCheck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50BC84AF1D899B2C0024B29D /* PALocationPermissionsCheck.swift */; };
+		50BC84C01D899B2C0024B29D /* PAMicrophonePermissionsCheck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50BC84B01D899B2C0024B29D /* PAMicrophonePermissionsCheck.swift */; };
+		50BC84C11D899B2C0024B29D /* PANotificationsPermissionsCheck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50BC84B11D899B2C0024B29D /* PANotificationsPermissionsCheck.swift */; };
+		50BC84C21D899B2C0024B29D /* PAPermissionsCheck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50BC84B21D899B2C0024B29D /* PAPermissionsCheck.swift */; };
+		50BC84C31D899B2C0024B29D /* PAUNNotificationPermissionsCheck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50BC84B31D899B2C0024B29D /* PAUNNotificationPermissionsCheck.swift */; };
+		50BC84C41D899B2C0024B29D /* PAPermissionsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50BC84B41D899B2C0024B29D /* PAPermissionsTableViewCell.swift */; };
+		50BC84C51D899B2C0024B29D /* PAPermissionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50BC84B51D899B2C0024B29D /* PAPermissionsView.swift */; };
+		50BC84C61D899B2C0024B29D /* PAPermissionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50BC84B61D899B2C0024B29D /* PAPermissionsViewController.swift */; };
+		50BC84C71D899B2C0024B29D /* PAConstraintsUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50BC84B81D899B2C0024B29D /* PAConstraintsUtils.swift */; };
 		50E9DCD31D7DC370007D0ED5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E9DCD21D7DC370007D0ED5 /* AppDelegate.swift */; };
 		50E9DCD51D7DC370007D0ED5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E9DCD41D7DC370007D0ED5 /* ViewController.swift */; };
 		50E9DCD81D7DC370007D0ED5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50E9DCD61D7DC370007D0ED5 /* Main.storyboard */; };
@@ -37,22 +37,22 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		407CBF141D8860AA005DE918 /* pa_icons.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = pa_icons.xcassets; sourceTree = "<group>"; };
-		407CBF161D8864A7005DE918 /* PAUNNotificationPermissionsCheck.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PAUNNotificationPermissionsCheck.swift; sourceTree = "<group>"; };
-		407CBF1A1D8864C2005DE918 /* PAEventKitPermissionsCheck.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PAEventKitPermissionsCheck.swift; sourceTree = "<group>"; };
-		407CBF1C1D8864D2005DE918 /* PACNContactsPermissionsCheck.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PACNContactsPermissionsCheck.swift; sourceTree = "<group>"; };
-		40B2C1A31D887A3900731B20 /* PAABAddressBookCheck.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PAABAddressBookCheck.swift; sourceTree = "<group>"; };
 		40B2C1EA1D88851800731B20 /* InfoPlist.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = InfoPlist.strings; sourceTree = "<group>"; };
-		5078F8E51D86C82500A487CC /* PABluetoothPermissionsCheck.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PABluetoothPermissionsCheck.swift; sourceTree = "<group>"; };
-		5078F8E61D86C82500A487CC /* PACameraPermissionsCheck.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PACameraPermissionsCheck.swift; sourceTree = "<group>"; };
-		5078F8E71D86C82500A487CC /* PALocationPermissionsCheck.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PALocationPermissionsCheck.swift; sourceTree = "<group>"; };
-		5078F8E81D86C82500A487CC /* PAMicrophonePermissionsCheck.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PAMicrophonePermissionsCheck.swift; sourceTree = "<group>"; };
-		5078F8E91D86C82500A487CC /* PANotificationsPermissionsCheck.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PANotificationsPermissionsCheck.swift; sourceTree = "<group>"; };
-		5078F8EA1D86C82500A487CC /* PAPermissionsCheck.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PAPermissionsCheck.swift; sourceTree = "<group>"; };
-		5078F8EB1D86C82500A487CC /* PAPermissionsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PAPermissionsTableViewCell.swift; sourceTree = "<group>"; };
-		5078F8EC1D86C82500A487CC /* PAPermissionsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PAPermissionsView.swift; sourceTree = "<group>"; };
-		5078F8ED1D86C82500A487CC /* PAPermissionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PAPermissionsViewController.swift; sourceTree = "<group>"; };
-		5078F8EF1D86C82500A487CC /* PAConstraintsUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PAConstraintsUtils.swift; sourceTree = "<group>"; };
+		50BC84A71D899B2C0024B29D /* pa_icons.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = pa_icons.xcassets; sourceTree = "<group>"; };
+		50BC84AA1D899B2C0024B29D /* PAABAddressBookCheck.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PAABAddressBookCheck.swift; sourceTree = "<group>"; };
+		50BC84AB1D899B2C0024B29D /* PABluetoothPermissionsCheck.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PABluetoothPermissionsCheck.swift; sourceTree = "<group>"; };
+		50BC84AC1D899B2C0024B29D /* PACameraPermissionsCheck.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PACameraPermissionsCheck.swift; sourceTree = "<group>"; };
+		50BC84AD1D899B2C0024B29D /* PACNContactsPermissionsCheck.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PACNContactsPermissionsCheck.swift; sourceTree = "<group>"; };
+		50BC84AE1D899B2C0024B29D /* PAEventKitPermissionsCheck.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PAEventKitPermissionsCheck.swift; sourceTree = "<group>"; };
+		50BC84AF1D899B2C0024B29D /* PALocationPermissionsCheck.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PALocationPermissionsCheck.swift; sourceTree = "<group>"; };
+		50BC84B01D899B2C0024B29D /* PAMicrophonePermissionsCheck.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PAMicrophonePermissionsCheck.swift; sourceTree = "<group>"; };
+		50BC84B11D899B2C0024B29D /* PANotificationsPermissionsCheck.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PANotificationsPermissionsCheck.swift; sourceTree = "<group>"; };
+		50BC84B21D899B2C0024B29D /* PAPermissionsCheck.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PAPermissionsCheck.swift; sourceTree = "<group>"; };
+		50BC84B31D899B2C0024B29D /* PAUNNotificationPermissionsCheck.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PAUNNotificationPermissionsCheck.swift; sourceTree = "<group>"; };
+		50BC84B41D899B2C0024B29D /* PAPermissionsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PAPermissionsTableViewCell.swift; sourceTree = "<group>"; };
+		50BC84B51D899B2C0024B29D /* PAPermissionsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PAPermissionsView.swift; sourceTree = "<group>"; };
+		50BC84B61D899B2C0024B29D /* PAPermissionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PAPermissionsViewController.swift; sourceTree = "<group>"; };
+		50BC84B81D899B2C0024B29D /* PAConstraintsUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PAConstraintsUtils.swift; sourceTree = "<group>"; };
 		50E9DCCF1D7DC370007D0ED5 /* PAPermissionsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PAPermissionsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		50E9DCD21D7DC370007D0ED5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		50E9DCD41D7DC370007D0ED5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -82,48 +82,56 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		5078F8CD1D86C82500A487CC /* PAPermissionsViewController */ = {
+		50BC84A51D899B2C0024B29D /* PAPermissions */ = {
 			isa = PBXGroup;
 			children = (
-				5078F8CE1D86C82500A487CC /* Assets */,
-				5078F8E41D86C82500A487CC /* Checks */,
-				5078F8EB1D86C82500A487CC /* PAPermissionsTableViewCell.swift */,
-				5078F8EC1D86C82500A487CC /* PAPermissionsView.swift */,
-				5078F8ED1D86C82500A487CC /* PAPermissionsViewController.swift */,
-				5078F8EE1D86C82500A487CC /* Utils */,
+				50BC84A61D899B2C0024B29D /* Assets */,
+				50BC84A81D899B2C0024B29D /* Classes */,
 			);
-			path = PAPermissionsViewController;
+			path = PAPermissions;
 			sourceTree = "<group>";
 		};
-		5078F8CE1D86C82500A487CC /* Assets */ = {
+		50BC84A61D899B2C0024B29D /* Assets */ = {
 			isa = PBXGroup;
 			children = (
-				407CBF141D8860AA005DE918 /* pa_icons.xcassets */,
+				50BC84A71D899B2C0024B29D /* pa_icons.xcassets */,
 			);
 			path = Assets;
 			sourceTree = "<group>";
 		};
-		5078F8E41D86C82500A487CC /* Checks */ = {
+		50BC84A81D899B2C0024B29D /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				407CBF161D8864A7005DE918 /* PAUNNotificationPermissionsCheck.swift */,
-				407CBF1A1D8864C2005DE918 /* PAEventKitPermissionsCheck.swift */,
-				407CBF1C1D8864D2005DE918 /* PACNContactsPermissionsCheck.swift */,
-				40B2C1A31D887A3900731B20 /* PAABAddressBookCheck.swift */,
-				5078F8E51D86C82500A487CC /* PABluetoothPermissionsCheck.swift */,
-				5078F8E61D86C82500A487CC /* PACameraPermissionsCheck.swift */,
-				5078F8E71D86C82500A487CC /* PALocationPermissionsCheck.swift */,
-				5078F8E81D86C82500A487CC /* PAMicrophonePermissionsCheck.swift */,
-				5078F8E91D86C82500A487CC /* PANotificationsPermissionsCheck.swift */,
-				5078F8EA1D86C82500A487CC /* PAPermissionsCheck.swift */,
+				50BC84A91D899B2C0024B29D /* Checks */,
+				50BC84B41D899B2C0024B29D /* PAPermissionsTableViewCell.swift */,
+				50BC84B51D899B2C0024B29D /* PAPermissionsView.swift */,
+				50BC84B61D899B2C0024B29D /* PAPermissionsViewController.swift */,
+				50BC84B71D899B2C0024B29D /* Utils */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		50BC84A91D899B2C0024B29D /* Checks */ = {
+			isa = PBXGroup;
+			children = (
+				50BC84AA1D899B2C0024B29D /* PAABAddressBookCheck.swift */,
+				50BC84AB1D899B2C0024B29D /* PABluetoothPermissionsCheck.swift */,
+				50BC84AC1D899B2C0024B29D /* PACameraPermissionsCheck.swift */,
+				50BC84AD1D899B2C0024B29D /* PACNContactsPermissionsCheck.swift */,
+				50BC84AE1D899B2C0024B29D /* PAEventKitPermissionsCheck.swift */,
+				50BC84AF1D899B2C0024B29D /* PALocationPermissionsCheck.swift */,
+				50BC84B01D899B2C0024B29D /* PAMicrophonePermissionsCheck.swift */,
+				50BC84B11D899B2C0024B29D /* PANotificationsPermissionsCheck.swift */,
+				50BC84B21D899B2C0024B29D /* PAPermissionsCheck.swift */,
+				50BC84B31D899B2C0024B29D /* PAUNNotificationPermissionsCheck.swift */,
 			);
 			path = Checks;
 			sourceTree = "<group>";
 		};
-		5078F8EE1D86C82500A487CC /* Utils */ = {
+		50BC84B71D899B2C0024B29D /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				5078F8EF1D86C82500A487CC /* PAConstraintsUtils.swift */,
+				50BC84B81D899B2C0024B29D /* PAConstraintsUtils.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -131,10 +139,10 @@
 		50E9DCC61D7DC370007D0ED5 = {
 			isa = PBXGroup;
 			children = (
-				5078F8CD1D86C82500A487CC /* PAPermissionsViewController */,
 				50E9DD2B1D7E44BD007D0ED5 /* AVFoundation.framework */,
 				50E9DD271D7E41E9007D0ED5 /* CoreLocation.framework */,
 				50E9DD181D7E37FC007D0ED5 /* CoreBluetooth.framework */,
+				50BC84A51D899B2C0024B29D /* PAPermissions */,
 				50E9DCD11D7DC370007D0ED5 /* PAPermissionsApp */,
 				50E9DCD01D7DC370007D0ED5 /* Products */,
 			);
@@ -228,9 +236,9 @@
 				50E9DD8F1D80925F007D0ED5 /* background.jpg in Resources */,
 				40B2C1EB1D88851800731B20 /* InfoPlist.strings in Resources */,
 				50E9DCDD1D7DC370007D0ED5 /* LaunchScreen.storyboard in Resources */,
-				407CBF151D8860AA005DE918 /* pa_icons.xcassets in Resources */,
 				50E9DCDA1D7DC370007D0ED5 /* Assets.xcassets in Resources */,
 				50E9DCD81D7DC370007D0ED5 /* Main.storyboard in Resources */,
+				50BC84B91D899B2C0024B29D /* pa_icons.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -241,24 +249,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5078F9091D86C82500A487CC /* PANotificationsPermissionsCheck.swift in Sources */,
-				5078F90E1D86C82500A487CC /* PAConstraintsUtils.swift in Sources */,
+				50BC84BD1D899B2C0024B29D /* PACNContactsPermissionsCheck.swift in Sources */,
+				50BC84BA1D899B2C0024B29D /* PAABAddressBookCheck.swift in Sources */,
+				50BC84BF1D899B2C0024B29D /* PALocationPermissionsCheck.swift in Sources */,
+				50BC84BB1D899B2C0024B29D /* PABluetoothPermissionsCheck.swift in Sources */,
+				50BC84C21D899B2C0024B29D /* PAPermissionsCheck.swift in Sources */,
 				50E9DD8D1D7F548B007D0ED5 /* CustomPermissionsViewController.swift in Sources */,
-				5078F90C1D86C82500A487CC /* PAPermissionsView.swift in Sources */,
-				5078F90A1D86C82500A487CC /* PAPermissionsCheck.swift in Sources */,
-				5078F90D1D86C82500A487CC /* PAPermissionsViewController.swift in Sources */,
+				50BC84C61D899B2C0024B29D /* PAPermissionsViewController.swift in Sources */,
+				50BC84BC1D899B2C0024B29D /* PACameraPermissionsCheck.swift in Sources */,
 				50E9DCD51D7DC370007D0ED5 /* ViewController.swift in Sources */,
-				407CBF171D8864A7005DE918 /* PAUNNotificationPermissionsCheck.swift in Sources */,
 				50E9DD881D7F3701007D0ED5 /* PACustomPermissionsCheck.swift in Sources */,
-				5078F9071D86C82500A487CC /* PALocationPermissionsCheck.swift in Sources */,
-				40B2C1A41D887A3900731B20 /* PAABAddressBookCheck.swift in Sources */,
-				5078F9081D86C82500A487CC /* PAMicrophonePermissionsCheck.swift in Sources */,
-				407CBF1B1D8864C2005DE918 /* PAEventKitPermissionsCheck.swift in Sources */,
-				5078F9061D86C82500A487CC /* PACameraPermissionsCheck.swift in Sources */,
-				407CBF1D1D8864D2005DE918 /* PACNContactsPermissionsCheck.swift in Sources */,
-				5078F90B1D86C82500A487CC /* PAPermissionsTableViewCell.swift in Sources */,
-				5078F9051D86C82500A487CC /* PABluetoothPermissionsCheck.swift in Sources */,
 				50E9DCD31D7DC370007D0ED5 /* AppDelegate.swift in Sources */,
+				50BC84C51D899B2C0024B29D /* PAPermissionsView.swift in Sources */,
+				50BC84C31D899B2C0024B29D /* PAUNNotificationPermissionsCheck.swift in Sources */,
+				50BC84C11D899B2C0024B29D /* PANotificationsPermissionsCheck.swift in Sources */,
+				50BC84C01D899B2C0024B29D /* PAMicrophonePermissionsCheck.swift in Sources */,
+				50BC84C71D899B2C0024B29D /* PAConstraintsUtils.swift in Sources */,
+				50BC84C41D899B2C0024B29D /* PAPermissionsTableViewCell.swift in Sources */,
+				50BC84BE1D899B2C0024B29D /* PAEventKitPermissionsCheck.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
