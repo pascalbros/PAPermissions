@@ -12,7 +12,6 @@ class PANotificationsPermissionsCheck: PAPermissionsCheck {
 
 	fileprivate var _categories: AnyObject?
 	
-	@available(iOS 8.0, *)
 	var categories: Set<UIMutableUserNotificationCategory>? {
 		get {
 			return self._categories as? Set<UIMutableUserNotificationCategory>
@@ -23,46 +22,20 @@ class PANotificationsPermissionsCheck: PAPermissionsCheck {
 		}
 	}
 	
-	fileprivate var _types: Any?
-	
-	@available(iOS 8.0, *)
-	var types: UIUserNotificationType {
-		get {
-			return self._types as! UIUserNotificationType
-		}
-		
-		set (newTypes) {
-			self._types = newTypes
-		}
-	}
-	
-	@available(iOS 7.0, *)
-	var legacyTypes: UIRemoteNotificationType {
-		get {
-			return self._types as! UIRemoteNotificationType
-		}
-		
-		set (newTypes) {
-			self._types = newTypes
-		}
-	}
-	
+	fileprivate var types: UIUserNotificationType = [.badge, .sound, .alert]
+
 	var lastDefaultActionTapped: Date?
 	
 	fileprivate var timer: Timer!
 	
 	override init() {
 		super.init()
-		if #available(iOS 8.0, *) {
-			self.types = [.badge, .sound, .alert]
-		}else{
-			self.legacyTypes = [.badge, .sound, .alert]
-		}
+		self.types = [.badge, .sound, .alert]
 	}
 	
 	override func checkStatus() {
 		let currentStatus = self.status
-
+		
 		if #available(iOS 8.0, *) {
 			if let settings = UIApplication.shared.currentUserNotificationSettings {
 				if settings.types != UIUserNotificationType() {
@@ -104,47 +77,25 @@ class PANotificationsPermissionsCheck: PAPermissionsCheck {
 	
 	override func defaultAction() {
 		
-		if #available(iOS 8.0, *) {
-			let notificationSettings: UIUserNotificationSettings = UIApplication.shared.currentUserNotificationSettings ?? UIUserNotificationSettings(types: UIUserNotificationType(), categories: nil)
-			if notificationSettings.types == UIUserNotificationType() {
-				if let lastDefaultActionTapped = self.lastDefaultActionTapped {
-					let now = Date()
-					
-					if now.timeIntervalSince(lastDefaultActionTapped) < 3 {
-						let settingsURL = URL(string: UIApplicationOpenSettingsURLString)
-						UIApplication.shared.openURL(settingsURL!)
-						self.stopTimer()
-						return
-					}
+		let notificationSettings: UIUserNotificationSettings = UIApplication.shared.currentUserNotificationSettings ?? UIUserNotificationSettings(types: UIUserNotificationType(), categories: nil)
+		if notificationSettings.types == UIUserNotificationType() {
+			if let lastDefaultActionTapped = self.lastDefaultActionTapped {
+				let now = Date()
+				
+				if now.timeIntervalSince(lastDefaultActionTapped) < 3 {
+					let settingsURL = URL(string: UIApplicationOpenSettingsURLString)
+					UIApplication.shared.openURL(settingsURL!)
+					self.stopTimer()
+					return
 				}
-				self.lastDefaultActionTapped = Date()
-				UIApplication.shared.registerUserNotificationSettings(UIUserNotificationSettings(types:self.types, categories: categories))
-				self.startTimer()
-			}else{
-				self.stopTimer()
-				self.status = .enabled
-				self.updateStatus()
 			}
+			self.lastDefaultActionTapped = Date()
+			UIApplication.shared.registerUserNotificationSettings(UIUserNotificationSettings(types:self.types, categories: categories))
+			self.startTimer()
 		}else{
-			if UIApplication.shared.enabledRemoteNotificationTypes() == UIRemoteNotificationType() {
-				if let lastDefaultActionTapped = self.lastDefaultActionTapped {
-					let now = Date()
-					
-					if now.timeIntervalSince(lastDefaultActionTapped) < 3 {
-						let settingsURL = URL(string: "prefs:root=NOTIFICATIONS_ID")!
-						UIApplication.shared.openURL(settingsURL)
-						self.stopTimer()
-						return
-					}
-				}
-				self.lastDefaultActionTapped = Date()
-				UIApplication.shared.registerForRemoteNotifications(matching: legacyTypes)
-				self.startTimer()
-			}else{
-				self.stopTimer()
-				self.status = .enabled
-				self.updateStatus()
-			}
+			self.stopTimer()
+			self.status = .enabled
+			self.updateStatus()
 		}
 	}
 }
