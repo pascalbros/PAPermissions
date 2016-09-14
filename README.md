@@ -8,6 +8,9 @@ Right now it supports out of the box permissions for:
 - Notifications
 - Microphone
 - Camera
+- Contacts
+- Calendar
+- Reminders
 - Custom
 
 
@@ -16,7 +19,9 @@ Right now it supports out of the box permissions for:
 ![](./ReadmeResources/PAPermissions3.gif)
 ###Compatibility
 
-PAPermissions requires iOS8+, compatible with both Swift 2/3 and Objective-C based projects
+PAPermissions requires iOS8+, compatible with both Swift 3 and Objective-C based projects
+
+If you are looking for the Swift 2 version of it, please check out the [legacy branch](https://github.com/pascalbros/PAPermissions/tree/legacy)
 
 ###Screenshots
 
@@ -57,5 +62,7 @@ Create a new UIViewController, inherit from *PAPermissionsViewController* and wr
 ```
 
 That's it!
+
+Anyway you no need to import everything, just remove the unnecessary "check" classes and keep the ones you want to use, you will find them in "Checks" folder.
 
 README not finished yet...
