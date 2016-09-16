@@ -13,7 +13,7 @@ public class PACameraPermissionsCheck: PAPermissionsCheck {
 
 	var mediaType = AVMediaTypeVideo
 	
-	override func checkStatus() {
+	public override func checkStatus() {
 		let currentStatus = self.status
 
 		if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.camera) {
@@ -38,7 +38,7 @@ public class PACameraPermissionsCheck: PAPermissionsCheck {
 		}
 	}
 	
-	override func defaultAction() {
+	public override func defaultAction() {
 		if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.camera) {
 			
 			if #available(iOS 8.0, *) {

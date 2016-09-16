@@ -11,11 +11,11 @@ import CoreBluetooth
 public class PABluetoothPermissionsCheck: PAPermissionsCheck, CBCentralManagerDelegate {
 	
 	var managerBLE: CBCentralManager?
-	override func checkStatus() {
+	public override func checkStatus() {
 		self.managerBLE = CBCentralManager(delegate: self, queue: nil, options: nil)
 	}
 	
-	override func defaultAction() {
+	public override func defaultAction() {
 		if #available(iOS 9, *) {
 			let url = URL(string: "prefs:root=Bluetooth")!
 			UIApplication.shared.openURL(url)

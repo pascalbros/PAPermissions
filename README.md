@@ -46,6 +46,16 @@ $ pod install
 
 Just copy the PAPermissions folder in your project
 
+## Run the Example
+
+Clone the repo, cd into `Example`:
+
+```bash
+$ pod install
+```
+
+Or open the project (the blue icon) and copy the PAPermissions folder inside.
+
 ## Screenshots
 
 It can be used with a plain background color

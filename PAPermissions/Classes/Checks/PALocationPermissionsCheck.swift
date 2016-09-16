@@ -16,12 +16,12 @@ public class PALocationPermissionsCheck: PAPermissionsCheck, CLLocationManagerDe
 	}
 	fileprivate var locationManager = CLLocationManager()
 	
-	override func checkStatus() {
+	public override func checkStatus() {
 		locationManager.delegate = self
 		self.updateAuthorization()
 	}
 	
-	override func defaultAction() {
+	public override func defaultAction() {
 		
 		if #available(iOS 8.0, *) {
 			if CLLocationManager.authorizationStatus() == .denied {

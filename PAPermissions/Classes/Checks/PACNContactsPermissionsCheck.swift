@@ -12,7 +12,7 @@ import Contacts
 @available(iOS 9.0, *)
 public class PACNContactsPermissionsCheck: PAPermissionsCheck {
 
-	override func checkStatus() {
+	public override func checkStatus() {
 		let currentStatus = status
 
 		switch CNContactStore.authorizationStatus(for: .contacts) {
@@ -31,7 +31,7 @@ public class PACNContactsPermissionsCheck: PAPermissionsCheck {
 		}
 	}
 
-	override func defaultAction() {
+	public override func defaultAction() {
 
 		if CNContactStore.authorizationStatus(for: .contacts) == .denied {
 			let settingsURL = URL(string: UIApplicationOpenSettingsURLString)

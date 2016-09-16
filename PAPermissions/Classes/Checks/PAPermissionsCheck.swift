@@ -12,19 +12,19 @@ public protocol PAPermissionsCheckDelegate {
 	func permissionCheck(_ permissionCheck: PAPermissionsCheck, didCheckStatus: PAPermissionsStatus);
 }
 
-public class PAPermissionsCheck: NSObject {
+open class PAPermissionsCheck: NSObject {
 	
-	var delegate: PAPermissionsCheckDelegate?
-	var status: PAPermissionsStatus = PAPermissionsStatus.checking
-	func checkStatus() {
+	public var delegate: PAPermissionsCheckDelegate?
+	public var status: PAPermissionsStatus = PAPermissionsStatus.checking
+	open func checkStatus() {
 		fatalError("checkStatus has not been implemented")
 	}
 	
-	func defaultAction() {
+	open func defaultAction() {
 		fatalError("defaultAction has not been implemented")
 	}
 	
-	func updateStatus() {
+	public func updateStatus() {
 		if let d = self.delegate {
 			DispatchQueue.main.async{
 				d.permissionCheck(self, didCheckStatus: self.status)

@@ -13,7 +13,7 @@ public class PAMicrophonePermissionsCheck: PAPermissionsCheck {
 
 	let audioSession = AVAudioSession.sharedInstance()
 	
-	override func checkStatus() {
+	public override func checkStatus() {
 		let currentStatus = self.status
 
 		if AVAudioSession.sharedInstance().isInputAvailable {
@@ -35,7 +35,7 @@ public class PAMicrophonePermissionsCheck: PAPermissionsCheck {
 		}
 	}
 	
-	override func defaultAction() {
+	public override func defaultAction() {
 		if #available(iOS 8.0, *) {
 			if AVAudioSession.sharedInstance().recordPermission() == .denied {
 				let settingsURL = URL(string: UIApplicationOpenSettingsURLString)

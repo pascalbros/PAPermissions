@@ -7,15 +7,16 @@
 //
 
 import UIKit
+import PAPermissions
 
 class PACustomPermissionsCheck: PAPermissionsCheck {
 
-	override func checkStatus() {
+	public override func checkStatus() {
 		self.status = .disabled
 		self.updateStatus()
 	}
 	
-	override func defaultAction() {
+	public override func defaultAction() {
 		self.status = .enabled
 		self.updateStatus()
 	}
