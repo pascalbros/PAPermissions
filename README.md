@@ -97,3 +97,9 @@ Create a new UIViewController, inherit from *PAPermissionsViewController* and wr
 That's it!
 
 Anyway you no need to import everything, just remove the unnecessary "check" classes and keep the ones you want to use, you will find them in "Checks" folder.
+
+
+## Contacts
+
+We would love to know if you are using PAPermissions in your app, send an email to <pasquale.ambrosini@gmail.com>
+
