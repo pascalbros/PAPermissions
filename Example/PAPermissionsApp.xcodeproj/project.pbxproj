@@ -148,7 +148,7 @@
 					50E9DCCE1D7DC370007D0ED5 = {
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = K78G42H4U2;
-						LastSwiftMigration = 0800;
+						LastSwiftMigration = 0810;
 					};
 				};
 			};

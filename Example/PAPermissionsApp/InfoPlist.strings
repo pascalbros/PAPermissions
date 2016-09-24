@@ -15,3 +15,4 @@ NSLocationWhenInUseUsageDescription="Required to locate yourself";
 NSBluetoothPeripheralUsageDescription = "Required to connect with your cool device";
 NSMicrophoneUsageDescription = "Required to hear your beautiful voice";
 NSCameraUsageDescription = "Required to shoot awesome photos";
+NSMotionUsageDescription = "Required to monitor motion & fitness";
