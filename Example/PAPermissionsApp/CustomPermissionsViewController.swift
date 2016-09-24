@@ -14,7 +14,7 @@ class CustomPermissionsViewController: PAPermissionsViewController {
 	let bluetoothCheck = PABluetoothPermissionsCheck()
 	let locationCheck = PALocationPermissionsCheck()
 	let microphoneCheck = PAMicrophonePermissionsCheck()
-    let motionFitnessCheck = PAMotionFitnessCheck()
+    let motionFitnessCheck = PAMotionFitnessPermissionsCheck()
 	let cameraCheck = PACameraPermissionsCheck()
 	lazy var notificationsCheck : PAPermissionsCheck = {
 		if #available(iOS 10.0, *) {
