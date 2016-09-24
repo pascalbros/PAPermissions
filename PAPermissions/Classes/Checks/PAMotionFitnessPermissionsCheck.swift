@@ -1,5 +1,5 @@
 //
-//  PAMotionFitnessCheck.swift
+//  PAMotionFitnessPermissionsCheck.swift
 //  Pods
 //
 //  Created by Joseph Blau on 9/24/16.
@@ -9,7 +9,7 @@
 import UIKit
 import CoreMotion
 
-public class PAMotionFitnessCheck: PAPermissionsCheck {
+public class PAMotionFitnessPermissionsCheck: PAPermissionsCheck {
     
     let motionActivityManager = CMMotionActivityManager()
     
