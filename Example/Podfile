@@ -2,5 +2,5 @@
 use_frameworks!
 
 target 'PAPermissionsApp' do
-  pod 'PAPermissions'
+  pod 'PAPermissions', :path => '../'
 end
