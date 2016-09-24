@@ -2,15 +2,11 @@ PODS:
   - PAPermissions (0.9.0)
 
 DEPENDENCIES:
-  - PAPermissions (from `~/Dropbox/Altri_progetti/PAPermissionsApp/`)
-
-EXTERNAL SOURCES:
-  PAPermissions:
-    :path: "~/Dropbox/Altri_progetti/PAPermissionsApp/"
+  - PAPermissions
 
 SPEC CHECKSUMS:
   PAPermissions: b57c549edff6779cf146d745dcdb7cb0fc1e22cf
 
-PODFILE CHECKSUM: 4eb91480bf97c03cfb7d034bf01235ca8e09fbe5
+PODFILE CHECKSUM: ec2539d0b71ac4bc34675c8dae508a73f7201cdc
 
-COCOAPODS: 1.1.0.rc.2
+COCOAPODS: 1.0.1
