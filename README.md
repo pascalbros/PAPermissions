@@ -80,12 +80,12 @@ Create a new UIViewController, inherit from *PAPermissionsViewController* and wr
 		
 		
 		let permissions = [
-	          PAPermissionsItem.itemForType(.Microphone, reason: "Required to hear your beautiful voice")!,
-					  PAPermissionsItem.itemForType(.Camera, reason: "Required to shoot awesome photos")!]
+	          PAPermissionsItem.itemForType(.microphone, reason: "Required to hear your beautiful voice")!,
+					  PAPermissionsItem.itemForType(.camera, reason: "Required to shoot awesome photos")!]
 		
 		let handlers = [
-						PAPermissionsType.Microphone.rawValue: self.microphoneCheck,
-						PAPermissionsType.Camera.rawValue: self.cameraCheck]
+						PAPermissionsType.microphone.rawValue: self.microphoneCheck,
+						PAPermissionsType.camera.rawValue: self.cameraCheck]
 		self.setupData(permissions, handlers: handlers)
 
 		self.titleText = "My Awesome App"
