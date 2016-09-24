@@ -36,6 +36,7 @@ public enum PAPermissionsType: String {
 	case motionFitness = "motion fitness"
 	case camera = "camera"
 	case custom = "custom"
+	case photoLibrary = "photo library"
 }
 
 public class PAPermissionsItem {
@@ -65,6 +66,7 @@ public class PAPermissionsItem {
 		case .reminders: key = Constants.InfoPlistKeys.reminders
 		case .contacts: key = Constants.InfoPlistKeys.contacts
 		case .motionFitness: key = Constants.InfoPlistKeys.motionFitness
+		case .photoLibrary: key = Constants.InfoPlistKeys.photoLibrary
 		case .location:
 			if let _ = Bundle.main.object(forInfoDictionaryKey: Constants.InfoPlistKeys.locationAlways) {
 				key = Constants.InfoPlistKeys.locationAlways
@@ -111,6 +113,8 @@ public class PAPermissionsItem {
 			return PAPermissionsItem(type: type, identifier: type.rawValue, title: NSLocalizedString("Reminders", comment: ""), reason: localReason, icon: UIImage(named: "pa_reminders_icon", in: Bundle(for: PAPermissionsViewController.self), compatibleWith: nil)!)
 		case .contacts:
 			return PAPermissionsItem(type: type, identifier: type.rawValue, title: NSLocalizedString("Contacts", comment: ""), reason: localReason, icon: UIImage(named: "pa_contacts_icon", in: Bundle(for: PAPermissionsViewController.self), compatibleWith: nil)!)
+		case .photoLibrary:
+			return PAPermissionsItem(type: type, identifier: type.rawValue, title: NSLocalizedString("Photo Library", comment: ""), reason: localReason, icon: UIImage(named: "pa_contacts_icon", in: Bundle(for: PAPermissionsViewController.self), compatibleWith: nil)!)
 		default:
 			return nil
 		}
