@@ -12,5 +12,5 @@ Pod::Spec.new do |s|
 
   s.source_files = 'PAPermissions/Classes/**/*.{swift}'
   s.resources = "PAPermissions/Assets/**/*"
-  s.ios.framework = ['AVFoundation', 'CoreLocation', 'CoreBluetooth', 'CoreMotion']
+  s.ios.framework = ['AVFoundation', 'CoreLocation', 'CoreBluetooth', 'CoreMotion', 'Photos']
 end
