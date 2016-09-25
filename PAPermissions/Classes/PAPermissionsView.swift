@@ -33,6 +33,7 @@ public enum PAPermissionsType: String {
 	case location = "location"
 	case notifications = "notifications"
 	case microphone = "microphone"
+	case motionFitness = "motion fitness"
 	case camera = "camera"
 	case custom = "custom"
 }
@@ -63,6 +64,7 @@ public class PAPermissionsItem {
 		case .calendar: key = Constants.InfoPlistKeys.calendar
 		case .reminders: key = Constants.InfoPlistKeys.reminders
 		case .contacts: key = Constants.InfoPlistKeys.contacts
+		case .motionFitness: key = Constants.InfoPlistKeys.motionFitness
 		case .location:
 			if let _ = Bundle.main.object(forInfoDictionaryKey: Constants.InfoPlistKeys.locationAlways) {
 				key = Constants.InfoPlistKeys.locationAlways
@@ -99,6 +101,8 @@ public class PAPermissionsItem {
 			return PAPermissionsItem(type: type, identifier: type.rawValue, title: NSLocalizedString("Notifications", comment: ""), reason: localReason, icon: UIImage(named: "pa_notification_icon", in: Bundle(for: PAPermissionsViewController.self), compatibleWith: nil)!)
 		case .microphone:
 			return PAPermissionsItem(type: type, identifier: type.rawValue, title: NSLocalizedString("Microphone", comment: ""), reason: localReason, icon: UIImage(named: "pa_microphone_icon", in: Bundle(for: PAPermissionsViewController.self), compatibleWith: nil)!)
+		case .motionFitness:
+			return PAPermissionsItem(type: type, identifier: type.rawValue, title: NSLocalizedString("Motion Fitness", comment: ""), reason: localReason, icon: UIImage(named: "pa_motion_activity_icon", in: Bundle(for: PAPermissionsViewController.self), compatibleWith: nil)!)
 		case .camera:
 			return PAPermissionsItem(type: type, identifier: type.rawValue, title: NSLocalizedString("Camera", comment: ""), reason: localReason, icon: UIImage(named: "pa_camera_icon", in: Bundle(for: PAPermissionsViewController.self), compatibleWith: nil)!)
 		case .calendar:
