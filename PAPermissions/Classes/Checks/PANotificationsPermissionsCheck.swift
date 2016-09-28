@@ -83,9 +83,8 @@ public class PANotificationsPermissionsCheck: PAPermissionsCheck {
 				let now = Date()
 				
 				if now.timeIntervalSince(lastDefaultActionTapped) < 3 {
-					let settingsURL = URL(string: UIApplicationOpenSettingsURLString)
-					UIApplication.shared.openURL(settingsURL!)
 					self.stopTimer()
+					self.openSettings()
 					return
 				}
 			}

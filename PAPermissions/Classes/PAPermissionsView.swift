@@ -23,6 +23,7 @@ public enum PAPermissionsStatus: Int {
 	case enabled
 	case checking
 	case unavailable
+	case denied
 }
 
 public enum PAPermissionsType: String {

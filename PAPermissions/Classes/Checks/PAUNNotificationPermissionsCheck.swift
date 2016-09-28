@@ -40,8 +40,7 @@ public class PAUNNotificationPermissionsCheck: PAPermissionsCheck {
 	public override func defaultAction() {
 
 		if authorizationStatus == .denied {
-			let settingsURL = URL(string: UIApplicationOpenSettingsURLString)
-			UIApplication.shared.openURL(settingsURL!)
+			self.openSettings()
 		} else {
 			notificationCenter.requestAuthorization(options: [.badge, .sound, .alert, .carPlay], completionHandler: { (success, error) in
 				if success && error == nil {

@@ -190,7 +190,7 @@ class PAPermissionsTableViewCell: UITableViewCell {
 			self.enableButton.setImage(UIImage(named: "pa_checkmark_icon", in: Bundle(for: PAPermissionsViewController.self), compatibleWith: nil), for: UIControlState())
 			self.enableButton.imageView?.contentMode = .scaleAspectFit
 			self.enableButton.isUserInteractionEnabled = false
-		}else if status == .disabled {
+		}else if status == .disabled || status == .denied {
 			self.enableButton.isHidden = false
 			self.checkingIndicator.isHidden = true
 			self.checkingIndicator.stopAnimating()

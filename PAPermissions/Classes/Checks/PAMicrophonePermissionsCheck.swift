@@ -38,8 +38,7 @@ public class PAMicrophonePermissionsCheck: PAPermissionsCheck {
 	public override func defaultAction() {
 		if #available(iOS 8.0, *) {
 			if AVAudioSession.sharedInstance().recordPermission() == .denied {
-				let settingsURL = URL(string: UIApplicationOpenSettingsURLString)
-				UIApplication.shared.openURL(settingsURL!)
+				self.openSettings()
 			}else{
 				AVAudioSession.sharedInstance().requestRecordPermission { (result) in
 					if result {

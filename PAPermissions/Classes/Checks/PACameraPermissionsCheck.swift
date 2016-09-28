@@ -44,8 +44,7 @@ public class PACameraPermissionsCheck: PAPermissionsCheck {
 			if #available(iOS 8.0, *) {
 				let authStatus = AVCaptureDevice.authorizationStatus(forMediaType: mediaType)
 				if authStatus == .denied {
-					let settingsURL = URL(string: UIApplicationOpenSettingsURLString)
-					UIApplication.shared.openURL(settingsURL!)
+					self.openSettings()
 				}else{
 					AVCaptureDevice.requestAccess(forMediaType: mediaType, completionHandler: { (result) in
 						if result {

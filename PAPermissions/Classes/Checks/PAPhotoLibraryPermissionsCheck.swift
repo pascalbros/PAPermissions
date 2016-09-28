@@ -38,10 +38,21 @@ public class PAPhotoLibraryPermissionsCheck: PAPermissionsCheck {
     }
     
     private func updatePermissions(status: PHAuthorizationStatus) {
+		
+		let oldStatus = self.status
+		
         switch status {
-        case .authorized: self.status = .enabled
-        case .denied, .notDetermined: self.status = .disabled
+        case .authorized: self.status =
+			.enabled
+		case .denied:
+			self.status = .denied
+		case .notDetermined:
+			self.status = .disabled
         case .restricted: self.status = .unavailable
         }
+		
+		if oldStatus == .denied && self.status == .denied {
+			self.openSettings()
+		}
     }
 }

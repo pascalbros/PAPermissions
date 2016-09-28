@@ -31,4 +31,9 @@ open class PAPermissionsCheck: NSObject {
 			}
 		}
 	}
+	
+	public func openSettings() {
+		let settingsURL = URL(string: UIApplicationOpenSettingsURLString)
+		UIApplication.shared.openURL(settingsURL!)
+	}
 }

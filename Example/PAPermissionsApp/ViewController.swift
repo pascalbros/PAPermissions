@@ -10,14 +10,6 @@ import UIKit
 import PAPermissions
 
 class ViewController: UIViewController {
-
-	let bluetoothCheck = PABluetoothPermissionsCheck()
-	let locationCheck = PALocationPermissionsCheck()
-	let microphoneCheck = PAMicrophonePermissionsCheck()
-	let cameraCheck = PACameraPermissionsCheck()
-	let notificationsCheck = PANotificationsPermissionsCheck()
-	
-	let customCheck = PACustomPermissionsCheck()
 	
 	@IBAction func didShowPermissions(_ sender: AnyObject) {
 		

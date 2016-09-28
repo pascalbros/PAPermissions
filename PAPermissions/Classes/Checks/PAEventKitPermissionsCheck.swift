@@ -47,12 +47,11 @@ public class PAEKPermissionsCheck: PAPermissionsCheck {
 	}
 
 	public override func defaultAction() {
-
-		if EKEventStore.authorizationStatus(for: entityType!) == .denied {
-			let settingsURL = URL(string: UIApplicationOpenSettingsURLString)
-			UIApplication.shared.openURL(settingsURL!)
+		let status = EKEventStore.authorizationStatus(for: entityType!)
+		if status == .denied {
+			self.openSettings()
 		} else {
-			EKEventStore().requestAccess(to: .reminder, completion: { (success, error) in
+			EKEventStore().requestAccess(to: entityType!, completion: { (success, error) in
 				if success && error == nil {
 					self.status = .enabled
 				} else {

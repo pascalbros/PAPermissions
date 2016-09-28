@@ -25,8 +25,7 @@ public class PALocationPermissionsCheck: PAPermissionsCheck, CLLocationManagerDe
 		
 		if #available(iOS 8.0, *) {
 			if CLLocationManager.authorizationStatus() == .denied {
-				let settingsURL = URL(string: UIApplicationOpenSettingsURLString)
-				UIApplication.shared.openURL(settingsURL!)
+				self.openSettings()
 			}else{
 				if self.requestAlwaysAuthorization {
 					self.locationManager.requestAlwaysAuthorization()

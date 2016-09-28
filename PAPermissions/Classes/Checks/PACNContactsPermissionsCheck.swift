@@ -34,8 +34,7 @@ public class PACNContactsPermissionsCheck: PAPermissionsCheck {
 	public override func defaultAction() {
 
 		if CNContactStore.authorizationStatus(for: .contacts) == .denied {
-			let settingsURL = URL(string: UIApplicationOpenSettingsURLString)
-			UIApplication.shared.openURL(settingsURL!)
+			self.openSettings()
 		} else {
 			CNContactStore().requestAccess(for: .contacts) { (success, error) in
 				if success && error == nil {
