@@ -3,16 +3,19 @@
 PAPermissions is a fully customizable and ready-to-run library to handle permissions through a ViewController
 
 Right now it supports out of the box permissions for:
+
+- Address Book
 - Bluetooth
-- Location
-- Notifications
-- Microphone
+- Calendar
 - Camera
 - Contacts
-- Calendar
+- Events
+- Location
+- Microphone
+- Motion Fitness
+- Notifications
 - Reminders
 - Custom
-
 
 ![](./ReadmeResources/PAPermissions1.gif)
 ![](./ReadmeResources/PAPermissions2.gif)
