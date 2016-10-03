@@ -34,17 +34,10 @@ public class PAMotionFitnessPermissionsCheck: PAPermissionsCheck {
         
         
         if #available(iOS 7.0, *) {
-			
-			//motionActivityManager.startActivityUpdates(to: OperationQueue.current!, withHandler: { (motionActivity: CMMotionActivity?) -> Void in
-							
+										
 			self.motionActivityManager.queryActivityStarting(from: Date(), to: Date(), to: OperationQueue.main, withHandler: { (motionActivity, error) in
 			
-                
-                if let motionActivity = motionActivity {
-                    self.status = .enabled
-                } else {
-                    self.status = .disabled
-                }
+                self.status = motionActivity == nil ? .disabled : .enabled
 				
 				if let e = error as? NSError {
 					if e.code == Int(CMErrorNotAuthorized.rawValue) {

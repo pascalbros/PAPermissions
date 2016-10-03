@@ -45,6 +45,17 @@ Then, run the following command:
 $ pod install
 ```
 
+### Carthage
+
+Add this to Cartfile
+```sh
+github "ReactiveX/RxSwift" "3.0.0-beta.1"
+```
+
+```sh
+$ carthage update
+```
+
 ### Manual Installation
 
 Just copy the PAPermissions folder in your project
@@ -77,15 +88,15 @@ Create a new UIViewController, inherit from *PAPermissionsViewController* and wr
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		
+
 		//Custom settings
 		self.locationCheck.requestAlwaysAuthorization = true
-		
-		
+
+
 		let permissions = [
 	          PAPermissionsItem.itemForType(.microphone, reason: "Required to hear your beautiful voice")!,
 					  PAPermissionsItem.itemForType(.camera, reason: "Required to shoot awesome photos")!]
-		
+
 		let handlers = [
 						PAPermissionsType.microphone.rawValue: self.microphoneCheck,
 						PAPermissionsType.camera.rawValue: self.cameraCheck]
@@ -94,7 +105,7 @@ Create a new UIViewController, inherit from *PAPermissionsViewController* and wr
 		self.titleText = "My Awesome App"
 		self.detailsText = "Please enable the following"
 	}
-		
+
 ```
 
 That's it!
@@ -105,4 +116,3 @@ Anyway you no need to import everything, just remove the unnecessary "check" cla
 ## Contacts
 
 We would love to know if you are using PAPermissions in your app, send an email to <pasquale.ambrosini@gmail.com>
-
