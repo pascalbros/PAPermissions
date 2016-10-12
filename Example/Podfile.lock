@@ -1,5 +1,5 @@
 PODS:
-  - PAPermissions (0.9.5)
+  - PAPermissions (0.9.7)
 
 DEPENDENCIES:
   - PAPermissions (from `../`)
@@ -9,6 +9,8 @@ EXTERNAL SOURCES:
     :path: ../
 
 SPEC CHECKSUMS:
-  PAPermissions: 4dd545fcb96bd683513a33ebcf28af589aa4501c
+  PAPermissions: 73f861fad43e5966a18931a2b1a855e57bcf3a85
 
-COCOAPODS: 0.39.0
+PODFILE CHECKSUM: 17cb6692260f5448df0c61e2797ca370af384594
+
+COCOAPODS: 1.1.0.rc.3

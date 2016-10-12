@@ -16,6 +16,7 @@ open class PAPermissionsCheck: NSObject {
 	
 	public var delegate: PAPermissionsCheckDelegate?
 	public var status: PAPermissionsStatus = PAPermissionsStatus.checking
+	public var canBeDisabled = false
 	open func checkStatus() {
 		fatalError("checkStatus has not been implemented")
 	}

@@ -180,32 +180,22 @@ class PAPermissionsTableViewCell: UITableViewCell {
 		self.enableButton.tintColor = self.tintColor
 		
 		if status == .enabled {
-			self.enableButton.isHidden = false
-			self.checkingIndicator.isHidden = true
-			self.checkingIndicator.stopAnimating()
-			self.enableButton.setTitle("", for: UIControlState())
-			self.enableButton.layer.cornerRadius = 0.0
-			self.enableButton.layer.borderColor = UIColor.clear.cgColor
-			self.enableButton.layer.borderWidth = 0.0
-			self.enableButton.setImage(UIImage(named: "pa_checkmark_icon", in: Bundle(for: PAPermissionsViewController.self), compatibleWith: nil), for: UIControlState())
-			self.enableButton.imageView?.contentMode = .scaleAspectFit
-			self.enableButton.isUserInteractionEnabled = false
+			if !self.permission.canBeDisabled {
+				self.enableButton.isHidden = false
+				self.checkingIndicator.isHidden = true
+				self.checkingIndicator.stopAnimating()
+				self.enableButton.setTitle("", for: UIControlState())
+				self.enableButton.layer.cornerRadius = 0.0
+				self.enableButton.layer.borderColor = UIColor.clear.cgColor
+				self.enableButton.layer.borderWidth = 0.0
+				self.enableButton.setImage(UIImage(named: "pa_checkmark_icon", in: Bundle(for: PAPermissionsViewController.self), compatibleWith: nil), for: UIControlState())
+				self.enableButton.imageView?.contentMode = .scaleAspectFit
+				self.enableButton.isUserInteractionEnabled = false
+			}else{
+				self.setupEnableDisableButton(title: "Disable")
+			}
 		}else if status == .disabled || status == .denied {
-			self.enableButton.isHidden = false
-			self.checkingIndicator.isHidden = true
-			self.checkingIndicator.stopAnimating()
-			self.enableButton.setTitle(NSLocalizedString("Enable", comment: ""), for: UIControlState())
-			self.enableButton.titleLabel?.font = UIFont(name: "HelveticaNeue-Bold", size: 12)
-			self.enableButton.setImage(nil, for: UIControlState())
-			self.enableButton.titleLabel?.minimumScaleFactor = 0.1
-			self.enableButton.titleLabel?.adjustsFontSizeToFitWidth  = true
-			self.enableButton.setTitleColor(self.tintColor, for: UIControlState())
-			self.enableButton.backgroundColor = UIColor.clear
-			self.enableButton.layer.cornerRadius = 2.0
-			self.enableButton.layer.borderColor = self.tintColor.cgColor
-			self.enableButton.layer.borderWidth = 1.0
-			self.enableButton.clipsToBounds = true
-			self.enableButton.isUserInteractionEnabled = true
+			self.setupEnableDisableButton(title: "Enable")
 		}else if status == .checking {
 			self.enableButton.isHidden = true
 			self.checkingIndicator.isHidden = false
@@ -222,6 +212,24 @@ class PAPermissionsTableViewCell: UITableViewCell {
 			self.enableButton.imageView?.contentMode = .scaleAspectFit
 			self.enableButton.isUserInteractionEnabled = false
 		}
+	}
+	
+	private func setupEnableDisableButton(title: String) {
+		self.enableButton.isHidden = false
+		self.checkingIndicator.isHidden = true
+		self.checkingIndicator.stopAnimating()
+		self.enableButton.setTitle(NSLocalizedString(title, comment: ""), for: UIControlState())
+		self.enableButton.titleLabel?.font = UIFont(name: "HelveticaNeue-Bold", size: 12)
+		self.enableButton.setImage(nil, for: UIControlState())
+		self.enableButton.titleLabel?.minimumScaleFactor = 0.1
+		self.enableButton.titleLabel?.adjustsFontSizeToFitWidth  = true
+		self.enableButton.setTitleColor(self.tintColor, for: UIControlState())
+		self.enableButton.backgroundColor = UIColor.clear
+		self.enableButton.layer.cornerRadius = 2.0
+		self.enableButton.layer.borderColor = self.tintColor.cgColor
+		self.enableButton.layer.borderWidth = 1.0
+		self.enableButton.clipsToBounds = true
+		self.enableButton.isUserInteractionEnabled = true
 	}
 	
 	@objc fileprivate func _didSelectItem() {

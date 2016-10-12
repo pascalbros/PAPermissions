@@ -19,7 +19,6 @@
 		50E9DD881D7F3701007D0ED5 /* PACustomPermissionsCheck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E9DD871D7F3701007D0ED5 /* PACustomPermissionsCheck.swift */; };
 		50E9DD8D1D7F548B007D0ED5 /* CustomPermissionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E9DD8C1D7F548B007D0ED5 /* CustomPermissionsViewController.swift */; };
 		50E9DD8F1D80925F007D0ED5 /* background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 50E9DD8E1D80925F007D0ED5 /* background.jpg */; };
-		D02C8BB09C60CB72568B8FCA /* Pods_PAPermissionsApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7292F8A8CFD2909D2EA9DB6 /* Pods_PAPermissionsApp.framework */; };
 		E642C3411DA1796900BC9133 /* PAPermissions.h in Headers */ = {isa = PBXBuildFile; fileRef = E642C33F1DA1796900BC9133 /* PAPermissions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E642C3441DA1796900BC9133 /* PAPermissions.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E642C33D1DA1796900BC9133 /* PAPermissions.framework */; };
 		E642C3451DA1796900BC9133 /* PAPermissions.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E642C33D1DA1796900BC9133 /* PAPermissions.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -81,9 +80,6 @@
 		50E9DD871D7F3701007D0ED5 /* PACustomPermissionsCheck.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PACustomPermissionsCheck.swift; sourceTree = "<group>"; };
 		50E9DD8C1D7F548B007D0ED5 /* CustomPermissionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomPermissionsViewController.swift; sourceTree = "<group>"; };
 		50E9DD8E1D80925F007D0ED5 /* background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = background.jpg; sourceTree = "<group>"; };
-		7A076817F20389BCFDB75226 /* Pods-PAPermissionsApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PAPermissionsApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PAPermissionsApp/Pods-PAPermissionsApp.debug.xcconfig"; sourceTree = "<group>"; };
-		C7292F8A8CFD2909D2EA9DB6 /* Pods_PAPermissionsApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PAPermissionsApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		E57574E623D6435CA7FA8788 /* Pods-PAPermissionsApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PAPermissionsApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-PAPermissionsApp/Pods-PAPermissionsApp.release.xcconfig"; sourceTree = "<group>"; };
 		E642C33D1DA1796900BC9133 /* PAPermissions.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PAPermissions.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E642C33F1DA1796900BC9133 /* PAPermissions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PAPermissions.h; sourceTree = "<group>"; };
 		E642C3401DA1796900BC9133 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -115,7 +111,6 @@
 				50E9DD2C1D7E44BD007D0ED5 /* AVFoundation.framework in Frameworks */,
 				50E9DD281D7E41E9007D0ED5 /* CoreLocation.framework in Frameworks */,
 				50E9DD191D7E37FC007D0ED5 /* CoreBluetooth.framework in Frameworks */,
-				D02C8BB09C60CB72568B8FCA /* Pods_PAPermissionsApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -129,14 +124,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		088A3FEE08AAB9A64E028FA0 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				C7292F8A8CFD2909D2EA9DB6 /* Pods_PAPermissionsApp.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		50E9DCC61D7DC370007D0ED5 = {
 			isa = PBXGroup;
 			children = (
@@ -146,8 +133,6 @@
 				50E9DCD11D7DC370007D0ED5 /* PAPermissionsApp */,
 				E642C33E1DA1796900BC9133 /* PAPermissions */,
 				50E9DCD01D7DC370007D0ED5 /* Products */,
-				BE512304B20AC7F89D82B883 /* Pods */,
-				088A3FEE08AAB9A64E028FA0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -175,15 +160,6 @@
 				50E9DD8E1D80925F007D0ED5 /* background.jpg */,
 			);
 			path = PAPermissionsApp;
-			sourceTree = "<group>";
-		};
-		BE512304B20AC7F89D82B883 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				7A076817F20389BCFDB75226 /* Pods-PAPermissionsApp.debug.xcconfig */,
-				E57574E623D6435CA7FA8788 /* Pods-PAPermissionsApp.release.xcconfig */,
-			);
-			name = Pods;
 			sourceTree = "<group>";
 		};
 		E642C33E1DA1796900BC9133 /* PAPermissions */ = {
@@ -264,13 +240,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 50E9DCE11D7DC370007D0ED5 /* Build configuration list for PBXNativeTarget "PAPermissionsApp" */;
 			buildPhases = (
-				A52F1C072DA5097B808C9C37 /* [CP] Check Pods Manifest.lock */,
 				50E9DCCB1D7DC370007D0ED5 /* Sources */,
 				50E9DCCC1D7DC370007D0ED5 /* Frameworks */,
 				50E9DCCD1D7DC370007D0ED5 /* Resources */,
-				665D77414CAAF3B81144D9B0 /* [CP] Embed Pods Frameworks */,
-				07A9B8B99C15E52D997403BA /* [CP] Copy Pods Resources */,
-				135E0CFCCAA0A60174DABE0D /* Embed Pods Frameworks */,
 				E642C3491DA1796900BC9133 /* Embed Frameworks */,
 			);
 			buildRules = (
@@ -313,7 +285,6 @@
 				TargetAttributes = {
 					50E9DCCE1D7DC370007D0ED5 = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = K78G42H4U2;
 						LastSwiftMigration = 0810;
 					};
 					E642C33C1DA1796900BC9133 = {
@@ -363,69 +334,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		07A9B8B99C15E52D997403BA /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PAPermissionsApp/Pods-PAPermissionsApp-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		135E0CFCCAA0A60174DABE0D /* Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PAPermissionsApp/Pods-PAPermissionsApp-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		665D77414CAAF3B81144D9B0 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PAPermissionsApp/Pods-PAPermissionsApp-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		A52F1C072DA5097B808C9C37 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		50E9DCCB1D7DC370007D0ED5 /* Sources */ = {
@@ -584,12 +492,11 @@
 		};
 		50E9DCE21D7DC370007D0ED5 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7A076817F20389BCFDB75226 /* Pods-PAPermissionsApp.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				DEVELOPMENT_TEAM = K78G42H4U2;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = PAPermissionsApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -601,12 +508,11 @@
 		};
 		50E9DCE31D7DC370007D0ED5 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E57574E623D6435CA7FA8788 /* Pods-PAPermissionsApp.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				DEVELOPMENT_TEAM = K78G42H4U2;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = PAPermissionsApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
