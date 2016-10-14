@@ -285,6 +285,7 @@
 				TargetAttributes = {
 					50E9DCCE1D7DC370007D0ED5 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = NRSZN92M5X;
 						LastSwiftMigration = 0810;
 					};
 					E642C33C1DA1796900BC9133 = {
@@ -496,7 +497,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = NRSZN92M5X;
 				INFOPLIST_FILE = PAPermissionsApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -512,7 +513,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = NRSZN92M5X;
 				INFOPLIST_FILE = PAPermissionsApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

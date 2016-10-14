@@ -139,9 +139,9 @@ class PAPermissionsView: UIView, UITableViewDataSource, UITableViewDelegate {
 	
 	fileprivate weak var _blurEffectView: AnyObject!
 	@available(iOS 8.0, *)
-	fileprivate weak var blurEffectView: UIVisualEffectView! {
+	fileprivate weak var blurEffectView: UIVisualEffectView? {
 		get {
-			return self._blurEffectView as! UIVisualEffectView
+			return self._blurEffectView as? UIVisualEffectView
 		}
 		
 		set(newView) {
@@ -175,12 +175,14 @@ class PAPermissionsView: UIView, UITableViewDataSource, UITableViewDelegate {
 					blurEffectView.frame = self.bounds
 					blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
 					self.blurEffectView = blurEffectView
-					self.insertSubview(self.blurEffectView, aboveSubview: self.imageView)
+					self.insertSubview(blurEffectView, aboveSubview: self.imageView)
 				}
 			}else{
-				if self.useBlurBackground && self.blurEffectView != nil {
-					self.blurEffectView.removeFromSuperview()
-					self.blurEffectView = nil
+				if self.useBlurBackground {
+					if let blurEffectView = self.blurEffectView {
+						blurEffectView.removeFromSuperview()
+						self.blurEffectView = nil
+					}
 				}
 			}
 		}
