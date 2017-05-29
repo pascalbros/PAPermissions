@@ -192,10 +192,10 @@ class PAPermissionsTableViewCell: UITableViewCell {
 				self.enableButton.imageView?.contentMode = .scaleAspectFit
 				self.enableButton.isUserInteractionEnabled = false
 			}else{
-				self.setupEnableDisableButton(title: "Disable")
+				self.setupEnableDisableButton(title: NSLocalizedString("Disable", comment: ""))
 			}
 		}else if status == .disabled || status == .denied {
-			self.setupEnableDisableButton(title: "Enable")
+			self.setupEnableDisableButton(title:  NSLocalizedString("Enable", comment: ""))
 		}else if status == .checking {
 			self.enableButton.isHidden = true
 			self.checkingIndicator.isHidden = false
