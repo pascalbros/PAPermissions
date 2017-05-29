@@ -290,6 +290,7 @@ class PAPermissionsView: UIView, UITableViewDataSource, UITableViewDelegate {
 		self.detailsLabel.font = UIFont(name: "HelveticaNeue-Light", size: 15)
 		self.detailsLabel.minimumScaleFactor = 0.1
 		self.detailsLabel.textColor = self.tintColor
+        self.detailsLabel.adjustsFontSizeToFitWidth = true
 	}
 	
 	fileprivate func setupTableView() {
