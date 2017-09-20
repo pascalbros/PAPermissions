@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "PAPermissions"
-  s.version          = "0.9.9"
+  s.version          = "0.9.10"
   s.summary          = "A unified API to ask for permissions on iOS."
   s.homepage         = "https://github.com/pascalbros/PAPermissions"
   s.license          = 'MIT'
