@@ -33,7 +33,7 @@ public class PANotificationsPermissionsCheck: PAPermissionsCheck {
 		self.types = [.badge, .sound, .alert]
 	}
 	
-	public override func checkStatus() {
+	@objc public override func checkStatus() {
 		let currentStatus = self.status
 		
 		if #available(iOS 8.0, *) {

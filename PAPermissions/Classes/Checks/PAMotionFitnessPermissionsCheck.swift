@@ -39,7 +39,7 @@ public class PAMotionFitnessPermissionsCheck: PAPermissionsCheck {
 			
                 self.status = motionActivity == nil ? .disabled : .enabled
 				
-				if let e = error as? NSError {
+				if let e = error as NSError? {
 					if e.code == Int(CMErrorNotAuthorized.rawValue) {
 						self.status = .denied
 						self.openSettings()

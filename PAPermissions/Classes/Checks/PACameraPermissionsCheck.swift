@@ -11,13 +11,13 @@ import UIKit
 
 public class PACameraPermissionsCheck: PAPermissionsCheck {
 
-	var mediaType = AVMediaTypeVideo
+	var mediaType = AVMediaType.video
 	
 	public override func checkStatus() {
 		let currentStatus = self.status
 
 		if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.camera) {
-			let authStatus = AVCaptureDevice.authorizationStatus(forMediaType: mediaType)
+			let authStatus = AVCaptureDevice.authorizationStatus(for: mediaType)
 			switch authStatus {
 			
 			case .authorized:
@@ -42,11 +42,11 @@ public class PACameraPermissionsCheck: PAPermissionsCheck {
 		if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.camera) {
 			
 			if #available(iOS 8.0, *) {
-				let authStatus = AVCaptureDevice.authorizationStatus(forMediaType: mediaType)
+				let authStatus = AVCaptureDevice.authorizationStatus(for: mediaType)
 				if authStatus == .denied {
 					self.openSettings()
 				}else{
-					AVCaptureDevice.requestAccess(forMediaType: mediaType, completionHandler: { (result) in
+					AVCaptureDevice.requestAccess(for: mediaType, completionHandler: { (result) in
 						if result {
 							self.status = .enabled
 						}else{

@@ -22,10 +22,10 @@ Right now it supports out of the box permissions for:
 ![](./ReadmeResources/PAPermissions3.gif)
 ## Compatibility
 
-PAPermissions requires iOS8+, compatible with both Swift 3 and Objective-C based projects
+PAPermissions requires iOS8+, compatible with both Swift 4 and Objective-C based projects
 
 If you are looking for the Swift 2 version of it, please check out the [legacy branch](https://github.com/pascalbros/PAPermissions/tree/legacy)
-
+If you are looking for the Swift 3 version of it, please check out the [legacy branch](https://github.com/pascalbros/PAPermissions/tree/swift3)
 ## Installation
 
 
@@ -43,17 +43,6 @@ Then, run the following command:
 
 ```bash
 $ pod install
-```
-
-### Carthage
-
-Add this to Cartfile
-```sh
-github "ReactiveX/RxSwift" "3.0.0-beta.1"
-```
-
-```sh
-$ carthage update
 ```
 
 ### Manual Installation
