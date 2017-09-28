@@ -52,8 +52,8 @@ public class PACameraPermissionsCheck: PAPermissionsCheck {
 						}else{
 							self.status = .disabled
 						}
+                        self.updateStatus();
 					})
-					self.updateStatus();
 				}
 			}else{
 				//Camera access should be always active on iOS 7
