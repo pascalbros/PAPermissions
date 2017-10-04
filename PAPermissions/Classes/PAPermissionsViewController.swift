@@ -19,6 +19,7 @@ public enum Constants {
 		static let microphone				= "NSMicrophoneUsageDescription"
 		static let motionFitness            = "NSMotionUsageDescription"
 		static let photoLibrary             = "NSPhotoLibraryUsageDescription"
+		static let mediaLibrary             = "NSAppleMusicUsageDescription"
 		static let bluetooth				= "NSBluetoothPeripheralUsageDescription"
 	}
 }

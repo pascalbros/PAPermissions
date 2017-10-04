@@ -38,6 +38,7 @@ public enum PAPermissionsType: String {
 	case camera = "camera"
 	case custom = "custom"
 	case photoLibrary = "photo library"
+	case mediaLibrary = "media library"
 }
 
 public class PAPermissionsItem {
@@ -70,6 +71,7 @@ public class PAPermissionsItem {
 		case .contacts: key = Constants.InfoPlistKeys.contacts
 		case .motionFitness: key = Constants.InfoPlistKeys.motionFitness
 		case .photoLibrary: key = Constants.InfoPlistKeys.photoLibrary
+		case .mediaLibrary: key = Constants.InfoPlistKeys.mediaLibrary
 		case .location:
 			if let _ = Bundle.main.object(forInfoDictionaryKey: Constants.InfoPlistKeys.locationAlways) {
 				key = Constants.InfoPlistKeys.locationAlways
@@ -118,6 +120,8 @@ public class PAPermissionsItem {
 			return PAPermissionsItem(type: type, identifier: type.rawValue, title: NSLocalizedString("Contacts", comment: ""), reason: localReason, icon: UIImage(named: "pa_contacts_icon", in: Bundle(for: PAPermissionsViewController.self), compatibleWith: nil)!, canBeDisabled: false)
 		case .photoLibrary:
 			return PAPermissionsItem(type: type, identifier: type.rawValue, title: NSLocalizedString("Photo Library", comment: ""), reason: localReason, icon: UIImage(named: "pa_photo_library_icon", in: Bundle(for: PAPermissionsViewController.self), compatibleWith: nil)!, canBeDisabled: false)
+		case .mediaLibrary:
+            return PAPermissionsItem(type: type, identifier: type.rawValue, title: NSLocalizedString("Media Library", comment: ""), reason: localReason, icon: UIImage(named: "pa_photo_library_icon", in: Bundle(for: PAPermissionsViewController.self), compatibleWith: nil)!, canBeDisabled: false)
 		default:
 			return nil
 		}
