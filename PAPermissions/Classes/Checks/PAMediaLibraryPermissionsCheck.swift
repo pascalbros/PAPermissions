@@ -29,13 +29,12 @@ public class PAMediaLibraryPermissionsCheck: PAPermissionsCheck {
     public override func defaultAction() {
         
         if #available(iOS 9.3, *) {
-//            PHPhotoLibrary.requestAuthorization({ (status: MPMediaLibraryAuthorizationStatus) in
             MPMediaLibrary.requestAuthorization({ (result) in
                 self.updatePermissions(status: result)
                 self.updateStatus()
             })
         } else {
-            // Photo Library Only available above iOS 9.2
+            // Media Library permission only available with iOS 9.3 and above
         }
     }
     
