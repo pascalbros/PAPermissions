@@ -22,26 +22,15 @@ public class PALocationPermissionsCheck: PAPermissionsCheck, CLLocationManagerDe
 	}
 	
 	public override func defaultAction() {
-		
-		if #available(iOS 8.0, *) {
-			if CLLocationManager.authorizationStatus() == .denied {
-				self.openSettings()
-			}else{
-				if self.requestAlwaysAuthorization {
-					self.locationManager.requestAlwaysAuthorization()
-				}else{
-					self.locationManager.requestWhenInUseAuthorization()
-				}
-				self.updateStatus()
-			}
+		if CLLocationManager.authorizationStatus() == .denied {
+			self.openSettings()
 		}else{
-			if CLLocationManager.authorizationStatus() == .denied {
-				let settingsURL = URL(string: "prefs:root=LOCATION_SERVICES")
-				UIApplication.shared.openURL(settingsURL!)
+			if self.requestAlwaysAuthorization {
+				self.locationManager.requestAlwaysAuthorization()
 			}else{
-				self.status = .enabled
-				self.updateStatus()
+				self.locationManager.requestWhenInUseAuthorization()
 			}
+			self.updateStatus()
 		}
 	}
 	

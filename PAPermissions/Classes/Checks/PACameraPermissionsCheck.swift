@@ -16,7 +16,7 @@ public class PACameraPermissionsCheck: PAPermissionsCheck {
 	public override func checkStatus() {
 		let currentStatus = self.status
 
-		if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.camera) {
+		if UIImagePickerController.isSourceTypeAvailable(UIImagePickerController.SourceType.camera) {
 			let authStatus = AVCaptureDevice.authorizationStatus(for: mediaType)
 			switch authStatus {
 			
@@ -39,27 +39,20 @@ public class PACameraPermissionsCheck: PAPermissionsCheck {
 	}
 	
 	public override func defaultAction() {
-		if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.camera) {
-			
-			if #available(iOS 8.0, *) {
-				let authStatus = AVCaptureDevice.authorizationStatus(for: mediaType)
-				if authStatus == .denied {
-					self.openSettings()
-				}else{
-					AVCaptureDevice.requestAccess(for: mediaType, completionHandler: { (result) in
-						if result {
-							self.status = .enabled
-						}else{
-							self.status = .disabled
-						}
-					})
-					self.updateStatus();
-				}
+		if UIImagePickerController.isSourceTypeAvailable(UIImagePickerController.SourceType.camera) {
+			let authStatus = AVCaptureDevice.authorizationStatus(for: mediaType)
+			if authStatus == .denied {
+				self.openSettings()
 			}else{
-				//Camera access should be always active on iOS 7
+				AVCaptureDevice.requestAccess(for: mediaType, completionHandler: { (result) in
+					if result {
+						self.status = .enabled
+					}else{
+						self.status = .disabled
+					}
+				})
+				self.updateStatus();
 			}
 		}
-		
-		
 	}
 }

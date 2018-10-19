@@ -13,12 +13,7 @@ public class PAPhotoLibraryPermissionsCheck: PAPermissionsCheck {
     
     public override func checkStatus() {
         let currentStatus = self.status
-        
-        if #available(iOS 8.0, *) {
-            self.updatePermissions(status: PHPhotoLibrary.authorizationStatus())
-        } else {
-            self.status = .unavailable
-        }
+		self.updatePermissions(status: PHPhotoLibrary.authorizationStatus())
         
         if self.status != currentStatus {
             self.updateStatus()
@@ -26,15 +21,10 @@ public class PAPhotoLibraryPermissionsCheck: PAPermissionsCheck {
     }
     
     public override func defaultAction() {
-        
-        if #available(iOS 8.0, *) {
-            PHPhotoLibrary.requestAuthorization({ (status: PHAuthorizationStatus) in
-                self.updatePermissions(status: status)
-                self.updateStatus()
-            })
-        } else {
-            // Photo Library Only available above iOS 8
-        }
+		PHPhotoLibrary.requestAuthorization({ (status: PHAuthorizationStatus) in
+			self.updatePermissions(status: status)
+			self.updateStatus()
+		})
     }
     
     private func updatePermissions(status: PHAuthorizationStatus) {

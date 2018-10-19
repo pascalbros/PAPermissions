@@ -17,14 +17,10 @@ public class PAMicrophonePermissionsCheck: PAPermissionsCheck {
 		let currentStatus = self.status
 
 		if AVAudioSession.sharedInstance().isInputAvailable {
-			if #available(iOS 8.0, *) {
-				if AVAudioSession.sharedInstance().recordPermission() == .granted {
-					self.status = .enabled
-				}else{
-					self.status = .disabled
-				}
-			}else{
+			if AVAudioSession.sharedInstance().recordPermission == .granted {
 				self.status = .enabled
+			}else{
+				self.status = .disabled
 			}
 		}else{
 			self.status = .unavailable
@@ -36,22 +32,18 @@ public class PAMicrophonePermissionsCheck: PAPermissionsCheck {
 	}
 	
 	public override func defaultAction() {
-		if #available(iOS 8.0, *) {
-			if AVAudioSession.sharedInstance().recordPermission() == .denied {
-				self.openSettings()
-			}else{
-				AVAudioSession.sharedInstance().requestRecordPermission { (result) in
-					if result {
-						self.status = .enabled
-					}else{
-						self.status = .disabled
-					}
-					
-					self.updateStatus()
+		if AVAudioSession.sharedInstance().recordPermission == .denied {
+			self.openSettings()
+		}else{
+			AVAudioSession.sharedInstance().requestRecordPermission { (result) in
+				if result {
+					self.status = .enabled
+				}else{
+					self.status = .disabled
 				}
+				
+				self.updateStatus()
 			}
-		} else {
-			//Microphone access should be always active on iOS 7
 		}
 	}
 }

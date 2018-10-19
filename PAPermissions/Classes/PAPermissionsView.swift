@@ -170,7 +170,7 @@ class PAPermissionsView: UIView, UITableViewDataSource, UITableViewDelegate {
 		set (use) {
 			if use {
 				if !self.useBlurBackground {
-					let blurEffect = UIBlurEffect(style: UIBlurEffectStyle.dark)
+					let blurEffect = UIBlurEffect(style: UIBlurEffect.Style.dark)
 					let blurEffectView = UIVisualEffectView(effect: blurEffect)
 					blurEffectView.frame = self.bounds
 					blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
@@ -257,11 +257,7 @@ class PAPermissionsView: UIView, UITableViewDataSource, UITableViewDelegate {
 		allConstraints.append(contentsOf: horizontalConstraints("detailsLabel"))
 		allConstraints.append(contentsOf: horizontalConstraints("tableView"))
 		allConstraints.append(contentsOf: horizontalConstraints("continueButton"))
-		if #available(iOS 8.0, *) {
-			NSLayoutConstraint.activate(allConstraints)
-		} else {
-			self.addConstraints(allConstraints)
-		}
+		NSLayoutConstraint.activate(allConstraints)
 	}
 	
 	fileprivate func setupTitleLabel() {
@@ -305,7 +301,7 @@ class PAPermissionsView: UIView, UITableViewDataSource, UITableViewDelegate {
 			self.tableView.tableFooterView = UIView()
 			
 			let refreshControl = UIRefreshControl()
-			refreshControl.addTarget(self, action: #selector(PAPermissionsView.refresh(_:)), for: UIControlEvents.valueChanged)
+			refreshControl.addTarget(self, action: #selector(PAPermissionsView.refresh(_:)), for: UIControl.Event.valueChanged)
 			tableView.addSubview(refreshControl)
 			self.refreshControl = refreshControl
 		}
@@ -330,8 +326,8 @@ class PAPermissionsView: UIView, UITableViewDataSource, UITableViewDelegate {
 		}
 		self.continueButton.titleLabel?.font = UIFont(name: "HelveticaNeue-Regular", size: 14)
 		self.continueButton.titleLabel?.minimumScaleFactor = 0.1
-		self.continueButton.setTitle(NSLocalizedString("Continue", comment: ""), for: UIControlState())
-		self.continueButton.setTitleColor(self.tintColor, for: UIControlState())
+		self.continueButton.setTitle(NSLocalizedString("Continue", comment: ""), for: UIControl.State())
+		self.continueButton.setTitleColor(self.tintColor, for: UIControl.State())
 		self.continueButton.backgroundColor = UIColor.clear
 	}
 	

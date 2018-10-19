@@ -18,22 +18,14 @@ class CustomPermissionsViewController: PAPermissionsViewController {
 	let cameraCheck = PACameraPermissionsCheck()
     let photoLibraryCheck = PAPhotoLibraryPermissionsCheck()
 	lazy var notificationsCheck : PAPermissionsCheck = {
-		if #available(iOS 10.0, *) {
-			return PAUNNotificationPermissionsCheck()
-		} else {
-			return PANotificationsPermissionsCheck()
-		}
+		return PAUNNotificationPermissionsCheck()
 	}()
 	let customCheck = PACustomPermissionsCheck()
 
 	let calendarCheck = PACalendarPermissionsCheck()
 	let reminderCheck = PARemindersPermissionsCheck()
 	let contactsCheck  : PAPermissionsCheck = {
-		if #available(iOS 9.0, *) {
-			return PACNContactsPermissionsCheck()
-		} else {
-			return PAABAddressBookCheck()
-		}
+		return PACNContactsPermissionsCheck()
 	}()
 
 
