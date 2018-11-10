@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0F5CC48F1F857B5700CCCB54 /* PAMediaLibraryPermissionsCheck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F5CC48E1F857B5700CCCB54 /* PAMediaLibraryPermissionsCheck.swift */; };
 		40B2C1EB1D88851800731B20 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 40B2C1EA1D88851800731B20 /* InfoPlist.strings */; };
 		50E9DCD31D7DC370007D0ED5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E9DCD21D7DC370007D0ED5 /* AppDelegate.swift */; };
 		50E9DCD51D7DC370007D0ED5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E9DCD41D7DC370007D0ED5 /* ViewController.swift */; };
@@ -66,6 +67,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0F5CC48E1F857B5700CCCB54 /* PAMediaLibraryPermissionsCheck.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PAMediaLibraryPermissionsCheck.swift; sourceTree = "<group>"; };
 		40B2C1EA1D88851800731B20 /* InfoPlist.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = InfoPlist.strings; sourceTree = "<group>"; };
 		50E9DCCF1D7DC370007D0ED5 /* PAPermissionsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PAPermissionsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		50E9DCD21D7DC370007D0ED5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -210,6 +212,7 @@
 				E642C3571DA1798500BC9133 /* PAPermissionsCheck.swift */,
 				E642C3581DA1798500BC9133 /* PAPhotoLibraryPermissionsCheck.swift */,
 				E642C3591DA1798500BC9133 /* PAUNNotificationPermissionsCheck.swift */,
+				0F5CC48E1F857B5700CCCB54 /* PAMediaLibraryPermissionsCheck.swift */,
 			);
 			path = Checks;
 			sourceTree = "<group>";
@@ -363,6 +366,7 @@
 				E642C3661DA1798500BC9133 /* PAMicrophonePermissionsCheck.swift in Sources */,
 				E642C36E1DA1798500BC9133 /* PAPermissionsViewController.swift in Sources */,
 				E642C3671DA1798500BC9133 /* PAMotionFitnessPermissionsCheck.swift in Sources */,
+				0F5CC48F1F857B5700CCCB54 /* PAMediaLibraryPermissionsCheck.swift in Sources */,
 				E642C3601DA1798500BC9133 /* PAABAddressBookCheck.swift in Sources */,
 				E642C36D1DA1798500BC9133 /* PAPermissionsView.swift in Sources */,
 				E642C36B1DA1798500BC9133 /* PAUNNotificationPermissionsCheck.swift in Sources */,

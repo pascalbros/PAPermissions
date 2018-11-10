@@ -17,6 +17,7 @@ class CustomPermissionsViewController: PAPermissionsViewController {
     let motionFitnessCheck = PAMotionFitnessPermissionsCheck()
 	let cameraCheck = PACameraPermissionsCheck()
     let photoLibraryCheck = PAPhotoLibraryPermissionsCheck()
+	let mediaLibraryCheck = PAMediaLibraryPermissionsCheck()
 	lazy var notificationsCheck : PAPermissionsCheck = {
 		return PAUNNotificationPermissionsCheck()
 	}()
@@ -36,12 +37,12 @@ class CustomPermissionsViewController: PAPermissionsViewController {
 			PAPermissionsItem.itemForType(.calendar, reason: PAPermissionDefaultReason)!,
 			PAPermissionsItem.itemForType(.reminders, reason: PAPermissionDefaultReason)!,
 			PAPermissionsItem.itemForType(.contacts, reason: PAPermissionDefaultReason)!,
-
 			PAPermissionsItem.itemForType(.bluetooth, reason: PAPermissionDefaultReason)!,
 			PAPermissionsItem.itemForType(.location, reason: PAPermissionDefaultReason)!,
 			PAPermissionsItem.itemForType(.microphone, reason: PAPermissionDefaultReason)!,
 			PAPermissionsItem.itemForType(.motionFitness, reason: PAPermissionDefaultReason)!,
 			PAPermissionsItem.itemForType(.photoLibrary, reason: PAPermissionDefaultReason)!,
+			PAPermissionsItem.itemForType(.mediaLibrary, reason: PAPermissionDefaultReason)!,
 			PAPermissionsItem.itemForType(.notifications, reason: "Required to send you great updates")!,
 			PAPermissionsItem.itemForType(.camera, reason: PAPermissionDefaultReason)!,
 			PAPermissionsItem(type: .custom, identifier: "my-custom-permission", title: "Custom Option", reason: "Optional", icon: UIImage(named: "pa_checkmark_icon", in: Bundle(for: PAPermissionsViewController.self), compatibleWith: nil)!, canBeDisabled: true)]
@@ -55,6 +56,7 @@ class CustomPermissionsViewController: PAPermissionsViewController {
 			PAPermissionsType.microphone.rawValue: self.microphoneCheck,
 			PAPermissionsType.motionFitness.rawValue: self.motionFitnessCheck,
 			PAPermissionsType.photoLibrary.rawValue: self.photoLibraryCheck,
+			PAPermissionsType.mediaLibrary.rawValue: self.mediaLibraryCheck,
 			PAPermissionsType.camera.rawValue: self.cameraCheck,
 			PAPermissionsType.notifications.rawValue: self.notificationsCheck,
 			"my-custom-permission": self.customCheck]

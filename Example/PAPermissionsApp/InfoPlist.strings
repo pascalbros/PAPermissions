@@ -17,3 +17,5 @@ NSMicrophoneUsageDescription = "Required to hear your beautiful voice";
 NSCameraUsageDescription = "Required to shoot awesome photos";
 NSMotionUsageDescription = "Required to monitor motion & fitness";
 NSPhotoLibraryUsageDescription = "Required to access your Photo Library";
+NSAppleMusicUsageDescription = "Required to access your Media Library";
+
