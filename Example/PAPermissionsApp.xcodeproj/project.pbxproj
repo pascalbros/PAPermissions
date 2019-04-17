@@ -32,7 +32,6 @@
 		E642C3651DA1798500BC9133 /* PALocationPermissionsCheck.swift in Sources */ = {isa = PBXBuildFile; fileRef = E642C3531DA1798500BC9133 /* PALocationPermissionsCheck.swift */; };
 		E642C3661DA1798500BC9133 /* PAMicrophonePermissionsCheck.swift in Sources */ = {isa = PBXBuildFile; fileRef = E642C3541DA1798500BC9133 /* PAMicrophonePermissionsCheck.swift */; };
 		E642C3671DA1798500BC9133 /* PAMotionFitnessPermissionsCheck.swift in Sources */ = {isa = PBXBuildFile; fileRef = E642C3551DA1798500BC9133 /* PAMotionFitnessPermissionsCheck.swift */; };
-		E642C3681DA1798500BC9133 /* PANotificationsPermissionsCheck.swift in Sources */ = {isa = PBXBuildFile; fileRef = E642C3561DA1798500BC9133 /* PANotificationsPermissionsCheck.swift */; };
 		E642C3691DA1798500BC9133 /* PAPermissionsCheck.swift in Sources */ = {isa = PBXBuildFile; fileRef = E642C3571DA1798500BC9133 /* PAPermissionsCheck.swift */; };
 		E642C36A1DA1798500BC9133 /* PAPhotoLibraryPermissionsCheck.swift in Sources */ = {isa = PBXBuildFile; fileRef = E642C3581DA1798500BC9133 /* PAPhotoLibraryPermissionsCheck.swift */; };
 		E642C36B1DA1798500BC9133 /* PAUNNotificationPermissionsCheck.swift in Sources */ = {isa = PBXBuildFile; fileRef = E642C3591DA1798500BC9133 /* PAUNNotificationPermissionsCheck.swift */; };
@@ -94,7 +93,6 @@
 		E642C3531DA1798500BC9133 /* PALocationPermissionsCheck.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PALocationPermissionsCheck.swift; sourceTree = "<group>"; };
 		E642C3541DA1798500BC9133 /* PAMicrophonePermissionsCheck.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PAMicrophonePermissionsCheck.swift; sourceTree = "<group>"; };
 		E642C3551DA1798500BC9133 /* PAMotionFitnessPermissionsCheck.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PAMotionFitnessPermissionsCheck.swift; sourceTree = "<group>"; };
-		E642C3561DA1798500BC9133 /* PANotificationsPermissionsCheck.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PANotificationsPermissionsCheck.swift; sourceTree = "<group>"; };
 		E642C3571DA1798500BC9133 /* PAPermissionsCheck.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PAPermissionsCheck.swift; sourceTree = "<group>"; };
 		E642C3581DA1798500BC9133 /* PAPhotoLibraryPermissionsCheck.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PAPhotoLibraryPermissionsCheck.swift; sourceTree = "<group>"; };
 		E642C3591DA1798500BC9133 /* PAUNNotificationPermissionsCheck.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PAUNNotificationPermissionsCheck.swift; sourceTree = "<group>"; };
@@ -208,7 +206,6 @@
 				E642C3531DA1798500BC9133 /* PALocationPermissionsCheck.swift */,
 				E642C3541DA1798500BC9133 /* PAMicrophonePermissionsCheck.swift */,
 				E642C3551DA1798500BC9133 /* PAMotionFitnessPermissionsCheck.swift */,
-				E642C3561DA1798500BC9133 /* PANotificationsPermissionsCheck.swift */,
 				E642C3571DA1798500BC9133 /* PAPermissionsCheck.swift */,
 				E642C3581DA1798500BC9133 /* PAPhotoLibraryPermissionsCheck.swift */,
 				E642C3591DA1798500BC9133 /* PAUNNotificationPermissionsCheck.swift */,
@@ -357,7 +354,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				E642C36A1DA1798500BC9133 /* PAPhotoLibraryPermissionsCheck.swift in Sources */,
-				E642C3681DA1798500BC9133 /* PANotificationsPermissionsCheck.swift in Sources */,
 				E642C3651DA1798500BC9133 /* PALocationPermissionsCheck.swift in Sources */,
 				E642C3691DA1798500BC9133 /* PAPermissionsCheck.swift in Sources */,
 				E642C3631DA1798500BC9133 /* PACNContactsPermissionsCheck.swift in Sources */,
