@@ -130,28 +130,17 @@ public class PAPermissionsItem {
 
 class PAPermissionsView: UIView, UITableViewDataSource, UITableViewDelegate {
 
-	weak var titleLabel: UILabel!
-	weak var detailsLabel: UILabel!
-	weak var continueButton: UIButton!
+	let titleLabel: UILabel = UILabel()
+	let detailsLabel: UILabel = UILabel()
+	let continueButton: UIButton = UIButton(type: .system)
 	
 	var delegate: PAPermissionsViewDelegate?
 	var dataSource: PAPermissionsViewDataSource?
 	
-	fileprivate weak var tableView: UITableView!
-	fileprivate weak var refreshControl: UIRefreshControl!
-	fileprivate weak var imageView: UIImageView!
-	
-	fileprivate weak var _blurEffectView: AnyObject!
-	@available(iOS 8.0, *)
-	fileprivate weak var blurEffectView: UIVisualEffectView? {
-		get {
-			return self._blurEffectView as? UIVisualEffectView
-		}
-		
-		set(newView) {
-			self._blurEffectView = newView
-		}
-	}
+	fileprivate let tableView: UITableView = UITableView(frame: CGRect.zero, style: .plain)
+	fileprivate let imageView: UIImageView = UIImageView()
+
+	fileprivate var blurEffectView: UIVisualEffectView?
 	
 	var permissions: [PAPermissionsItem] = Array()
 	
@@ -165,7 +154,6 @@ class PAPermissionsView: UIView, UITableViewDataSource, UITableViewDelegate {
 		}
 	}
 	
-	@available (iOS 8, *)
 	var useBlurBackground: Bool {
 		get {
 			return self.blurEffectView != nil
@@ -265,55 +253,39 @@ class PAPermissionsView: UIView, UITableViewDataSource, UITableViewDelegate {
 	}
 	
 	fileprivate func setupTitleLabel() {
-		if self.titleLabel == nil {
-			let titleLabel = UILabel()
-			titleLabel.translatesAutoresizingMaskIntoConstraints = false
-			self.addSubview(titleLabel)
-			self.titleLabel = titleLabel
-			self.titleLabel.text = "Title"
-		}
-		
+		titleLabel.translatesAutoresizingMaskIntoConstraints = false
+		self.addSubview(titleLabel)
+		self.titleLabel.text = "Title"
 		self.titleLabel.font = UIFont(name: "HelveticaNeue-Light", size: 30)
 		self.titleLabel.minimumScaleFactor = 0.1
 		self.titleLabel.textColor = self.tintColor
 	}
 	
 	fileprivate func setupDetailsLabel() {
-		if self.detailsLabel == nil {
-			let detailsLabel = UILabel()
-			detailsLabel.translatesAutoresizingMaskIntoConstraints = false
-			self.addSubview(detailsLabel)
-			self.detailsLabel = detailsLabel
-			self.detailsLabel.text = "Details"
-            // handle multi line details text
-            self.detailsLabel.numberOfLines = 0
-            self.detailsLabel.lineBreakMode = .byWordWrapping
-		}
-		
+		detailsLabel.translatesAutoresizingMaskIntoConstraints = false
+		self.addSubview(detailsLabel)
+		self.detailsLabel.text = "Details"
+		// handle multi line details text
+		self.detailsLabel.numberOfLines = 0
+		self.detailsLabel.lineBreakMode = .byWordWrapping
 		self.detailsLabel.font = UIFont(name: "HelveticaNeue-Light", size: 15)
 		self.detailsLabel.minimumScaleFactor = 0.1
 		self.detailsLabel.textColor = self.tintColor
 	}
 	
 	fileprivate func setupTableView() {
-		if self.tableView == nil {
-			let tableView = UITableView(frame: CGRect.zero, style: .plain)
-			tableView.translatesAutoresizingMaskIntoConstraints = false
-			self.addSubview(tableView)
-			self.tableView = tableView
-			self.tableView.backgroundColor = UIColor.clear
-			self.tableView.dataSource = self
-			self.tableView.delegate = self
-			self.tableView.register(PAPermissionsTableViewCell.self, forCellReuseIdentifier: "permission-item")
-			self.tableView.tableFooterView = UIView()
-			
-			let refreshControl = UIRefreshControl()
-			refreshControl.addTarget(self, action: #selector(PAPermissionsView.refresh(_:)), for: UIControl.Event.valueChanged)
-			tableView.addSubview(refreshControl)
-			self.refreshControl = refreshControl
-		}
+		tableView.translatesAutoresizingMaskIntoConstraints = false
+		self.addSubview(tableView)
+		self.tableView.backgroundColor = UIColor.clear
+		self.tableView.dataSource = self
+		self.tableView.delegate = self
+		self.tableView.register(PAPermissionsTableViewCell.self, forCellReuseIdentifier: "permission-item")
+		self.tableView.tableFooterView = UIView()
+		
+		let refreshControl: UIRefreshControl = UIRefreshControl()
+		refreshControl.addTarget(self, action: #selector(PAPermissionsView.refresh(_:)), for: UIControl.Event.valueChanged)
+		tableView.addSubview(refreshControl)
 		refreshControl.tintColor = self.tintColor
-
 	}
 	
 	@objc fileprivate func refresh(_ sender:UIRefreshControl) {
@@ -324,13 +296,9 @@ class PAPermissionsView: UIView, UITableViewDataSource, UITableViewDelegate {
 	}
 	
 	fileprivate func setupContinueButton() {
-		if self.continueButton == nil {
-			let continueButton = UIButton(type: .system)
-			continueButton.translatesAutoresizingMaskIntoConstraints = false
-			self.addSubview(continueButton)
-			self.continueButton = continueButton
-			self.continueButton.backgroundColor = UIColor.red
-		}
+		continueButton.translatesAutoresizingMaskIntoConstraints = false
+		self.addSubview(continueButton)
+		self.continueButton.backgroundColor = UIColor.red
 		self.continueButton.titleLabel?.font = UIFont(name: "HelveticaNeue-Regular", size: 14)
 		self.continueButton.titleLabel?.minimumScaleFactor = 0.1
 		self.continueButton.setTitle(NSLocalizedString("Continue", comment: ""), for: UIControl.State())
@@ -339,16 +307,12 @@ class PAPermissionsView: UIView, UITableViewDataSource, UITableViewDelegate {
 	}
 	
 	fileprivate func setupImageView() {
-		if self.imageView == nil {
-			let imageView = UIImageView()
-			imageView.contentMode = .scaleAspectFill
-			self.addSubview(imageView)
-			self.imageView = imageView
-			self.imageView.backgroundColor = UIColor.clear
-			imageView.translatesAutoresizingMaskIntoConstraints = false
-			imageView.superview!.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-0-[subview]-0-|", options: [], metrics: nil, views: ["subview": imageView]))
-			imageView.superview!.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|-0-[subview]-0-|", options: [], metrics: nil, views: ["subview": imageView]))
-		}
+		imageView.contentMode = .scaleAspectFill
+		self.addSubview(imageView)
+		self.imageView.backgroundColor = UIColor.clear
+		imageView.translatesAutoresizingMaskIntoConstraints = false
+		imageView.superview?.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-0-[subview]-0-|", options: [], metrics: nil, views: ["subview": imageView]))
+		imageView.superview?.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|-0-[subview]-0-|", options: [], metrics: nil, views: ["subview": imageView]))
 	}
 	
 	

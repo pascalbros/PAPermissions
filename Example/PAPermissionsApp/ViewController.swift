@@ -13,8 +13,9 @@ class ViewController: UIViewController {
 	
 	@IBAction func didShowPermissions(_ sender: AnyObject) {
 		
-		let controller = self.storyboard?.instantiateViewController(withIdentifier: "CustomPermissionsViewController")
-		self.present(controller!, animated: true, completion: nil)
+		if let controller = self.storyboard?.instantiateViewController(withIdentifier: "CustomPermissionsViewController") {
+			self.present(controller, animated: true, completion: nil)
+		}
 	}
 	override func viewDidLoad() {
 		super.viewDidLoad()

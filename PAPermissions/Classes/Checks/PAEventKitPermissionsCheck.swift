@@ -28,9 +28,13 @@ public class PAEKPermissionsCheck: PAPermissionsCheck {
 	var entityType : EKEntityType?
 
 	public override func checkStatus() {
+		guard let entityType = entityType else {
+			return
+		}
+		
 		let currentStatus = status
 
-		switch EKEventStore.authorizationStatus(for: entityType!) {
+		switch EKEventStore.authorizationStatus(for: entityType) {
 		case .authorized:
 			status = .enabled
 		case .denied:
@@ -47,11 +51,15 @@ public class PAEKPermissionsCheck: PAPermissionsCheck {
 	}
 
 	public override func defaultAction() {
-		let status = EKEventStore.authorizationStatus(for: entityType!)
+		guard let entityType = entityType else {
+			return
+		}
+		
+		let status = EKEventStore.authorizationStatus(for: entityType)
 		if status == .denied {
 			self.openSettings()
 		} else {
-			EKEventStore().requestAccess(to: entityType!, completion: { (success, error) in
+			EKEventStore().requestAccess(to: entityType, completion: { (success, error) in
 				if success && error == nil {
 					self.status = .enabled
 				} else {

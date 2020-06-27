@@ -33,7 +33,7 @@ open class PAPermissionsViewController: UIViewController, PAPermissionsViewDeleg
 	
 	public var delegate: PAPermissionsViewControllerDelegate?
 	fileprivate var permissionHandlers: [String: PAPermissionsCheck] = Dictionary()
-	fileprivate weak var permissionsView: PAPermissionsView!
+	fileprivate var permissionsView: PAPermissionsView = PAPermissionsView(frame: CGRect(origin: CGPoint.zero, size: CGSize.zero));
 
 	public var titleText: String? {
 		get {
@@ -57,7 +57,7 @@ open class PAPermissionsViewController: UIViewController, PAPermissionsViewDeleg
 		
 	}
 	
-	public var tintColor: UIColor! {
+	public var tintColor: UIColor {
 		get {
 			return self.permissionsView.tintColor
 		}
@@ -67,7 +67,7 @@ open class PAPermissionsViewController: UIViewController, PAPermissionsViewDeleg
 		}
 	}
 	
-	public var backgroundColor: UIColor! {
+	public var backgroundColor: UIColor? {
 		get {
 			return self.permissionsView.backgroundColor
 		}
@@ -87,7 +87,6 @@ open class PAPermissionsViewController: UIViewController, PAPermissionsViewDeleg
 		}
 	}
 	
-	@available (iOS 8, *)
 	public var useBlurBackground: Bool {
 		get {
 			return self.permissionsView.useBlurBackground
@@ -111,17 +110,15 @@ open class PAPermissionsViewController: UIViewController, PAPermissionsViewDeleg
 	}
 	
 	fileprivate func setupUI() {
-		let mainView = PAPermissionsView(frame: CGRect(origin: CGPoint.zero, size: CGSize.zero));
-		mainView.delegate = self
-		mainView.dataSource = self
-		self.view.addSubview(mainView)
-		self.permissionsView = mainView
+		permissionsView.delegate = self
+		permissionsView.dataSource = self
+		self.view.addSubview(permissionsView)
 		
-		mainView.translatesAutoresizingMaskIntoConstraints = false
-		mainView.superview!.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-0-[subview]-0-|", options: [], metrics: nil, views: ["subview": mainView]))
-		mainView.superview!.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|-0-[subview]-0-|", options: [], metrics: nil, views: ["subview": mainView]))
-		mainView.backgroundColor = UIColor.white
-		mainView.continueButton.addTarget(self, action: #selector(PAPermissionsViewController.didContinue), for: .touchUpInside)
+		permissionsView.translatesAutoresizingMaskIntoConstraints = false
+		permissionsView.superview?.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-0-[subview]-0-|", options: [], metrics: nil, views: ["subview": permissionsView]))
+		permissionsView.superview?.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|-0-[subview]-0-|", options: [], metrics: nil, views: ["subview": permissionsView]))
+		permissionsView.backgroundColor = UIColor.white
+		permissionsView.continueButton.addTarget(self, action: #selector(PAPermissionsViewController.didContinue), for: .touchUpInside)
 	}
 	
 	public func setupData(_ permissions: [PAPermissionsItem], handlers:[String: PAPermissionsCheck]) {
