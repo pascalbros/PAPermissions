@@ -12,15 +12,15 @@ class PAPermissionsTableViewCell: UITableViewCell {
 
 	var didSelectItem: ((PAPermissionsItem) -> ())?
 	
-	weak var iconImageView: UIImageView!
-	weak var titleLabel: UILabel!
-	weak var detailsLabel: UILabel!
+	let iconImageView: UIImageView = UIImageView()
+	let titleLabel: UILabel = UILabel()
+	let detailsLabel: UILabel = UILabel()
 	
-	weak var permission: PAPermissionsItem!
+	var permission: PAPermissionsItem?
 	
-	fileprivate weak var rightDetailsContainer: UIView!
-	fileprivate weak var enableButton: UIButton!
-	fileprivate weak var checkingIndicator: UIActivityIndicatorView!
+	fileprivate let rightDetailsContainer: UIView = UIView()
+	fileprivate let enableButton: UIButton = UIButton(type: .system)
+	fileprivate let checkingIndicator: UIActivityIndicatorView = UIActivityIndicatorView(style: .white)
 	
 	fileprivate var _permissionStatus = PAPermissionsStatus.disabled
 	var permissionStatus: PAPermissionsStatus {
@@ -88,26 +88,18 @@ class PAPermissionsTableViewCell: UITableViewCell {
 	}
 	
 	fileprivate func setupImageView() {
-		if self.iconImageView == nil {
-			let imageView = UIImageView()
-			imageView.contentMode = .scaleAspectFit
-			self.addSubview(imageView)
-			self.iconImageView = imageView
-			self.iconImageView.backgroundColor = UIColor.clear
-			self.iconImageView.translatesAutoresizingMaskIntoConstraints = false
-		}
+		iconImageView.contentMode = .scaleAspectFit
+		self.addSubview(iconImageView)
+		self.iconImageView.backgroundColor = UIColor.clear
+		self.iconImageView.translatesAutoresizingMaskIntoConstraints = false
 		self.iconImageView.tintColor = self.tintColor
 	}
 	
 	fileprivate func setupTitleLabel() {
-		if self.titleLabel == nil {
-			let titleLabel = UILabel()
-			titleLabel.translatesAutoresizingMaskIntoConstraints = false
-			self.addSubview(titleLabel)
-			self.titleLabel = titleLabel
-			self.titleLabel.text = "Title"
-			self.titleLabel.adjustsFontSizeToFitWidth = true
-		}
+		titleLabel.translatesAutoresizingMaskIntoConstraints = false
+		self.addSubview(titleLabel)
+		self.titleLabel.text = "Title"
+		self.titleLabel.adjustsFontSizeToFitWidth = true
 		
 		self.titleLabel.font = UIFont(name: "HelveticaNeue-Light", size: 15)
 		self.titleLabel.minimumScaleFactor = 0.1
@@ -115,14 +107,10 @@ class PAPermissionsTableViewCell: UITableViewCell {
 	}
 	
 	fileprivate func setupDetailsLabel() {
-		if self.detailsLabel == nil {
-			let detailsLabel = UILabel()
-			detailsLabel.translatesAutoresizingMaskIntoConstraints = false
-			self.addSubview(detailsLabel)
-			self.detailsLabel = detailsLabel
-			self.detailsLabel.text = "details"
-			self.detailsLabel.adjustsFontSizeToFitWidth = true
-		}
+		detailsLabel.translatesAutoresizingMaskIntoConstraints = false
+		self.addSubview(detailsLabel)
+		self.detailsLabel.text = "details"
+		self.detailsLabel.adjustsFontSizeToFitWidth = true
 		
 		self.detailsLabel.font = UIFont(name: "HelveticaNeue-Light", size: 11)
 		self.detailsLabel.minimumScaleFactor = 0.1
@@ -130,47 +118,37 @@ class PAPermissionsTableViewCell: UITableViewCell {
 	}
 	
 	fileprivate func setupRightDetailsContainer() {
-		if self.rightDetailsContainer == nil {
-			let rightDetailsContainer = UIView()
-			rightDetailsContainer.backgroundColor = UIColor.clear
-			rightDetailsContainer.translatesAutoresizingMaskIntoConstraints = false
-			self.addSubview(rightDetailsContainer)
-			self.rightDetailsContainer = rightDetailsContainer
-			self.rightDetailsContainer.backgroundColor = UIColor.clear
-		}
+		rightDetailsContainer.backgroundColor = UIColor.clear
+		rightDetailsContainer.translatesAutoresizingMaskIntoConstraints = false
+		rightDetailsContainer.backgroundColor = UIColor.clear
+		self.addSubview(rightDetailsContainer)
 	}
 	
 	fileprivate func setupEnableButton(_ status: PAPermissionsStatus) {
-		if self.enableButton == nil {
-			let enableButton = UIButton(type: .system)
-			enableButton.translatesAutoresizingMaskIntoConstraints = false
-			self.rightDetailsContainer.addSubview(enableButton)
-			self.enableButton = enableButton
-			self.enableButton.backgroundColor = UIColor.red
-			self.enableButton.addTarget(self, action: #selector(PAPermissionsTableViewCell._didSelectItem), for: .touchUpInside)
-			
-			let checkingIndicator = UIActivityIndicatorView(style: .white)
-			checkingIndicator.translatesAutoresizingMaskIntoConstraints = false
-			self.rightDetailsContainer.addSubview(checkingIndicator)
-			self.checkingIndicator = checkingIndicator
+		enableButton.translatesAutoresizingMaskIntoConstraints = false
+		self.rightDetailsContainer.addSubview(enableButton)
+		self.enableButton.backgroundColor = UIColor.red
+		self.enableButton.addTarget(self, action: #selector(PAPermissionsTableViewCell._didSelectItem), for: .touchUpInside)
+		
+		checkingIndicator.translatesAutoresizingMaskIntoConstraints = false
+		self.rightDetailsContainer.addSubview(checkingIndicator)
 
-			let views = ["enableButton": self.enableButton,
-						 "checkingIndicator": self.checkingIndicator] as [String : UIView]
-			
-			var allConstraints = PAConstraintsUtils.concatenateConstraintsFromString([
-				"V:[enableButton(30)]",
-				"H:|-2-[enableButton]-2-|",
-				"V:|-0-[checkingIndicator]-0-|",
-				"H:|-0-[checkingIndicator]-0-|"
-				], views: views)
-			allConstraints.append(NSLayoutConstraint.init(item: self.enableButton, attribute: NSLayoutConstraint.Attribute.centerY, relatedBy: NSLayoutConstraint.Relation.equal, toItem: self.enableButton.superview, attribute: NSLayoutConstraint.Attribute.centerY, multiplier: 1.0, constant: 0.0))
-			NSLayoutConstraint.activate(allConstraints)
-		}
+		let views = ["enableButton": self.enableButton,
+					 "checkingIndicator": self.checkingIndicator] as [String : UIView]
+		
+		var allConstraints = PAConstraintsUtils.concatenateConstraintsFromString([
+			"V:[enableButton(30)]",
+			"H:|-2-[enableButton]-2-|",
+			"V:|-0-[checkingIndicator]-0-|",
+			"H:|-0-[checkingIndicator]-0-|"
+			], views: views)
+		allConstraints.append(NSLayoutConstraint.init(item: self.enableButton, attribute: NSLayoutConstraint.Attribute.centerY, relatedBy: NSLayoutConstraint.Relation.equal, toItem: self.enableButton.superview, attribute: NSLayoutConstraint.Attribute.centerY, multiplier: 1.0, constant: 0.0))
+		NSLayoutConstraint.activate(allConstraints)
 		
 		self.enableButton.tintColor = self.tintColor
 		
 		if status == .enabled {
-			if !self.permission.canBeDisabled {
+			if self.permission?.canBeDisabled == false {
 				self.enableButton.isHidden = false
 				self.checkingIndicator.isHidden = true
 				self.checkingIndicator.stopAnimating()
@@ -223,8 +201,8 @@ class PAPermissionsTableViewCell: UITableViewCell {
 	}
 	
 	@objc fileprivate func _didSelectItem() {
-		if self.didSelectItem != nil {
-			self.didSelectItem!(self.permission)
+		if let didSelectItem = didSelectItem, let permission = permission {
+			didSelectItem(permission)
 		}
 	}
 	

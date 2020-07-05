@@ -20,9 +20,13 @@ public class PABluetoothPermissionsCheck: PAPermissionsCheck, CBCentralManagerDe
 	}
 	
 	public func centralManagerDidUpdateState(_ central: CBCentralManager) {
+		guard let managerBLE = managerBLE else {
+			return
+		}
+		
 		let currentStatus = self.status
 
-		switch managerBLE!.state
+		switch managerBLE.state
 		{
 		case .poweredOff:
 			self.status = .disabled
