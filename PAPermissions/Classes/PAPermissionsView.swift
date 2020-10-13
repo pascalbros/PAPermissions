@@ -328,7 +328,7 @@ class PAPermissionsView: UIView, UITableViewDataSource, UITableViewDelegate {
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 		let cell = tableView.dequeueReusableCell(withIdentifier: "permission-item", for: indexPath) as! PAPermissionsTableViewCell
 		let item = self.permissions[(indexPath as NSIndexPath).row]
-		cell.didSelectItem = {selectedPermission in
+		cell.didSelectItem = { selectedPermission in
 			if let delegate = self.delegate {
 				delegate.permissionsView(self, permissionSelected: selectedPermission)
 			}

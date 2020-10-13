@@ -16,14 +16,11 @@ public class PACNContactsPermissionsCheck: PAPermissionsCheck {
 		let currentStatus = status
 
 		switch CNContactStore.authorizationStatus(for: .contacts) {
-		case .authorized:
-			status = .enabled
-		case .denied:
-			status = .disabled
-		case .notDetermined:
-			status = .disabled
-		case .restricted:
-			status = .unavailable
+		case .authorized:		status = .enabled
+		case .denied:			status = .disabled
+		case .notDetermined: 	status = .disabled
+		case .restricted:		status = .unavailable
+		@unknown default:		status = .unavailable
 		}
 
 		if currentStatus != status {

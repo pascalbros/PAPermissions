@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "PAPermissions"
-  s.version          = "0.9.11"
+  s.version          = "0.9.50"
   s.summary          = "A unified API to ask for permissions on iOS."
   s.homepage         = "https://github.com/pascalbros/PAPermissions"
   s.license          = 'MIT'
@@ -9,7 +9,7 @@ Pod::Spec.new do |s|
   s.social_media_url = 'https://twitter.com/PascalAmbro'
   s.platform         = :ios, '10.0'
   s.requires_arc     = true
-  s.swift_version    = '4.2'
+  s.swift_version    = '5.0'
   s.source_files     = 'PAPermissions/Classes/**/*.{swift}'
   s.resources        = "PAPermissions/Assets/**/*"
   s.ios.framework    = ['AVFoundation', 'CoreLocation', 'CoreBluetooth', 'CoreMotion', 'Photos']

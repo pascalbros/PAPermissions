@@ -43,6 +43,7 @@ public class PAEKPermissionsCheck: PAPermissionsCheck {
 			status = .disabled
 		case .restricted:
 			status = .unavailable
+		@unknown default: break
 		}
 
 		if currentStatus != status {

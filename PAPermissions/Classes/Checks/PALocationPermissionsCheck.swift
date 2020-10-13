@@ -47,6 +47,8 @@ public class PALocationPermissionsCheck: PAPermissionsCheck, CLLocationManagerDe
 				self.status = PAPermissionsStatus.disabled
 			case .authorizedAlways, .authorizedWhenInUse:
 				self.status = PAPermissionsStatus.enabled
+			@unknown default:
+				self.status = PAPermissionsStatus.disabled
 			}
 		} else {
 			self.status = PAPermissionsStatus.disabled

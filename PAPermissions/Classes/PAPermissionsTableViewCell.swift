@@ -127,7 +127,6 @@ class PAPermissionsTableViewCell: UITableViewCell {
 	fileprivate func setupEnableButton(_ status: PAPermissionsStatus) {
 		enableButton.translatesAutoresizingMaskIntoConstraints = false
 		self.rightDetailsContainer.addSubview(enableButton)
-		self.enableButton.backgroundColor = UIColor.red
 		self.enableButton.addTarget(self, action: #selector(PAPermissionsTableViewCell._didSelectItem), for: .touchUpInside)
 		
 		checkingIndicator.translatesAutoresizingMaskIntoConstraints = false
@@ -180,6 +179,7 @@ class PAPermissionsTableViewCell: UITableViewCell {
 			self.enableButton.imageView?.contentMode = .scaleAspectFit
 			self.enableButton.isUserInteractionEnabled = false
 		}
+		rightDetailsContainer.superview?.bringSubviewToFront(rightDetailsContainer)
 	}
 	
 	private func setupEnableDisableButton(title: String) {

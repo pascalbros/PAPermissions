@@ -28,18 +28,13 @@ public class PABluetoothPermissionsCheck: PAPermissionsCheck, CBCentralManagerDe
 
 		switch managerBLE.state
 		{
-		case .poweredOff:
-			self.status = .disabled
-		case .poweredOn:
-			self.status = .enabled
-		case .unsupported:
-			self.status = .unavailable
-		case .resetting:
-			self.status = .checking
-		case .unauthorized:
-			self.status = .disabled
-		case .unknown:
-			self.status = .unavailable
+		case .poweredOff:	self.status = .disabled
+		case .poweredOn:	self.status = .enabled
+		case .unsupported:	self.status = .unavailable
+		case .resetting:	self.status = .checking
+		case .unauthorized:	self.status = .disabled
+		case .unknown:		self.status = .unavailable
+		@unknown default: 	self.status = .unavailable
 		}
 		
 		if self.status != currentStatus {

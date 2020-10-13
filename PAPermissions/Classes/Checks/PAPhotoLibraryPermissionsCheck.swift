@@ -32,14 +32,13 @@ public class PAPhotoLibraryPermissionsCheck: PAPermissionsCheck {
 		let oldStatus = self.status
 		
         switch status {
-        case .authorized: self.status =
-			.enabled
-		case .denied:
-			self.status = .denied
-		case .notDetermined:
-			self.status = .disabled
-        case .restricted: self.status = .unavailable
-        }
+        case .authorized: 		self.status = .enabled
+		case .denied: 			self.status = .denied
+		case .notDetermined,
+			 .limited: 			self.status = .disabled
+        case .restricted: 		self.status = .unavailable
+		@unknown default:		self.status = .unavailable
+		}
 		
 		if oldStatus == .denied && self.status == .denied {
 			self.openSettings()

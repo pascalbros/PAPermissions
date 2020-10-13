@@ -21,14 +21,12 @@ public class PAUNNotificationPermissionsCheck: PAPermissionsCheck {
 		notificationCenter.getNotificationSettings { (settings) in
 
 			switch settings.authorizationStatus {
-			case .authorized:
-				self.status = .enabled
-			case .denied:
-				self.status = .disabled
-			case .notDetermined:
-				self.status = .disabled
-			case .provisional:
-				self.status = .enabled
+			case .authorized,
+				 .ephemeral,
+				 .provisional: 		self.status = .enabled
+			case .denied,
+				 .notDetermined: 	self.status = .disabled
+			@unknown default: 		self.status = .disabled
 			}
 
 			self.authorizationStatus = settings.authorizationStatus
